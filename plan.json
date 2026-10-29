@@ -2005,191 +2005,453 @@
   {
    "namn": "Gul lök",
    "kat": "Frukt & grönt",
-   "start": "600 g",
-   "kop": "v4: 1 kg",
-   "anm": ""
+   "anm": "",
+   "harHemma": "600 g",
+   "kop": [
+    {
+     "vecka": "48–49",
+     "handla": "ons 25 nov",
+     "qty": "1 kg"
+    }
+   ]
   },
   {
    "namn": "Morötter",
    "kat": "Frukt & grönt",
-   "start": "300 g",
-   "kop": "v1: 1 kg, v2: 1 kg, v3: 1 kg, v4: 1 kg, v5: 1 kg",
-   "anm": ""
+   "anm": "",
+   "harHemma": "300 g",
+   "kop": [
+    {
+     "vecka": "45–46",
+     "handla": "ons 4 nov",
+     "qty": "1 kg"
+    },
+    {
+     "vecka": "46–47",
+     "handla": "ons 11 nov",
+     "qty": "1 kg"
+    },
+    {
+     "vecka": "47–48",
+     "handla": "ons 18 nov",
+     "qty": "1 kg"
+    },
+    {
+     "vecka": "48–49",
+     "handla": "ons 25 nov",
+     "qty": "1 kg"
+    },
+    {
+     "vecka": "49–50",
+     "handla": "ons 2 dec",
+     "qty": "1 kg"
+    }
+   ]
   },
   {
    "namn": "Potatis",
    "kat": "Frukt & grönt",
-   "start": "300 g",
-   "kop": "v1: 1,5 kg, v3: 1,5 kg, v5: 1,5 kg",
-   "anm": ""
+   "anm": "",
+   "harHemma": "300 g",
+   "kop": [
+    {
+     "vecka": "45–46",
+     "handla": "ons 4 nov",
+     "qty": "1,5 kg"
+    },
+    {
+     "vecka": "47–48",
+     "handla": "ons 18 nov",
+     "qty": "1,5 kg"
+    },
+    {
+     "vecka": "49–50",
+     "handla": "ons 2 dec",
+     "qty": "1,5 kg"
+    }
+   ]
   },
   {
    "namn": "Vitlök",
    "kat": "Frukt & grönt",
-   "start": "8 klyfta",
-   "kop": "v2: 1 huvud, v5: 1 huvud",
-   "anm": ""
+   "anm": "",
+   "harHemma": "8 klyfta",
+   "kop": [
+    {
+     "vecka": "46–47",
+     "handla": "ons 11 nov",
+     "qty": "1 huvud"
+    },
+    {
+     "vecka": "49–50",
+     "handla": "ons 2 dec",
+     "qty": "1 huvud"
+    }
+   ]
   },
   {
    "namn": "Frysta bär",
    "kat": "Fryst",
-   "start": "300 g",
-   "kop": "v1: 500 g, v2: 500 g, v3: 500 g, v4: 500 g, v5: 500 g",
-   "anm": ""
+   "anm": "",
+   "harHemma": "300 g",
+   "kop": [
+    {
+     "vecka": "45–46",
+     "handla": "ons 4 nov",
+     "qty": "500 g"
+    },
+    {
+     "vecka": "46–47",
+     "handla": "ons 11 nov",
+     "qty": "500 g"
+    },
+    {
+     "vecka": "47–48",
+     "handla": "ons 18 nov",
+     "qty": "500 g"
+    },
+    {
+     "vecka": "48–49",
+     "handla": "ons 25 nov",
+     "qty": "500 g"
+    },
+    {
+     "vecka": "49–50",
+     "handla": "ons 2 dec",
+     "qty": "500 g"
+    }
+   ]
   },
   {
    "namn": "Frysta ärtor",
    "kat": "Fryst",
-   "start": "400 g",
-   "kop": "behöver inte köpas",
-   "anm": ""
+   "anm": "",
+   "harHemma": "400 g",
+   "kop": []
   },
   {
    "namn": "Nötfärs",
    "kat": "Kött & fisk",
-   "start": "inget",
-   "kop": "v1: 500 g, v2: 500 g, v3: 500 g, v4: 500 g, v5: 500 g",
-   "anm": "Frys det du inte använder inom 2 dagar."
+   "anm": "Frys det du inte använder inom 2 dagar.",
+   "harHemma": null,
+   "kop": [
+    {
+     "vecka": "45–46",
+     "handla": "ons 4 nov",
+     "qty": "500 g"
+    },
+    {
+     "vecka": "46–47",
+     "handla": "ons 11 nov",
+     "qty": "500 g"
+    },
+    {
+     "vecka": "47–48",
+     "handla": "ons 18 nov",
+     "qty": "500 g"
+    },
+    {
+     "vecka": "48–49",
+     "handla": "ons 25 nov",
+     "qty": "500 g"
+    },
+    {
+     "vecka": "49–50",
+     "handla": "ons 2 dec",
+     "qty": "500 g"
+    }
+   ]
   },
   {
    "namn": "Ostbit till mackor",
    "kat": "Mejeri & ägg",
-   "start": "100 g",
-   "kop": "v1: 400 g, v2: 400 g, v4: 400 g",
-   "anm": ""
+   "anm": "",
+   "harHemma": "100 g",
+   "kop": [
+    {
+     "vecka": "45–46",
+     "handla": "ons 4 nov",
+     "qty": "400 g"
+    },
+    {
+     "vecka": "46–47",
+     "handla": "ons 11 nov",
+     "qty": "400 g"
+    },
+    {
+     "vecka": "48–49",
+     "handla": "ons 25 nov",
+     "qty": "400 g"
+    }
+   ]
   },
   {
    "namn": "Riven ost",
    "kat": "Mejeri & ägg",
-   "start": "100 g",
-   "kop": "v1: 200 g, v3: 200 g",
-   "anm": ""
+   "anm": "",
+   "harHemma": "100 g",
+   "kop": [
+    {
+     "vecka": "45–46",
+     "handla": "ons 4 nov",
+     "qty": "200 g"
+    },
+    {
+     "vecka": "47–48",
+     "handla": "ons 18 nov",
+     "qty": "200 g"
+    }
+   ]
   },
   {
    "namn": "Smör",
    "kat": "Mejeri & ägg",
-   "start": "350 g",
-   "kop": "v4: 500 g",
-   "anm": ""
+   "anm": "",
+   "harHemma": "350 g",
+   "kop": [
+    {
+     "vecka": "48–49",
+     "handla": "ons 25 nov",
+     "qty": "500 g"
+    }
+   ]
   },
   {
    "namn": "Ägg",
    "kat": "Mejeri & ägg",
-   "start": "4 st",
-   "kop": "v1: 1 förp (12 st), v2: 1 förp (12 st), v4: 1 förp (12 st), v5: 1 förp (12 st)",
-   "anm": ""
+   "anm": "",
+   "harHemma": "4 st",
+   "kop": [
+    {
+     "vecka": "45–46",
+     "handla": "ons 4 nov",
+     "qty": "1 förp (12 st)"
+    },
+    {
+     "vecka": "46–47",
+     "handla": "ons 11 nov",
+     "qty": "1 förp (12 st)"
+    },
+    {
+     "vecka": "48–49",
+     "handla": "ons 25 nov",
+     "qty": "1 förp (12 st)"
+    },
+    {
+     "vecka": "49–50",
+     "handla": "ons 2 dec",
+     "qty": "1 förp (12 st)"
+    }
+   ]
   },
   {
    "namn": "Fullkornspasta",
    "kat": "Skafferi",
-   "start": "250 g",
-   "kop": "v2: 500 g, v4: 500 g",
-   "anm": ""
+   "anm": "",
+   "harHemma": "250 g",
+   "kop": [
+    {
+     "vecka": "46–47",
+     "handla": "ons 11 nov",
+     "qty": "500 g"
+    },
+    {
+     "vecka": "48–49",
+     "handla": "ons 25 nov",
+     "qty": "500 g"
+    }
+   ]
   },
   {
    "namn": "Havregryn",
    "kat": "Skafferi",
-   "start": "900 g",
-   "kop": "v4: 1 kg",
-   "anm": ""
+   "anm": "",
+   "harHemma": "900 g",
+   "kop": [
+    {
+     "vecka": "48–49",
+     "handla": "ons 25 nov",
+     "qty": "1 kg"
+    }
+   ]
   },
   {
    "namn": "Honung",
    "kat": "Skafferi",
-   "start": "250 g",
-   "kop": "behöver inte köpas",
-   "anm": ""
+   "anm": "",
+   "harHemma": "250 g",
+   "kop": []
   },
   {
    "namn": "Jordnötssmör",
    "kat": "Skafferi",
-   "start": "250 g",
-   "kop": "behöver inte köpas",
-   "anm": ""
+   "anm": "",
+   "harHemma": "250 g",
+   "kop": []
   },
   {
    "namn": "Knäckebröd",
    "kat": "Skafferi",
-   "start": "150 g",
-   "kop": "v1: 1 förp, v3: 1 förp, v4: 1 förp, v5: 1 förp",
-   "anm": ""
+   "anm": "",
+   "harHemma": "150 g",
+   "kop": [
+    {
+     "vecka": "45–46",
+     "handla": "ons 4 nov",
+     "qty": "1 förp"
+    },
+    {
+     "vecka": "47–48",
+     "handla": "ons 18 nov",
+     "qty": "1 förp"
+    },
+    {
+     "vecka": "48–49",
+     "handla": "ons 25 nov",
+     "qty": "1 förp"
+    },
+    {
+     "vecka": "49–50",
+     "handla": "ons 2 dec",
+     "qty": "1 förp"
+    }
+   ]
   },
   {
    "namn": "Mild currypulver",
    "kat": "Skafferi",
-   "start": "inget",
-   "kop": "v2: 1 burk",
-   "anm": ""
+   "anm": "",
+   "harHemma": null,
+   "kop": [
+    {
+     "vecka": "46–47",
+     "handla": "ons 11 nov",
+     "qty": "1 burk"
+    }
+   ]
   },
   {
    "namn": "Mild tacokrydda",
    "kat": "Skafferi",
-   "start": "inget",
-   "kop": "v1: 1 förp",
-   "anm": ""
+   "anm": "",
+   "harHemma": null,
+   "kop": [
+    {
+     "vecka": "45–46",
+     "handla": "ons 4 nov",
+     "qty": "1 förp"
+    }
+   ]
   },
   {
    "namn": "Osockrad müsli",
    "kat": "Skafferi",
-   "start": "250 g",
-   "kop": "v2: 500 g, v4: 500 g",
-   "anm": ""
+   "anm": "",
+   "harHemma": "250 g",
+   "kop": [
+    {
+     "vecka": "46–47",
+     "handla": "ons 11 nov",
+     "qty": "500 g"
+    },
+    {
+     "vecka": "48–49",
+     "handla": "ons 25 nov",
+     "qty": "500 g"
+    }
+   ]
   },
   {
    "namn": "Popcornmajs",
    "kat": "Skafferi",
-   "start": "inget",
-   "kop": "v1: 500 g",
-   "anm": ""
+   "anm": "",
+   "harHemma": null,
+   "kop": [
+    {
+     "vecka": "45–46",
+     "handla": "ons 4 nov",
+     "qty": "500 g"
+    }
+   ]
   },
   {
    "namn": "Ris",
    "kat": "Skafferi",
-   "start": "1,2 kg",
-   "kop": "behöver inte köpas",
-   "anm": ""
+   "anm": "",
+   "harHemma": "1,2 kg",
+   "kop": []
   },
   {
    "namn": "Röda linser",
    "kat": "Skafferi",
-   "start": "inget",
-   "kop": "v2: 500 g",
-   "anm": ""
+   "anm": "",
+   "harHemma": null,
+   "kop": [
+    {
+     "vecka": "46–47",
+     "handla": "ons 11 nov",
+     "qty": "500 g"
+    }
+   ]
   },
   {
    "namn": "Salt-reducerad soja",
    "kat": "Skafferi",
-   "start": "200 ml",
-   "kop": "behöver inte köpas",
-   "anm": ""
+   "anm": "",
+   "harHemma": "200 ml",
+   "kop": []
   },
   {
    "namn": "Tacosås",
    "kat": "Skafferi",
-   "start": "inget",
-   "kop": "v1: 1 burk",
-   "anm": ""
+   "anm": "",
+   "harHemma": null,
+   "kop": [
+    {
+     "vecka": "45–46",
+     "handla": "ons 4 nov",
+     "qty": "1 burk"
+    }
+   ]
   },
   {
    "namn": "Torrjäst",
    "kat": "Skafferi",
-   "start": "inget",
-   "kop": "v1: 1 förp",
-   "anm": ""
+   "anm": "",
+   "harHemma": null,
+   "kop": [
+    {
+     "vecka": "45–46",
+     "handla": "ons 4 nov",
+     "qty": "1 förp"
+    }
+   ]
   },
   {
    "namn": "Tortillabröd",
    "kat": "Skafferi",
-   "start": "8 st",
-   "kop": "v3: 1 förp (8 st)",
-   "anm": ""
+   "anm": "",
+   "harHemma": "8 st",
+   "kop": [
+    {
+     "vecka": "47–48",
+     "handla": "ons 18 nov",
+     "qty": "1 förp (8 st)"
+    }
+   ]
   },
   {
    "namn": "Vetemjöl",
    "kat": "Skafferi",
-   "start": "inget",
-   "kop": "v1: 1 kg",
-   "anm": ""
+   "anm": "",
+   "harHemma": null,
+   "kop": [
+    {
+     "vecka": "45–46",
+     "handla": "ons 4 nov",
+     "qty": "1 kg"
+    }
+   ]
   }
  ],
  "recept": [

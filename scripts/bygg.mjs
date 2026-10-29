@@ -133,10 +133,9 @@ for (let w = 0; w * NV < dagar.length; w++) {
 }
 
 const skafferi = Object.keys(K).filter((key) => K[key].lagra).map((key) => ({
-  namn: K[key].n, kat: K[key].k,
-  start: K[key].start ? fmtMangd(K[key], K[key].start) : 'inget',
-  kop: (kopt[key] || []).map((x) => `v${x.vecka}: ${x.qty}`).join(', ') || 'behöver inte köpas',
-  anm: K[key].anm || ''
+  namn: K[key].n, kat: K[key].k, anm: K[key].anm || '',
+  harHemma: K[key].start ? fmtMangd(K[key], K[key].start) : null,
+  kop: (kopt[key] || []).map((x) => ({ vecka: veckor[x.vecka - 1].veckonr, handla: dagNamn(veckor[x.vecka - 1].fran), qty: x.qty }))
 })).sort((a, b) => a.kat.localeCompare(b.kat, 'sv') || a.namn.localeCompare(b.namn, 'sv'));
 
 const recept = Object.entries(RECEPT).map(([id, r]) => ({

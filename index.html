@@ -79,6 +79,7 @@ table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
 th, td { text-align: left; padding: 8px 12px; border-top: 1px solid var(--line); vertical-align: top; }
 tr:first-child th, tr:first-child td { border-top: 0; }
 .dim { color: var(--muted); }
+.srow { padding: 10px 14px; }
 .intro { color: var(--muted); font-size: 0.92rem; margin: 12px 0 0; }
 @media (prefers-reduced-motion: reduce) { .bar i { transition: none; } }
 </style>
@@ -209,11 +210,32 @@ function recept(main) {
 }
 
 function skafferi(main) {
-  main.append(el('p', 'intro', 'Basvaror och frysvaror köps bara när skafferiet inte räcker, så du får inga dubletter. Lagret är en uppskattning efter veckan som slutar tis 3 nov. Stämmer det inte, räkna om i huvudet och hoppa över eller lägg till på listan.'));
-  const wrap = el('div', 'table'); const t = el('table');
-  const head = el('tr'); ['Vara', 'Har hemma nu', 'Köps'].forEach((h) => head.append(el('th', '', h))); t.append(head);
-  plan.skafferi.forEach((s) => { const tr = el('tr'); tr.append(el('td', '', s.namn), el('td', 'dim', s.start), el('td', '', s.kop)); t.append(tr); });
-  wrap.append(t); main.append(wrap);
+  main.append(el('p', 'intro', 'Här ser du vad du redan har hemma och vad som behöver köpas när. Basvaror och frysvaror står bara på inköpslistan den vecka de faktiskt tar slut, så du köper dem inte i onödan. Mängderna du har hemma är en uppskattning, så kolla i skafferiet och hoppa över eller lägg till på listan om det inte stämmer.'));
+  const grupper = [
+    ['Du har redan, köp inte', 'Räcker hela de fem veckorna.', (s) => s.harHemma && !s.kop.length],
+    ['Köps nästan varje vecka', 'Går åt snabbt och står med på de flesta inköpslistor.', (s) => s.kop.length >= 3],
+    ['Du har lite hemma, köp mer senare', 'Räcker ett tag. Köp mer när det står på listan.', (s) => s.harHemma && s.kop.length && s.kop.length < 3],
+    ['Du har inget hemma, köp', 'Står på inköpslistan den vecka som anges.', (s) => !s.harHemma && s.kop.length && s.kop.length < 3],
+    ['Inget behövs', 'Används inte i planen.', (s) => !s.harHemma && !s.kop.length]
+  ];
+  grupper.forEach(([rubrik, text, test]) => {
+    const rader = plan.skafferi.filter(test);
+    if (!rader.length) return;
+    main.append(el('h2', 'sec', rubrik), el('p', 'intro', text));
+    const ul = el('ul', 'items');
+    rader.forEach((s) => {
+      const li = el('li'); const row = el('div', 'srow');
+      const t = el('div', 'txt'); t.append(el('span', 'name', s.namn));
+      const rad = [];
+      if (s.harHemma) rad.push('Har hemma: ca ' + s.harHemma);
+      s.kop.forEach((k) => rad.push('Köp ' + k.qty + ' vecka ' + k.vecka + ' (handla ' + k.handla + ')'));
+      if (!rad.length) rad.push('Behöver inte köpas');
+      rad.forEach((r) => t.append(el('span', 'note', r)));
+      if (s.anm) t.append(el('span', 'note', s.anm));
+      row.append(t); li.append(row); ul.append(li);
+    });
+    main.append(ul);
+  });
 }
 
 window.addEventListener('hashchange', () => { const h = location.hash.slice(1); if (plan && h !== flik && (h === 'recept' || h === 'skafferi' || /^v\d$/.test(h))) visa(h, false); });
