@@ -132,6 +132,14 @@ for (let w = 0; w * NV < dagar.length; w++) {
   });
 }
 
+// Recept per vecka: middagar, plus bröd/andra recept från särskilda dagar (bröd förbereds veckan innan).
+veckor.forEach((v, w) => {
+  const ids = new Set();
+  v.dagar.forEach((d) => { if (d.middag.recept) ids.add(d.middag.recept); [].concat(OVERRIDE[d.datum]?.recept || []).forEach((id) => ids.add(id)); });
+  tidigare.filter((t) => t.vecka === w).forEach((t) => [].concat(t.ov.recept || []).forEach((id) => ids.add(id)));
+  v.recept = [...ids];
+});
+
 const skafferi = Object.keys(K).filter((key) => K[key].lagra).map((key) => ({
   namn: K[key].n, kat: K[key].k, anm: K[key].anm || '',
   harHemma: K[key].start ? fmtMangd(K[key], K[key].start) : null,

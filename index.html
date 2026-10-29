@@ -171,11 +171,14 @@ function vecka(v, main) {
     const dl = el('dl');
     [['Frukost', d.frukost], ...(d.lunch ? [['Lunch', d.lunch]] : []), ['Mellanmål', d.mellis]].forEach(([a, b]) => { dl.append(el('dt', '', a), el('dd', '', b)); });
     dl.append(el('dt', '', 'Middag'));
-    const dd = el('dd'); const a = d.middag.recept ? el('a', '', d.middag.namn) : el('span', '', d.middag.namn); if (d.middag.recept) a.href = '#recept'; if (d.middag.recept) a.addEventListener('click', (e) => { e.preventDefault(); visa('recept', false); const t = document.getElementById('r-' + d.middag.recept); if (t) t.scrollIntoView(); });
+    const dd = el('dd'); const a = d.middag.recept ? el('a', '', d.middag.namn) : el('span', '', d.middag.namn); if (d.middag.recept) a.href = '#recept'; if (d.middag.recept) a.addEventListener('click', (e) => { e.preventDefault(); const t = document.getElementById('r-' + d.middag.recept); if (t) t.scrollIntoView(); });
     dd.append(a); if (d.middag.port) dd.append(el('span', 'tag', ' · ' + d.middag.port)); dl.append(dd); k.append(dl);
     if (d.extra) [].concat(d.extra).forEach((x) => k.append(el('div', 'godis', x)));
     main.append(k);
   });
+  main.append(el('h2', 'sec', 'Recept den här veckan'));
+  main.append(el('p', 'intro', 'Alla recept gäller 2 portioner (du + Noah). Planen skalar upp eller ner automatiskt.'));
+  (v.recept || []).forEach((id) => { const r = plan.recept.find((x) => x.id === id); if (r) main.append(receptKort(r)); });
   uppdatera(v);
 }
 
@@ -195,18 +198,20 @@ function uppdatera(v) {
   $('#fill').style.width = (tot ? klar / tot * 100 : 0) + '%';
 }
 
+function receptKort(r) {
+  const a = el('article', 'recipe'); a.id = 'r-' + r.id;
+  a.append(el('h3', '', r.namn), el('p', 'meta', r.tid + (r.fisk ? ' · fisk' : '')));
+  a.append(el('h4', '', 'Ingredienser'));
+  const ul = el('ul'); r.ingr.forEach((i) => ul.append(el('li', '', `${i.mangd} ${i.namn.toLowerCase()}`))); a.append(ul);
+  a.append(el('h4', '', 'Gör så här'));
+  const ol = el('ol'); r.steg.forEach((s) => ol.append(el('li', '', s))); a.append(ol);
+  if (r.tips) a.append(el('p', 'tip', r.tips));
+  return a;
+}
+
 function recept(main) {
   main.append(el('p', 'intro', 'Alla recept gäller 2 portioner (du + Noah). Planen skalar upp eller ner automatiskt.'));
-  plan.recept.forEach((r) => {
-    const a = el('article', 'recipe'); a.id = 'r-' + r.id;
-    a.append(el('h3', '', r.namn), el('p', 'meta', r.tid + (r.fisk ? ' · fisk' : '')));
-    a.append(el('h4', '', 'Ingredienser'));
-    const ul = el('ul'); r.ingr.forEach((i) => ul.append(el('li', '', `${i.mangd} ${i.namn.toLowerCase()}`))); a.append(ul);
-    a.append(el('h4', '', 'Gör så här'));
-    const ol = el('ol'); r.steg.forEach((s) => ol.append(el('li', '', s))); a.append(ol);
-    if (r.tips) a.append(el('p', 'tip', r.tips));
-    main.append(a);
-  });
+  plan.recept.forEach((r) => main.append(receptKort(r)));
 }
 
 function skafferi(main) {

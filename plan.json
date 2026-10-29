@@ -473,6 +473,14 @@
      "namn": "Tortillabröd",
      "text": "räcker (kvar ca 2 st)"
     }
+   ],
+   "recept": [
+    "omelett",
+    "chili",
+    "lax",
+    "wok",
+    "tacos",
+    "brod"
    ]
   },
   {
@@ -865,6 +873,13 @@
      "namn": "Popcornmajs",
      "text": "räcker (kvar ca 180 g)"
     }
+   ],
+   "recept": [
+    "torsk",
+    "brod",
+    "pastasas",
+    "laxpasta",
+    "linssoppa"
    ]
   },
   {
@@ -1274,6 +1289,14 @@
      "namn": "Salt-reducerad soja",
      "text": "räcker (kvar ca 155 ml)"
     }
+   ],
+   "recept": [
+    "lar",
+    "bullar",
+    "laxpasta",
+    "curry",
+    "pizza",
+    "wok"
    ]
   },
   {
@@ -1673,6 +1696,13 @@
      "namn": "Ris",
      "text": "räcker (kvar ca 525 g)"
     }
+   ],
+   "recept": [
+    "omelett",
+    "lax",
+    "pastasas",
+    "laxpasta",
+    "chili"
    ]
   },
   {
@@ -2052,6 +2082,13 @@
      "namn": "Ris",
      "text": "räcker (kvar ca 450 g)"
     }
+   ],
+   "recept": [
+    "chili",
+    "omelett",
+    "torsk",
+    "lar",
+    "bullar"
    ]
   }
  ],
