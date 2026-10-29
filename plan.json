@@ -404,6 +404,12 @@
        "namn": "Mörk choklad 70 %",
        "qty": "1 kaka",
        "anm": ""
+      },
+      {
+       "key": "tartljus",
+       "namn": "Tårtljus",
+       "qty": "1 förp",
+       "anm": ""
       }
      ]
     },
@@ -415,6 +421,17 @@
        "namn": "Läsk, öl eller mineralvatten (valfritt)",
        "qty": "1 förp",
        "anm": "Till spelkvällen med Dennis."
+      }
+     ]
+    },
+    {
+     "kat": "Köps på ICA",
+     "rader": [
+      {
+       "key": "princess",
+       "namn": "Princesstårta",
+       "qty": "1 st",
+       "anm": "Köps på ICA. Hämta tis 10 nov eller på morgonen den 11:e. Beställ i förväg om de kräver det."
       }
      ]
     }
@@ -470,7 +487,7 @@
      "datum": "2026-11-11",
      "dag": "ons 11 nov",
      "noah": true,
-     "med": "Du + Noah + Dennis (Dennis åker efter lunch)",
+     "med": "Du + Dennis, Noah hämtas från förskolan på eftermiddagen",
      "lunch": "Smörgåsar med nybakat bröd, ost, kalkon och hummus",
      "frukost": "God frukost hemma: äggröra, avokadotoast, yoghurt med bär och müsli",
      "mellis": "Päron eller banan i bitar",
@@ -480,7 +497,10 @@
       "namn": "Ugnstorsk med rotfrukter",
       "port": "3 portioner (en blir rester)"
      },
-     "extra": "Du bakar bröd (recept: Lätt bröd utan knådning)"
+     "extra": [
+      "Du bakar bröd (recept: Lätt bröd utan knådning)",
+      "Du fyller år! Princesstårta (köpt på ICA) med Noah på eftermiddagen"
+     ]
     },
     {
      "datum": "2026-11-12",

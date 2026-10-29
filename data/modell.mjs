@@ -5,7 +5,7 @@
 
 const F = 'Frukt & grönt', M = 'Kött & fisk', D = 'Mejeri & ägg', S = 'Skafferi', B = 'Bröd', Fr = 'Fryst', G = 'Godis & snacks';
 
-export const KATEGORIER = [F, M, D, S, B, Fr, G, 'Dryck'];
+export const KATEGORIER = [F, M, D, S, B, Fr, G, 'Dryck', 'Köps på ICA'];
 
 export const K = {
   banan: { n: 'Bananer', k: F, e: 'st', p: 6, pt: ['klase', 'klasar'] },
@@ -75,6 +75,8 @@ export const K = {
   choklad: { n: 'Mörk choklad 70 %', k: G, e: 'g', p: 100, pt: ['kaka', 'kakor'] },
   dippmix: { n: 'Dippmix (t.ex. gräddfil/lök)', k: G, e: 'förp', p: 1 },
   dryck: { n: 'Läsk, öl eller mineralvatten (valfritt)', k: 'Dryck', e: 'förp', p: 1, anm: 'Till spelkvällen med Dennis.' },
+  princess: { n: 'Princesstårta', k: 'Köps på ICA', e: 'st', p: 1, anm: 'Köps på ICA. Hämta tis 10 nov eller på morgonen den 11:e. Beställ i förväg om de kräver det.' },
+  tartljus: { n: 'Tårtljus', k: G, e: 'förp', p: 1 },
   chips: { n: 'Chips', k: G, e: 'förp', p: 1 }
 };
 
@@ -201,13 +203,13 @@ export const OVERRIDE = {
     extraPersoner: 0
   },
   '2026-11-11': {
-    med: 'Du + Noah + Dennis (Dennis åker efter lunch)',
+    med: 'Du + Dennis, Noah hämtas från förskolan på eftermiddagen',
     frukost: 'God frukost hemma: äggröra, avokadotoast, yoghurt med bär och müsli',
     lunch: 'Smörgåsar med nybakat bröd, ost, kalkon och hummus',
-    extra: 'Du bakar bröd (recept: Lätt bröd utan knådning)',
+    extra: ['Du bakar bröd (recept: Lätt bröd utan knådning)', 'Du fyller år! Princesstårta (köpt på ICA) med Noah på eftermiddagen'],
     recept: 'brod',
     extraPersoner: 1,
     kopTidigare: true,
-    ingr: [['agg', 4], ['avokado', 2], ['tomat', 150], ['yoghurt', 200], ['bar', 100], ['brod', 6], ['ost', 100], ['kalkon', 60], ['hummus', 100], ['gurka', 1]]
+    ingr: [['agg', 4], ['avokado', 2], ['tomat', 150], ['yoghurt', 200], ['bar', 100], ['brod', 6], ['ost', 100], ['kalkon', 60], ['hummus', 100], ['gurka', 1], ['princess', 1], ['tartljus', 1]]
   }
 };

@@ -39,7 +39,7 @@ const NV = 7;
 function ovVaror(need, ov) {
   Object.entries(DAG).forEach(([key, q]) => lagg(need, key, q * (ov.extraPersoner || 0)));
   (ov.ingr || []).forEach(([key, q]) => lagg(need, key, q));
-  if (ov.recept) RECEPT[ov.recept].ingr.forEach(([key, q]) => lagg(need, key, q));
+  [].concat(ov.recept || []).forEach((id) => RECEPT[id].ingr.forEach(([key, q]) => lagg(need, key, q)));
 }
 const tidigare = Object.entries(OVERRIDE).filter(([, ov]) => ov.kopTidigare).map(([datum, ov]) => {
   const idx = dagar.findIndex((d) => d.datum === datum);
