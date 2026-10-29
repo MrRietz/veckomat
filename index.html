@@ -112,7 +112,7 @@ async function start() {
   try { plan = await (await fetch('plan.json', { cache: 'no-cache' })).json(); }
   catch (e) { $('#main').replaceChildren(el('p', 'intro', 'Kunde inte läsa plan.json. Öppna sidan via GitHub Pages eller en lokal server.')); return; }
   const nav = $('#nav');
-  plan.veckor.forEach((v) => nav.append(tab('v' + v.vecka, 'Vecka ' + v.vecka)));
+  plan.veckor.forEach((v) => nav.append(tab('v' + v.vecka, 'V' + v.veckonr)));
   nav.append(tab('recept', 'Recept'), tab('skafferi', 'Skafferi'));
   $('#sub').textContent = `${plan.veckor[0].rubrik.split(' till ')[0]} till ${plan.veckor[plan.veckor.length - 1].rubrik.split(' till ')[1]} · frukost, mellanmål och middag för dig och Noah`;
   const h = location.hash.slice(1);
@@ -134,7 +134,7 @@ function visa(id, scroll) {
 }
 
 function vecka(v, main) {
-  main.append(el('p', 'intro', `${v.rubrik}. Handla första dagen. ${v.noahDagar} dagar med Noah.`));
+  main.append(el('p', 'intro', `Vecka ${v.veckonr}: ${v.rubrik}. Handla första dagen. ${v.noahDagar} dagar med Noah.`));
   const tools = el('div', 'tools');
   const hide = el('button', 'btn', dolj ? 'Visa avbockade' : 'Dölj avbockade'); hide.setAttribute('aria-pressed', String(dolj));
   hide.addEventListener('click', () => { dolj = !dolj; lsSet('veckomat:v1:dolj', dolj ? '1' : '0'); hide.textContent = dolj ? 'Visa avbockade' : 'Dölj avbockade'; hide.setAttribute('aria-pressed', String(dolj)); uppdatera(v); });

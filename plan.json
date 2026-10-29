@@ -3,6 +3,7 @@
  "veckor": [
   {
    "vecka": 1,
+   "veckonr": "45–46",
    "fran": "2026-11-04",
    "till": "2026-11-10",
    "rubrik": "ons 4 nov till tis 10 nov",
@@ -409,6 +410,7 @@
   },
   {
    "vecka": 2,
+   "veckonr": "46–47",
    "fran": "2026-11-11",
    "till": "2026-11-17",
    "rubrik": "ons 11 nov till tis 17 nov",
@@ -781,6 +783,7 @@
   },
   {
    "vecka": 3,
+   "veckonr": "47–48",
    "fran": "2026-11-18",
    "till": "2026-11-24",
    "rubrik": "ons 18 nov till tis 24 nov",
@@ -1169,6 +1172,7 @@
   },
   {
    "vecka": 4,
+   "veckonr": "48–49",
    "fran": "2026-11-25",
    "till": "2026-12-01",
    "rubrik": "ons 25 nov till tis 1 dec",
@@ -1553,6 +1557,7 @@
   },
   {
    "vecka": 5,
+   "veckonr": "49–50",
    "fran": "2026-12-02",
    "till": "2026-12-08",
    "rubrik": "ons 2 dec till tis 8 dec",

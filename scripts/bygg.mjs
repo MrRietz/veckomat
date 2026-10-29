@@ -12,6 +12,13 @@ const MANAD = ['jan', 'feb', 'mars', 'apr', 'maj', 'juni', 'juli', 'aug', 'sep',
 const EPS = 1e-9;
 
 const dagNamn = (iso) => { const d = new Date(iso + 'T12:00:00'); return `${VECKODAG[d.getDay()]} ${d.getDate()} ${MANAD[d.getMonth()]}`; };
+const isoVecka = (iso) => {
+  const d = new Date(iso + 'T12:00:00');
+  const dag = (d.getDay() + 6) % 7;
+  d.setDate(d.getDate() - dag + 3);
+  const jan4 = new Date(d.getFullYear(), 0, 4, 12);
+  return 1 + Math.round(((d - jan4) / 86400000 - 3 + ((jan4.getDay() + 6) % 7)) / 7);
+};
 const lagg = (need, key, q) => { if (!K[key]) throw new Error('Okänd vara: ' + key); need[key] = (need[key] || 0) + q; };
 
 function fmt(k, n) {
@@ -100,7 +107,7 @@ for (let w = 0; w * NV < dagar.length; w++) {
   });
   const lista = KATEGORIER.filter((c) => rader[c]).map((c) => ({ kat: c, rader: rader[c].sort((a, b) => a.namn.localeCompare(b.namn, 'sv')) }));
   veckor.push({
-    vecka: w + 1, fran: slice[0].datum, till: slice[slice.length - 1].datum,
+    vecka: w + 1, veckonr: (() => { const a = isoVecka(slice[0].datum), c = isoVecka(slice[slice.length - 1].datum); return a === c ? `${a}` : `${a}–${c}`; })(), fran: slice[0].datum, till: slice[slice.length - 1].datum,
     rubrik: `${dagNamn(slice[0].datum)} till ${dagNamn(slice[slice.length - 1].datum)}`,
     noahDagar: slice.filter((d) => d.hos === 'Pappa').length, dagar: dagKort, lista, hemma
   });
