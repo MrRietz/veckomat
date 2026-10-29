@@ -61,6 +61,8 @@ export const K = {
   musli: { n: 'Osockrad müsli', k: S, e: 'g', p: 500, lagra: true, start: 250 },
   knacke: { n: 'Knäckebröd', k: S, e: 'g', p: 250, pt: ['förp', 'förp'], lagra: true, start: 150 },
   tortilla: { n: 'Tortillabröd', k: S, e: 'st', p: 8, pt: ['förp (8 st)', 'förp (8 st)'], lagra: true, start: 8 },
+  mjol: { n: 'Vetemjöl', k: S, e: 'g', p: 1000, lagra: true },
+  torrjast: { n: 'Torrjäst', k: S, e: 'förp', p: 1, lagra: true },
   popcorn: { n: 'Popcornmajs', k: S, e: 'g', p: 500, lagra: true },
 
   brod: { n: 'Fullkornsbröd', k: B, e: 'skivor', p: 20, pt: ['limpa', 'limpor'] },
@@ -168,6 +170,12 @@ export const RECEPT = {
     ingr: [['kidney', 1], ['majs', 1], ['krossade', 400], ['paprika', 1], ['lok', 80], ['morot', 100], ['vitlok', 2], ['ris', 150], ['rivost', 40], ['cf', 50]],
     steg: ['Koka riset.', 'Fräs lök, vitlök och tärnad paprika och morot.', 'Tillsätt tomater, bönor och majs och sjud 20 min.', 'Servera med ris, ost och crème fraiche.']
   },
+  brod: {
+    namn: 'Lätt bröd utan knådning', tid: '15 min + 12 tim jäsning + 45 min i ugnen',
+    ingr: [['mjol', 500], ['torrjast', 0.1]],
+    steg: ['Blanda 500 g vetemjöl, 1 tsk salt och en nypa torrjäst i en skål.', 'Rör ner 4 dl kallt vatten till en kladdig deg. Låt jäsa täckt 12 timmar (kvällen innan eller på morgonen).', 'Ugn 240 °C med en gjutjärnsgryta eller ugnsfast form inuti. Vänd ut degen på mjölad bänk, vik ihop och lägg i den heta grytan.', 'Grädda med lock 30 min och utan lock 15 min tills brödet är gyllene.'],
+    tips: 'Vill du ha det på lördagsmorgonen: rör ihop degen på kvällen.'
+  },
   omelett: {
     namn: 'Omelett med grönsaker', tid: '15 min', solo: true, rester: false,
     ingr: [['agg', 5], ['paprika', 0.5], ['tomat', 100], ['spenat', 40], ['rivost', 40], ['brod', 4], ['gurka', 0.5]],
@@ -179,3 +187,24 @@ export const RECEPT = {
 export const HUVUD = ['lax', 'wok', 'tacos', 'torsk', 'pastasas', 'linssoppa', 'lar', 'bullar', 'laxpasta', 'curry', 'pizza', 'lax', 'pastasas', 'chili', 'torsk', 'lar', 'bullar'];
 // Enkla middagar för dig när Noah inte är hos dig (halv portion).
 export const SOLO = ['omelett', 'chili', 'laxpasta', 'wok', 'omelett', 'pastasas', 'laxpasta'];
+
+// Särskilda dagar. extraPersoner läggs på frukost/mellanmål, ingr är extra varor den dagen.
+export const OVERRIDE = {
+  '2026-11-10': {
+    med: 'Du + Dennis',
+    lunch: 'Thaibuffé med Dennis',
+    middag: { typ: 'ute', recept: null, namn: 'Middag ute med Dennis', port: '' },
+    extra: 'Rör ihop brödsmeten innan ni går ut, så jäser den över natten till onsdag (recept: Lätt bröd utan knådning)',
+    extraPersoner: 0
+  },
+  '2026-11-11': {
+    med: 'Du + Noah + Dennis (Dennis åker efter lunch)',
+    frukost: 'God frukost hemma: äggröra, avokadotoast, yoghurt med bär och müsli',
+    lunch: 'Smörgåsar med nybakat bröd, ost, kalkon och hummus',
+    extra: 'Du bakar bröd (recept: Lätt bröd utan knådning)',
+    recept: 'brod',
+    extraPersoner: 1,
+    kopTidigare: true,
+    ingr: [['agg', 4], ['avokado', 2], ['tomat', 150], ['yoghurt', 200], ['bar', 100], ['brod', 6], ['ost', 100], ['kalkon', 60], ['hummus', 100], ['gurka', 1]]
+  }
+};

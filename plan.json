@@ -13,6 +13,8 @@
      "datum": "2026-11-04",
      "dag": "ons 4 nov",
      "noah": false,
+     "med": null,
+     "lunch": null,
      "frukost": "Havregrynsgröt med banan och bär",
      "mellis": "Päron eller banan i bitar",
      "middag": {
@@ -27,6 +29,8 @@
      "datum": "2026-11-05",
      "dag": "tors 5 nov",
      "noah": false,
+     "med": null,
+     "lunch": null,
      "frukost": "Turkisk yoghurt med müsli och bär",
      "mellis": "Hummus med gurka och riven morot",
      "middag": {
@@ -41,6 +45,8 @@
      "datum": "2026-11-06",
      "dag": "fre 6 nov",
      "noah": true,
+     "med": null,
+     "lunch": null,
      "frukost": "Smörgås med ost, gurka och ägg",
      "mellis": "Keso eller kvarg med bär",
      "middag": {
@@ -55,6 +61,8 @@
      "datum": "2026-11-07",
      "dag": "lör 7 nov",
      "noah": true,
+     "med": null,
+     "lunch": null,
      "frukost": "Äggröra på fullkornsbröd",
      "mellis": "Ostbitar med knäckebröd",
      "middag": {
@@ -69,6 +77,8 @@
      "datum": "2026-11-08",
      "dag": "sön 8 nov",
      "noah": true,
+     "med": null,
+     "lunch": null,
      "frukost": "Turkisk yoghurt med müsli och bär",
      "mellis": "Äppelklyftor med yoghurt och kanel",
      "middag": {
@@ -83,6 +93,8 @@
      "datum": "2026-11-09",
      "dag": "mån 9 nov",
      "noah": false,
+     "med": null,
+     "lunch": null,
      "frukost": "Havregrynsgröt med honung och äpple",
      "mellis": "Yoghurt med bär",
      "middag": {
@@ -97,15 +109,17 @@
      "datum": "2026-11-10",
      "dag": "tis 10 nov",
      "noah": false,
+     "med": "Du + Dennis",
+     "lunch": "Thaibuffé med Dennis",
      "frukost": "Smörgås med kalkon och avokado",
      "mellis": "Gurka och tunna morotsstavar med hummus",
      "middag": {
-      "typ": "solo",
-      "recept": "laxpasta",
-      "namn": "Pasta med lax och spenat",
-      "port": "1 portion (halva receptet)"
+      "typ": "ute",
+      "recept": null,
+      "namn": "Middag ute med Dennis",
+      "port": ""
      },
-     "extra": null
+     "extra": "Rör ihop brödsmeten innan ni går ut, så jäser den över natten till onsdag (recept: Lätt bröd utan knådning)"
     }
    ],
    "lista": [
@@ -115,7 +129,7 @@
       {
        "key": "avokado",
        "namn": "Avokado",
-       "qty": "2 st",
+       "qty": "4 st",
        "anm": ""
       },
       {
@@ -145,7 +159,7 @@
       {
        "key": "gurka",
        "namn": "Gurka",
-       "qty": "4 st",
+       "qty": "5 st",
        "anm": ""
       },
       {
@@ -198,7 +212,7 @@
       {
        "key": "kalkon",
        "namn": "Kalkonpålägg",
-       "qty": "2 förp",
+       "qty": "3 förp",
        "anm": ""
       },
       {
@@ -227,13 +241,13 @@
       {
        "key": "cf",
        "namn": "Crème fraiche",
-       "qty": "400 g",
+       "qty": "200 g",
        "anm": ""
       },
       {
        "key": "hummus",
        "namn": "Hummus",
-       "qty": "400 g",
+       "qty": "600 g",
        "anm": ""
       },
       {
@@ -324,6 +338,18 @@
        "namn": "Tacosås",
        "qty": "1 burk",
        "anm": ""
+      },
+      {
+       "key": "torrjast",
+       "namn": "Torrjäst",
+       "qty": "1 förp",
+       "anm": ""
+      },
+      {
+       "key": "mjol",
+       "namn": "Vetemjöl",
+       "qty": "1 kg",
+       "anm": ""
       }
      ]
     },
@@ -333,7 +359,7 @@
       {
        "key": "brod",
        "namn": "Fullkornsbröd",
-       "qty": "1 limpa",
+       "qty": "2 limpor",
        "anm": ""
       }
      ]
@@ -364,19 +390,19 @@
    "hemma": [
     {
      "namn": "Osockrad müsli",
-     "text": "räcker (kvar ca 30 g)"
+     "text": "räcker (kvar ca 5 g)"
     },
     {
      "namn": "Havregryn",
-     "text": "räcker (kvar ca 636 g)"
+     "text": "räcker (kvar ca 606 g)"
     },
     {
      "namn": "Honung",
-     "text": "räcker (kvar ca 206 g)"
+     "text": "räcker (kvar ca 201 g)"
     },
     {
      "namn": "Smör",
-     "text": "räcker (kvar ca 262 g)"
+     "text": "räcker (kvar ca 252 g)"
     },
     {
      "namn": "Gul lök",
@@ -397,14 +423,6 @@
     {
      "namn": "Tortillabröd",
      "text": "räcker (kvar ca 2 st)"
-    },
-    {
-     "namn": "Fullkornspasta",
-     "text": "räcker (kvar ca 170 g)"
-    },
-    {
-     "namn": "Frysta ärtor",
-     "text": "räcker (kvar ca 375 g)"
     }
    ]
   },
@@ -420,7 +438,9 @@
      "datum": "2026-11-11",
      "dag": "ons 11 nov",
      "noah": true,
-     "frukost": "Havregrynsgröt med banan och bär",
+     "med": "Du + Noah + Dennis (Dennis åker efter lunch)",
+     "lunch": "Smörgåsar med nybakat bröd, ost, kalkon och hummus",
+     "frukost": "God frukost hemma: äggröra, avokadotoast, yoghurt med bär och müsli",
      "mellis": "Päron eller banan i bitar",
      "middag": {
       "typ": "recept",
@@ -428,12 +448,14 @@
       "namn": "Ugnstorsk med rotfrukter",
       "port": "3 portioner (en blir rester)"
      },
-     "extra": null
+     "extra": "Du bakar bröd (recept: Lätt bröd utan knådning)"
     },
     {
      "datum": "2026-11-12",
      "dag": "tors 12 nov",
      "noah": false,
+     "med": null,
+     "lunch": null,
      "frukost": "Turkisk yoghurt med müsli och bär",
      "mellis": "Hummus med gurka och riven morot",
      "middag": {
@@ -448,6 +470,8 @@
      "datum": "2026-11-13",
      "dag": "fre 13 nov",
      "noah": true,
+     "med": null,
+     "lunch": null,
      "frukost": "Smörgås med ost, gurka och ägg",
      "mellis": "Keso eller kvarg med bär",
      "middag": {
@@ -462,6 +486,8 @@
      "datum": "2026-11-14",
      "dag": "lör 14 nov",
      "noah": false,
+     "med": null,
+     "lunch": null,
      "frukost": "Äggröra på fullkornsbröd",
      "mellis": "Ostbitar med knäckebröd",
      "middag": {
@@ -476,12 +502,14 @@
      "datum": "2026-11-15",
      "dag": "sön 15 nov",
      "noah": false,
+     "med": null,
+     "lunch": null,
      "frukost": "Turkisk yoghurt med müsli och bär",
      "mellis": "Äppelklyftor med yoghurt och kanel",
      "middag": {
       "typ": "solo",
-      "recept": "wok",
-      "namn": "Kycklingwok med ris",
+      "recept": "laxpasta",
+      "namn": "Pasta med lax och spenat",
       "port": "1 portion (halva receptet)"
      },
      "extra": null
@@ -490,6 +518,8 @@
      "datum": "2026-11-16",
      "dag": "mån 16 nov",
      "noah": true,
+     "med": null,
+     "lunch": null,
      "frukost": "Havregrynsgröt med honung och äpple",
      "mellis": "Yoghurt med bär",
      "middag": {
@@ -504,6 +534,8 @@
      "datum": "2026-11-17",
      "dag": "tis 17 nov",
      "noah": false,
+     "med": null,
+     "lunch": null,
      "frukost": "Smörgås med kalkon och avokado",
      "mellis": "Gurka och tunna morotsstavar med hummus",
      "middag": {
@@ -519,6 +551,12 @@
     {
      "kat": "Frukt & grönt",
      "rader": [
+      {
+       "key": "spenat",
+       "namn": "Babyspenat",
+       "qty": "1 påse",
+       "anm": ""
+      },
       {
        "key": "banan",
        "namn": "Bananer",
@@ -547,12 +585,6 @@
        "key": "morot",
        "namn": "Morötter",
        "qty": "1 kg",
-       "anm": ""
-      },
-      {
-       "key": "paprika",
-       "namn": "Paprika",
-       "qty": "1 st",
        "anm": ""
       },
       {
@@ -591,9 +623,9 @@
        "anm": ""
       },
       {
-       "key": "kyckling",
-       "namn": "Kycklingfilé",
-       "qty": "600 g",
+       "key": "lax",
+       "namn": "Laxfilé",
+       "qty": "500 g",
        "anm": ""
       },
       {
@@ -607,6 +639,12 @@
     {
      "kat": "Mejeri & ägg",
      "rader": [
+      {
+       "key": "cf",
+       "namn": "Crème fraiche",
+       "qty": "200 g",
+       "anm": ""
+      },
       {
        "key": "hummus",
        "namn": "Hummus",
@@ -632,9 +670,21 @@
        "anm": ""
       },
       {
+       "key": "ost",
+       "namn": "Ostbit till mackor",
+       "qty": "400 g",
+       "anm": ""
+      },
+      {
        "key": "yoghurt",
        "namn": "Turkisk yoghurt",
        "qty": "2 burkar (1 kg)",
+       "anm": ""
+      },
+      {
+       "key": "agg",
+       "namn": "Ägg",
+       "qty": "1 förp (12 st)",
        "anm": ""
       }
      ]
@@ -729,27 +779,19 @@
    "hemma": [
     {
      "namn": "Havregryn",
-     "text": "räcker (kvar ca 372 g)"
-    },
-    {
-     "namn": "Ägg",
-     "text": "räcker (kvar ca 1,2 st)"
-    },
-    {
-     "namn": "Ostbit till mackor",
-     "text": "räcker (kvar ca 60 g)"
+     "text": "räcker (kvar ca 342 g)"
     },
     {
      "namn": "Honung",
-     "text": "räcker (kvar ca 162 g)"
+     "text": "räcker (kvar ca 157 g)"
     },
     {
      "namn": "Smör",
-     "text": "räcker (kvar ca 144 g)"
+     "text": "räcker (kvar ca 134 g)"
     },
     {
      "namn": "Knäckebröd",
-     "text": "räcker (kvar ca 48 g)"
+     "text": "räcker (kvar ca 28 g)"
     },
     {
      "namn": "Potatis",
@@ -757,7 +799,7 @@
     },
     {
      "namn": "Gul lök",
-     "text": "räcker (kvar ca 170 g)"
+     "text": "räcker (kvar ca 210 g)"
     },
     {
      "namn": "Frysta ärtor",
@@ -770,14 +812,6 @@
     {
      "namn": "Popcornmajs",
      "text": "räcker (kvar ca 340 g)"
-    },
-    {
-     "namn": "Salt-reducerad soja",
-     "text": "räcker (kvar ca 155 ml)"
-    },
-    {
-     "namn": "Ris",
-     "text": "räcker (kvar ca 900 g)"
     }
    ]
   },
@@ -793,6 +827,8 @@
      "datum": "2026-11-18",
      "dag": "ons 18 nov",
      "noah": true,
+     "med": null,
+     "lunch": null,
      "frukost": "Havregrynsgröt med banan och bär",
      "mellis": "Päron eller banan i bitar",
      "middag": {
@@ -807,6 +843,8 @@
      "datum": "2026-11-19",
      "dag": "tors 19 nov",
      "noah": false,
+     "med": null,
+     "lunch": null,
      "frukost": "Turkisk yoghurt med müsli och bär",
      "mellis": "Hummus med gurka och riven morot",
      "middag": {
@@ -821,6 +859,8 @@
      "datum": "2026-11-20",
      "dag": "fre 20 nov",
      "noah": true,
+     "med": null,
+     "lunch": null,
      "frukost": "Smörgås med ost, gurka och ägg",
      "mellis": "Keso eller kvarg med bär",
      "middag": {
@@ -835,6 +875,8 @@
      "datum": "2026-11-21",
      "dag": "lör 21 nov",
      "noah": true,
+     "med": null,
+     "lunch": null,
      "frukost": "Äggröra på fullkornsbröd",
      "mellis": "Ostbitar med knäckebröd",
      "middag": {
@@ -849,6 +891,8 @@
      "datum": "2026-11-22",
      "dag": "sön 22 nov",
      "noah": true,
+     "med": null,
+     "lunch": null,
      "frukost": "Turkisk yoghurt med müsli och bär",
      "mellis": "Äppelklyftor med yoghurt och kanel",
      "middag": {
@@ -863,6 +907,8 @@
      "datum": "2026-11-23",
      "dag": "mån 23 nov",
      "noah": true,
+     "med": null,
+     "lunch": null,
      "frukost": "Havregrynsgröt med honung och äpple",
      "mellis": "Yoghurt med bär",
      "middag": {
@@ -877,12 +923,14 @@
      "datum": "2026-11-24",
      "dag": "tis 24 nov",
      "noah": false,
+     "med": null,
+     "lunch": null,
      "frukost": "Smörgås med kalkon och avokado",
      "mellis": "Gurka och tunna morotsstavar med hummus",
      "middag": {
       "typ": "solo",
-      "recept": "omelett",
-      "namn": "Omelett med grönsaker",
+      "recept": "wok",
+      "namn": "Kycklingwok med ris",
       "port": "1 portion (halva receptet)"
      },
      "extra": null
@@ -895,7 +943,7 @@
       {
        "key": "spenat",
        "namn": "Babyspenat",
-       "qty": "2 påsar",
+       "qty": "1 påse",
        "anm": ""
       },
       {
@@ -976,6 +1024,12 @@
        "anm": ""
       },
       {
+       "key": "kyckling",
+       "namn": "Kycklingfilé",
+       "qty": "600 g",
+       "anm": ""
+      },
+      {
        "key": "kycklinglar",
        "namn": "Kycklinglårfilé",
        "qty": "700 g",
@@ -1029,12 +1083,6 @@
        "anm": ""
       },
       {
-       "key": "ost",
-       "namn": "Ostbit till mackor",
-       "qty": "400 g",
-       "anm": ""
-      },
-      {
        "key": "rivost",
        "namn": "Riven ost",
        "qty": "200 g",
@@ -1044,12 +1092,6 @@
        "key": "yoghurt",
        "namn": "Turkisk yoghurt",
        "qty": "2 burkar (1 kg)",
-       "anm": ""
-      },
-      {
-       "key": "agg",
-       "namn": "Ägg",
-       "qty": "1 förp (12 st)",
        "anm": ""
       }
      ]
@@ -1095,7 +1137,7 @@
       {
        "key": "brod",
        "namn": "Fullkornsbröd",
-       "qty": "2 limpor",
+       "qty": "1 limpa",
        "anm": ""
       }
      ]
@@ -1126,19 +1168,27 @@
    "hemma": [
     {
      "namn": "Osockrad müsli",
-     "text": "räcker (kvar ca 60 g)"
+     "text": "räcker (kvar ca 35 g)"
     },
     {
      "namn": "Havregryn",
-     "text": "räcker (kvar ca 42 g)"
+     "text": "räcker (kvar ca 12 g)"
+    },
+    {
+     "namn": "Ägg",
+     "text": "räcker (kvar ca 0,5 st)"
+    },
+    {
+     "namn": "Ostbit till mackor",
+     "text": "räcker (kvar ca 85 g)"
     },
     {
      "namn": "Honung",
-     "text": "räcker (kvar ca 112 g)"
+     "text": "räcker (kvar ca 107 g)"
     },
     {
      "namn": "Smör",
-     "text": "räcker (kvar ca 44 g)"
+     "text": "räcker (kvar ca 34 g)"
     },
     {
      "namn": "Gul lök",
@@ -1167,6 +1217,10 @@
     {
      "namn": "Mild currypulver",
      "text": "räcker (kvar ca 0,8 burk)"
+    },
+    {
+     "namn": "Salt-reducerad soja",
+     "text": "räcker (kvar ca 155 ml)"
     }
    ]
   },
@@ -1182,12 +1236,14 @@
      "datum": "2026-11-25",
      "dag": "ons 25 nov",
      "noah": false,
+     "med": null,
+     "lunch": null,
      "frukost": "Havregrynsgröt med banan och bär",
      "mellis": "Päron eller banan i bitar",
      "middag": {
       "typ": "solo",
-      "recept": "pastasas",
-      "namn": "Pasta med grönsaksrik köttfärssås",
+      "recept": "omelett",
+      "namn": "Omelett med grönsaker",
       "port": "1 portion (halva receptet)"
      },
      "extra": null
@@ -1196,6 +1252,8 @@
      "datum": "2026-11-26",
      "dag": "tors 26 nov",
      "noah": true,
+     "med": null,
+     "lunch": null,
      "frukost": "Turkisk yoghurt med müsli och bär",
      "mellis": "Hummus med gurka och riven morot",
      "middag": {
@@ -1210,6 +1268,8 @@
      "datum": "2026-11-27",
      "dag": "fre 27 nov",
      "noah": false,
+     "med": null,
+     "lunch": null,
      "frukost": "Smörgås med ost, gurka och ägg",
      "mellis": "Keso eller kvarg med bär",
      "middag": {
@@ -1224,12 +1284,14 @@
      "datum": "2026-11-28",
      "dag": "lör 28 nov",
      "noah": false,
+     "med": null,
+     "lunch": null,
      "frukost": "Äggröra på fullkornsbröd",
      "mellis": "Ostbitar med knäckebröd",
      "middag": {
       "typ": "solo",
-      "recept": "laxpasta",
-      "namn": "Pasta med lax och spenat",
+      "recept": "pastasas",
+      "namn": "Pasta med grönsaksrik köttfärssås",
       "port": "1 portion (halva receptet)"
      },
      "extra": "Lördagssnacks för dig: mörk choklad, popcorn och chips med yoghurtdipp"
@@ -1238,12 +1300,14 @@
      "datum": "2026-11-29",
      "dag": "sön 29 nov",
      "noah": false,
+     "med": null,
+     "lunch": null,
      "frukost": "Turkisk yoghurt med müsli och bär",
      "mellis": "Äppelklyftor med yoghurt och kanel",
      "middag": {
       "typ": "solo",
-      "recept": "omelett",
-      "namn": "Omelett med grönsaker",
+      "recept": "laxpasta",
+      "namn": "Pasta med lax och spenat",
       "port": "1 portion (halva receptet)"
      },
      "extra": null
@@ -1252,6 +1316,8 @@
      "datum": "2026-11-30",
      "dag": "mån 30 nov",
      "noah": true,
+     "med": null,
+     "lunch": null,
      "frukost": "Havregrynsgröt med honung och äpple",
      "mellis": "Yoghurt med bär",
      "middag": {
@@ -1266,6 +1332,8 @@
      "datum": "2026-12-01",
      "dag": "tis 1 dec",
      "noah": true,
+     "med": null,
+     "lunch": null,
      "frukost": "Smörgås med kalkon och avokado",
      "mellis": "Gurka och tunna morotsstavar med hummus",
      "middag": {
@@ -1527,7 +1595,15 @@
    "hemma": [
     {
      "namn": "Honung",
-     "text": "räcker (kvar ca 68 g)"
+     "text": "räcker (kvar ca 63 g)"
+    },
+    {
+     "namn": "Riven ost",
+     "text": "räcker (kvar ca 50 g)"
+    },
+    {
+     "namn": "Potatis",
+     "text": "räcker (kvar ca 350 g)"
     },
     {
      "namn": "Vitlök",
@@ -1536,14 +1612,6 @@
     {
      "namn": "Frysta ärtor",
      "text": "räcker (kvar ca 150 g)"
-    },
-    {
-     "namn": "Riven ost",
-     "text": "räcker (kvar ca 30 g)"
-    },
-    {
-     "namn": "Potatis",
-     "text": "räcker (kvar ca 350 g)"
     },
     {
      "namn": "Popcornmajs",
@@ -1567,6 +1635,8 @@
      "datum": "2026-12-02",
      "dag": "ons 2 dec",
      "noah": false,
+     "med": null,
+     "lunch": null,
      "frukost": "Havregrynsgröt med banan och bär",
      "mellis": "Päron eller banan i bitar",
      "middag": {
@@ -1581,12 +1651,14 @@
      "datum": "2026-12-03",
      "dag": "tors 3 dec",
      "noah": false,
+     "med": null,
+     "lunch": null,
      "frukost": "Turkisk yoghurt med müsli och bär",
      "mellis": "Hummus med gurka och riven morot",
      "middag": {
       "typ": "solo",
-      "recept": "chili",
-      "namn": "Mild bönchili med ris",
+      "recept": "omelett",
+      "namn": "Omelett med grönsaker",
       "port": "1 portion (halva receptet)"
      },
      "extra": null
@@ -1595,6 +1667,8 @@
      "datum": "2026-12-04",
      "dag": "fre 4 dec",
      "noah": true,
+     "med": null,
+     "lunch": null,
      "frukost": "Smörgås med ost, gurka och ägg",
      "mellis": "Keso eller kvarg med bär",
      "middag": {
@@ -1609,6 +1683,8 @@
      "datum": "2026-12-05",
      "dag": "lör 5 dec",
      "noah": true,
+     "med": null,
+     "lunch": null,
      "frukost": "Äggröra på fullkornsbröd",
      "mellis": "Ostbitar med knäckebröd",
      "middag": {
@@ -1623,6 +1699,8 @@
      "datum": "2026-12-06",
      "dag": "sön 6 dec",
      "noah": true,
+     "med": null,
+     "lunch": null,
      "frukost": "Turkisk yoghurt med müsli och bär",
      "mellis": "Äppelklyftor med yoghurt och kanel",
      "middag": {
@@ -1637,6 +1715,8 @@
      "datum": "2026-12-07",
      "dag": "mån 7 dec",
      "noah": false,
+     "med": null,
+     "lunch": null,
      "frukost": "Havregrynsgröt med honung och äpple",
      "mellis": "Yoghurt med bär",
      "middag": {
@@ -1651,12 +1731,14 @@
      "datum": "2026-12-08",
      "dag": "tis 8 dec",
      "noah": false,
+     "med": null,
+     "lunch": null,
      "frukost": "Smörgås med kalkon och avokado",
      "mellis": "Gurka och tunna morotsstavar med hummus",
      "middag": {
       "typ": "solo",
-      "recept": "laxpasta",
-      "namn": "Pasta med lax och spenat",
+      "recept": "chili",
+      "namn": "Mild bönchili med ris",
       "port": "1 portion (halva receptet)"
      },
      "extra": null
@@ -1721,6 +1803,12 @@
        "anm": ""
       },
       {
+       "key": "tomat",
+       "namn": "Tomater",
+       "qty": "500 g",
+       "anm": ""
+      },
+      {
        "key": "vitlok",
        "namn": "Vitlök",
        "qty": "1 huvud",
@@ -1747,12 +1835,6 @@
        "key": "kycklinglar",
        "namn": "Kycklinglårfilé",
        "qty": "700 g",
-       "anm": ""
-      },
-      {
-       "key": "lax",
-       "namn": "Laxfilé",
-       "qty": "500 g",
        "anm": ""
       },
       {
@@ -1854,6 +1936,12 @@
      "kat": "Fryst",
      "rader": [
       {
+       "key": "bar",
+       "namn": "Frysta bär",
+       "qty": "500 g",
+       "anm": ""
+      },
+      {
        "key": "torsk",
        "namn": "Torskfilé, fryst",
        "qty": "500 g",
@@ -1876,35 +1964,23 @@
    "hemma": [
     {
      "namn": "Osockrad müsli",
-     "text": "räcker (kvar ca 120 g)"
-    },
-    {
-     "namn": "Frysta bär",
-     "text": "räcker (kvar ca 40 g)"
+     "text": "räcker (kvar ca 95 g)"
     },
     {
      "namn": "Havregryn",
-     "text": "räcker (kvar ca 469 g)"
+     "text": "räcker (kvar ca 439 g)"
     },
     {
      "namn": "Ostbit till mackor",
-     "text": "räcker (kvar ca 170 g)"
+     "text": "räcker (kvar ca 45 g)"
     },
     {
      "namn": "Honung",
-     "text": "räcker (kvar ca 24 g)"
+     "text": "räcker (kvar ca 19 g)"
     },
     {
      "namn": "Smör",
-     "text": "räcker (kvar ca 348 g)"
-    },
-    {
-     "namn": "Gul lök",
-     "text": "räcker (kvar ca 710 g)"
-    },
-    {
-     "namn": "Ris",
-     "text": "räcker (kvar ca 450 g)"
+     "text": "räcker (kvar ca 338 g)"
     },
     {
      "namn": "Riven ost",
@@ -1915,12 +1991,12 @@
      "text": "räcker (kvar ca 100 g)"
     },
     {
-     "namn": "Fullkornspasta",
-     "text": "räcker (kvar ca 370 g)"
+     "namn": "Gul lök",
+     "text": "räcker (kvar ca 710 g)"
     },
     {
-     "namn": "Frysta ärtor",
-     "text": "räcker (kvar ca 125 g)"
+     "namn": "Ris",
+     "text": "räcker (kvar ca 450 g)"
     }
    ]
   }
@@ -1958,7 +2034,7 @@
    "namn": "Frysta bär",
    "kat": "Fryst",
    "start": "300 g",
-   "kop": "v1: 500 g, v2: 500 g, v3: 500 g, v4: 500 g",
+   "kop": "v1: 500 g, v2: 500 g, v3: 500 g, v4: 500 g, v5: 500 g",
    "anm": ""
   },
   {
@@ -1979,7 +2055,7 @@
    "namn": "Ostbit till mackor",
    "kat": "Mejeri & ägg",
    "start": "100 g",
-   "kop": "v1: 400 g, v3: 400 g, v4: 400 g",
+   "kop": "v1: 400 g, v2: 400 g, v4: 400 g",
    "anm": ""
   },
   {
@@ -2000,7 +2076,7 @@
    "namn": "Ägg",
    "kat": "Mejeri & ägg",
    "start": "4 st",
-   "kop": "v1: 1 förp (12 st), v3: 1 förp (12 st), v4: 1 förp (12 st), v5: 1 förp (12 st)",
+   "kop": "v1: 1 förp (12 st), v2: 1 förp (12 st), v4: 1 förp (12 st), v5: 1 förp (12 st)",
    "anm": ""
   },
   {
@@ -2095,10 +2171,24 @@
    "anm": ""
   },
   {
+   "namn": "Torrjäst",
+   "kat": "Skafferi",
+   "start": "inget",
+   "kop": "v1: 1 förp",
+   "anm": ""
+  },
+  {
    "namn": "Tortillabröd",
    "kat": "Skafferi",
    "start": "8 st",
    "kop": "v3: 1 förp (8 st)",
+   "anm": ""
+  },
+  {
+   "namn": "Vetemjöl",
+   "kat": "Skafferi",
+   "start": "inget",
+   "kop": "v1: 1 kg",
    "anm": ""
   }
  ],
@@ -2647,6 +2737,29 @@
     "Fräs lök, vitlök och tärnad paprika och morot.",
     "Tillsätt tomater, bönor och majs och sjud 20 min.",
     "Servera med ris, ost och crème fraiche."
+   ]
+  },
+  {
+   "id": "brod",
+   "namn": "Lätt bröd utan knådning",
+   "tid": "15 min + 12 tim jäsning + 45 min i ugnen",
+   "fisk": false,
+   "tips": "Vill du ha det på lördagsmorgonen: rör ihop degen på kvällen.",
+   "ingr": [
+    {
+     "namn": "Vetemjöl",
+     "mangd": "500 g"
+    },
+    {
+     "namn": "Torrjäst",
+     "mangd": "0,1 förp"
+    }
+   ],
+   "steg": [
+    "Blanda 500 g vetemjöl, 1 tsk salt och en nypa torrjäst i en skål.",
+    "Rör ner 4 dl kallt vatten till en kladdig deg. Låt jäsa täckt 12 timmar (kvällen innan eller på morgonen).",
+    "Ugn 240 °C med en gjutjärnsgryta eller ugnsfast form inuti. Vänd ut degen på mjölad bänk, vik ihop och lägg i den heta grytan.",
+    "Grädda med lock 30 min och utan lock 15 min tills brödet är gyllene."
    ]
   },
   {

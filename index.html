@@ -166,12 +166,12 @@ function vecka(v, main) {
   main.append(el('h2', 'sec', 'Dag för dag'));
   v.dagar.forEach((d) => {
     const k = el('div', 'dag' + (d.noah ? ' noah' : ''));
-    const h = el('div', 'dag-head'); h.append(el('strong', '', d.dag), el('span', 'tag', d.noah ? 'Du + Noah' : 'Bara du')); k.append(h);
+    const h = el('div', 'dag-head'); h.append(el('strong', '', d.dag), el('span', 'tag', d.med || (d.noah ? 'Du + Noah' : 'Bara du'))); k.append(h);
     const dl = el('dl');
-    [['Frukost', d.frukost], ['Mellanmål', d.mellis]].forEach(([a, b]) => { dl.append(el('dt', '', a), el('dd', '', b)); });
+    [['Frukost', d.frukost], ...(d.lunch ? [['Lunch', d.lunch]] : []), ['Mellanmål', d.mellis]].forEach(([a, b]) => { dl.append(el('dt', '', a), el('dd', '', b)); });
     dl.append(el('dt', '', 'Middag'));
-    const dd = el('dd'); const a = el('a', '', d.middag.namn); a.href = '#recept'; a.addEventListener('click', (e) => { e.preventDefault(); visa('recept', false); const t = document.getElementById('r-' + d.middag.recept); if (t) t.scrollIntoView(); });
-    dd.append(a, el('span', 'tag', ' · ' + d.middag.port)); dl.append(dd); k.append(dl);
+    const dd = el('dd'); const a = d.middag.recept ? el('a', '', d.middag.namn) : el('span', '', d.middag.namn); if (d.middag.recept) a.href = '#recept'; if (d.middag.recept) a.addEventListener('click', (e) => { e.preventDefault(); visa('recept', false); const t = document.getElementById('r-' + d.middag.recept); if (t) t.scrollIntoView(); });
+    dd.append(a); if (d.middag.port) dd.append(el('span', 'tag', ' · ' + d.middag.port)); dl.append(dd); k.append(dl);
     if (d.extra) k.append(el('div', 'godis', d.extra));
     main.append(k);
   });

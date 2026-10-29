@@ -3,7 +3,7 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
-import { K, KATEGORIER, DAG, NOAH_VIKT, FRUKOST, MELLIS, RECEPT, HUVUD, SOLO } from '../data/modell.mjs';
+import { K, KATEGORIER, DAG, NOAH_VIKT, FRUKOST, MELLIS, RECEPT, HUVUD, SOLO, OVERRIDE } from '../data/modell.mjs';
 
 const rot = join(dirname(fileURLToPath(import.meta.url)), '..');
 const dagar = JSON.parse(readFileSync(join(rot, 'data', 'noah-dagar.json'), 'utf8'));
@@ -35,6 +35,17 @@ function fmtMangd(k, q) {
 }
 
 const NV = 7;
+// Varor för en särskild dag (extra personer, extra ingredienser, recept).
+function ovVaror(need, ov) {
+  Object.entries(DAG).forEach(([key, q]) => lagg(need, key, q * (ov.extraPersoner || 0)));
+  (ov.ingr || []).forEach(([key, q]) => lagg(need, key, q));
+  if (ov.recept) RECEPT[ov.recept].ingr.forEach(([key, q]) => lagg(need, key, q));
+}
+const tidigare = Object.entries(OVERRIDE).filter(([, ov]) => ov.kopTidigare).map(([datum, ov]) => {
+  const idx = dagar.findIndex((d) => d.datum === datum);
+  if (idx % NV !== 0) throw new Error('kopTidigare gäller bara första dagen i en vecka: ' + datum);
+  return { vecka: idx / NV - 1, ov };
+});
 const veckor = [];
 const stock = {};
 Object.keys(K).forEach((k) => { stock[k] = K[k].start || 0; });
@@ -45,17 +56,24 @@ for (let w = 0; w * NV < dagar.length; w++) {
   const slice = dagar.slice(w * NV, w * NV + NV);
   const need = {};
   const dagKort = [];
+  tidigare.filter((t) => t.vecka === w).forEach((t) => ovVaror(need, t.ov));
 
   slice.forEach((d, j) => {
     const i = w * NV + j;
     const noah = d.hos === 'Pappa';
     const nasta = dagar[i + 1];
     const nastaNoah = nasta ? nasta.hos === 'Pappa' : true;
-    const pd = 1 + (noah ? NOAH_VIKT : 0);
+    const ov = OVERRIDE[d.datum];
+    const pd = 1 + (noah ? NOAH_VIKT : 0) + (ov && !ov.kopTidigare ? ov.extraPersoner || 0 : 0);
     Object.entries(DAG).forEach(([key, q]) => lagg(need, key, q * pd));
 
     let middag;
-    if (noah) {
+    if (ov) {
+      if (ov.middag) middag = ov.middag;
+      if (!ov.kopTidigare) ovVaror(need, { ingr: ov.ingr, recept: ov.recept });
+    }
+    if (middag) { restFran = null; }
+    else if (noah) {
       const id = HUVUD[huvudIdx++ % HUVUD.length];
       const r = RECEPT[id];
       const extra = !nastaNoah && nasta && r.rester !== false;
@@ -74,7 +92,7 @@ for (let w = 0; w * NV < dagar.length; w++) {
     }
 
     const dow = new Date(d.datum + 'T12:00:00').getDay();
-    let extra = null;
+    let extra = ov && ov.extra ? ov.extra : null;
     if (dow === 6) {
       if (noah) {
         lagg(need, 'godis', 150); lagg(need, 'popcorn', 80);
@@ -86,7 +104,8 @@ for (let w = 0; w * NV < dagar.length; w++) {
     }
     dagKort.push({
       datum: d.datum, dag: dagNamn(d.datum), noah,
-      frukost: FRUKOST[i % FRUKOST.length], mellis: MELLIS[i % MELLIS.length], middag, extra
+      med: ov && ov.med ? ov.med : null, lunch: ov && ov.lunch ? ov.lunch : null,
+      frukost: ov && ov.frukost ? ov.frukost : FRUKOST[i % FRUKOST.length], mellis: MELLIS[i % MELLIS.length], middag, extra
     });
   });
 
