@@ -1,0 +1,181 @@
+// Varukatalog, recept och förbrukning. bygg.mjs räknar ihop inköpslistorna ur detta.
+// Enheter: g, ml, dl, st, klyfta, skivor, förp, burk.
+// p = förpackningsstorlek, lagra = håller flera veckor (köps bara när skafferiet inte räcker),
+// start = uppskattat lager efter veckan som slutar tis 3 nov.
+
+const F = 'Frukt & grönt', M = 'Kött & fisk', D = 'Mejeri & ägg', S = 'Skafferi', B = 'Bröd', Fr = 'Fryst', G = 'Godis & snacks';
+
+export const KATEGORIER = [F, M, D, S, B, Fr, G];
+
+export const K = {
+  banan: { n: 'Bananer', k: F, e: 'st', p: 6, pt: ['klase', 'klasar'] },
+  apple: { n: 'Äpplen', k: F, e: 'st', p: 6 },
+  paron: { n: 'Päron', k: F, e: 'st', p: 4 },
+  gurka: { n: 'Gurka', k: F, e: 'st', p: 1 },
+  tomat: { n: 'Tomater', k: F, e: 'g', p: 500 },
+  paprika: { n: 'Paprika', k: F, e: 'st', p: 1 },
+  broccoli: { n: 'Broccoli', k: F, e: 'st', p: 1 },
+  morot: { n: 'Morötter', k: F, e: 'g', p: 1000, lagra: true, start: 300 },
+  zucchini: { n: 'Zucchini', k: F, e: 'st', p: 1 },
+  lok: { n: 'Gul lök', k: F, e: 'g', p: 1000, lagra: true, start: 600 },
+  vitlok: { n: 'Vitlök', k: F, e: 'klyfta', p: 10, pt: ['huvud', 'huvuden'], lagra: true, start: 8 },
+  sallad: { n: 'Sallad', k: F, e: 'st', p: 1 },
+  avokado: { n: 'Avokado', k: F, e: 'st', p: 2 },
+  spenat: { n: 'Babyspenat', k: F, e: 'g', p: 120, pt: ['påse', 'påsar'] },
+  citron: { n: 'Citron', k: F, e: 'st', p: 1 },
+  potatis: { n: 'Potatis', k: F, e: 'g', p: 1500, lagra: true, start: 300 },
+  sotpotatis: { n: 'Sötpotatis', k: F, e: 'g', p: 800 },
+
+  kyckling: { n: 'Kycklingfilé', k: M, e: 'g', p: 600 },
+  kycklinglar: { n: 'Kycklinglårfilé', k: M, e: 'g', p: 700 },
+  notfars: { n: 'Nötfärs', k: M, e: 'g', p: 500, lagra: true, anm: 'Frys det du inte använder inom 2 dagar.' },
+  lax: { n: 'Laxfilé', k: M, e: 'g', p: 500 },
+  kalkon: { n: 'Kalkonpålägg', k: M, e: 'g', p: 120, pt: ['förp', 'förp'] },
+
+  mjolk: { n: 'Mjölk', k: D, e: 'dl', p: 20, pt: ['paket (2 l)', 'paket (2 l)'] },
+  yoghurt: { n: 'Turkisk yoghurt', k: D, e: 'g', p: 1000, pt: ['burk (1 kg)', 'burkar (1 kg)'] },
+  kvarg: { n: 'Mild kvarg', k: D, e: 'g', p: 500 },
+  keso: { n: 'Keso', k: D, e: 'g', p: 500 },
+  hummus: { n: 'Hummus', k: D, e: 'g', p: 200 },
+  agg: { n: 'Ägg', k: D, e: 'st', p: 12, pt: ['förp (12 st)', 'förp (12 st)'], lagra: true, start: 4 },
+  smor: { n: 'Smör', k: D, e: 'g', p: 500, lagra: true, start: 350 },
+  ost: { n: 'Ostbit till mackor', k: D, e: 'g', p: 400, lagra: true, start: 100 },
+  rivost: { n: 'Riven ost', k: D, e: 'g', p: 200, lagra: true, start: 100 },
+  cf: { n: 'Crème fraiche', k: D, e: 'g', p: 200 },
+
+  havregryn: { n: 'Havregryn', k: S, e: 'g', p: 1000, lagra: true, start: 900 },
+  ris: { n: 'Ris', k: S, e: 'g', p: 1000, lagra: true, start: 1200 },
+  pasta: { n: 'Fullkornspasta', k: S, e: 'g', p: 500, lagra: true, start: 250 },
+  krossade: { n: 'Krossade tomater', k: S, e: 'g', p: 400, pt: ['förp', 'förp'] },
+  kidney: { n: 'Kidneybönor', k: S, e: 'burk', p: 1, pt: ['burk', 'burkar'] },
+  kikarter: { n: 'Kikärtor', k: S, e: 'burk', p: 1, pt: ['burk', 'burkar'] },
+  linser: { n: 'Röda linser', k: S, e: 'g', p: 500, lagra: true },
+  majs: { n: 'Majs', k: S, e: 'burk', p: 1, pt: ['burk', 'burkar'] },
+  kokos: { n: 'Kokosmjölk', k: S, e: 'ml', p: 400, pt: ['burk', 'burkar'] },
+  curry: { n: 'Mild currypulver', k: S, e: 'burk', p: 1, lagra: true },
+  tacokrydda: { n: 'Mild tacokrydda', k: S, e: 'förp', p: 1, lagra: true },
+  tacosas: { n: 'Tacosås', k: S, e: 'burk', p: 1, pt: ['burk', 'burkar'], lagra: true },
+  soja: { n: 'Salt-reducerad soja', k: S, e: 'ml', p: 250, pt: ['flaska', 'flaskor'], lagra: true, start: 200 },
+  honung: { n: 'Honung', k: S, e: 'g', p: 350, pt: ['burk', 'burkar'], lagra: true, start: 250 },
+  jnsmor: { n: 'Jordnötssmör', k: S, e: 'g', p: 340, pt: ['burk', 'burkar'], lagra: true, start: 250 },
+  musli: { n: 'Osockrad müsli', k: S, e: 'g', p: 500, lagra: true, start: 250 },
+  knacke: { n: 'Knäckebröd', k: S, e: 'g', p: 250, pt: ['förp', 'förp'], lagra: true, start: 150 },
+  tortilla: { n: 'Tortillabröd', k: S, e: 'st', p: 8, pt: ['förp (8 st)', 'förp (8 st)'], lagra: true, start: 8 },
+  popcorn: { n: 'Popcornmajs', k: S, e: 'g', p: 500, lagra: true },
+
+  brod: { n: 'Fullkornsbröd', k: B, e: 'skivor', p: 20, pt: ['limpa', 'limpor'] },
+
+  bar: { n: 'Frysta bär', k: Fr, e: 'g', p: 500, lagra: true, start: 300 },
+  arter: { n: 'Frysta ärtor', k: Fr, e: 'g', p: 500, lagra: true, start: 400 },
+  torsk: { n: 'Torskfilé, fryst', k: Fr, e: 'g', p: 500 },
+
+  godis: { n: 'Lösgodis', k: G, e: 'g', p: 150, anm: 'Lördagsgodis. Ta bara det som ska ätas samma dag.' },
+  choklad: { n: 'Mörk choklad 70 %', k: G, e: 'g', p: 100, pt: ['kaka', 'kakor'] },
+  chips: { n: 'Chips', k: G, e: 'förp', p: 1 }
+};
+
+// Förbrukning per person och dag (frukost + mellanmål). Noah räknas som 0,6.
+export const NOAH_VIKT = 0.6;
+export const DAG = {
+  banan: 0.5, apple: 0.4, paron: 0.3, yoghurt: 120, musli: 25, bar: 50, havregryn: 30,
+  mjolk: 2.5, agg: 0.7, brod: 2, ost: 25, kalkon: 20, gurka: 0.3, morot: 60, hummus: 40,
+  keso: 60, honung: 5, smor: 10, knacke: 20, kvarg: 30
+};
+
+export const FRUKOST = [
+  'Havregrynsgröt med banan och bär',
+  'Turkisk yoghurt med müsli och bär',
+  'Smörgås med ost, gurka och ägg',
+  'Äggröra på fullkornsbröd',
+  'Turkisk yoghurt med müsli och bär',
+  'Havregrynsgröt med honung och äpple',
+  'Smörgås med kalkon och avokado'
+];
+export const MELLIS = [
+  'Päron eller banan i bitar',
+  'Hummus med gurka och riven morot',
+  'Keso eller kvarg med bär',
+  'Ostbitar med knäckebröd',
+  'Äppelklyftor med yoghurt och kanel',
+  'Yoghurt med bär',
+  'Gurka och tunna morotsstavar med hummus'
+];
+
+// Recept för 2 portioner (du + Noah). rester: false om rätten inte värms om bra.
+export const RECEPT = {
+  lax: {
+    namn: 'Ugnslax med potatis och broccoli', tid: '35 min', fisk: true,
+    ingr: [['lax', 300], ['potatis', 500], ['broccoli', 1], ['citron', 0.5], ['yoghurt', 100]],
+    steg: ['Ugn 200 °C. Tärna potatisen, vänd i olja och rosta 20 min.', 'Lägg laxen bredvid på plåten och rosta 12–15 min.', 'Ånga broccolin 4–5 min.', 'Rör ihop yoghurt, citronsaft och en nypa salt till sås.'],
+    tips: 'Kolla laxen efter ben och ta bort skinnet åt Noah. Skär potatis och broccoli små.'
+  },
+  wok: {
+    namn: 'Kycklingwok med ris', tid: '25 min', solo: true,
+    ingr: [['kyckling', 300], ['paprika', 1], ['broccoli', 1], ['morot', 150], ['lok', 80], ['vitlok', 2], ['soja', 30], ['ris', 150]],
+    steg: ['Koka riset.', 'Skär kyckling i strimlor och grönsakerna smalt. Morötterna tunnast.', 'Stek kycklingen genomstekt och ta upp den.', 'Woka morot, lök och broccoli 4 min, sedan paprika och vitlök 2 min.', 'Lägg tillbaka kycklingen, tillsätt soja och en skvätt vatten. Servera över riset.']
+  },
+  tacos: {
+    namn: 'Tacos', tid: '25 min',
+    ingr: [['notfars', 300], ['tacokrydda', 0.6], ['kidney', 1], ['majs', 1], ['tortilla', 4], ['sallad', 1], ['tomat', 150], ['gurka', 0.5], ['avokado', 1], ['rivost', 60], ['cf', 100], ['tacosas', 0.3]],
+    steg: ['Bryn färsen, rör ner kryddan och lite vatten och sjud 5 min.', 'Skölj bönorna och blanda ner dem med majsen.', 'Skär grönsakerna och mosa avokadon.', 'Värm tortillabröden och ställ fram allt så att alla bygger själva.'],
+    tips: 'Använd halv mängd krydda åt Noah om det blir för starkt.'
+  },
+  pastasas: {
+    namn: 'Pasta med grönsaksrik köttfärssås', tid: '35 min', solo: true,
+    ingr: [['notfars', 300], ['lok', 80], ['vitlok', 2], ['morot', 150], ['zucchini', 0.5], ['krossade', 400], ['arter', 50], ['pasta', 160], ['rivost', 40]],
+    steg: ['Fräs lök och vitlök, bryn färsen.', 'Rör ner riven morot och zucchini samt tomaterna. Sjud 20 min.', 'Koka pastan och lägg i ärtorna i såsen sista 3 min.', 'Servera med riven ost.'],
+    tips: 'De rivna grönsakerna försvinner i såsen, bra för en 3-åring.'
+  },
+  torsk: {
+    namn: 'Ugnstorsk med rotfrukter', tid: '40 min', fisk: true,
+    ingr: [['torsk', 300], ['morot', 200], ['potatis', 400], ['broccoli', 1], ['citron', 0.5], ['yoghurt', 100], ['smor', 20]],
+    steg: ['Tina torsken i kylen kvällen innan.', 'Ugn 200 °C. Tärna morot och potatis, rosta 20 min.', 'Lägg torsken på plåten med lite smör och rosta 12–15 min.', 'Ånga broccolin och rör yoghurt med citron till sås.'],
+    tips: 'Kolla torsken efter ben innan Noah får den.'
+  },
+  linssoppa: {
+    namn: 'Röd linssoppa med bröd', tid: '30 min',
+    ingr: [['linser', 150], ['morot', 200], ['lok', 100], ['vitlok', 2], ['kokos', 400], ['curry', 0.1], ['brod', 4], ['yoghurt', 50]],
+    steg: ['Fräs lök, vitlök och curry i en kastrull.', 'Tillsätt riven morot, linser, kokosmjölk och 5 dl vatten. Sjud 15–20 min.', 'Mixa slätt med stavmixer.', 'Servera med bröd och en klick yoghurt.']
+  },
+  lar: {
+    namn: 'Ugnsbakad kyckling med rotfrukter', tid: '45 min',
+    ingr: [['kycklinglar', 350], ['potatis', 400], ['morot', 200], ['broccoli', 1], ['yoghurt', 100]],
+    steg: ['Ugn 200 °C. Skär rotfrukterna i bitar och lägg på plåt med olja och salt.', 'Lägg kycklingen ovanpå och rosta 25–30 min tills den är genomstekt.', 'Ånga broccolin och servera med yoghurt.']
+  },
+  bullar: {
+    namn: 'Ugnsbullar med potatis och gurka', tid: '40 min',
+    ingr: [['notfars', 300], ['agg', 1], ['havregryn', 30], ['mjolk', 1], ['lok', 40], ['potatis', 500], ['gurka', 0.5], ['cf', 50]],
+    steg: ['Ugn 200 °C. Blanda färs, ägg, havregryn, mjölk och riven lök. Rulla bullar.', 'Baka 15–18 min.', 'Koka potatisen och skär gurkan i tunna stavar.', 'Servera med crème fraiche.']
+  },
+  curry: {
+    namn: 'Kikärtscurry med sötpotatis', tid: '35 min', solo: false,
+    ingr: [['sotpotatis', 400], ['kikarter', 1], ['kokos', 400], ['lok', 80], ['vitlok', 2], ['spenat', 50], ['ris', 150], ['curry', 0.1]],
+    steg: ['Koka riset.', 'Fräs lök, vitlök och curry. Tillsätt tärnad sötpotatis, kokosmjölk och 1 dl vatten.', 'Sjud 15 min, lägg i kikärtor och spenat sista 3 min.', 'Servera över riset.']
+  },
+  laxpasta: {
+    namn: 'Pasta med lax och spenat', tid: '25 min', fisk: true, solo: true,
+    ingr: [['pasta', 160], ['lax', 250], ['spenat', 60], ['cf', 100], ['citron', 0.5], ['arter', 50]],
+    steg: ['Koka pastan och lägg i ärtorna sista 3 min.', 'Stek laxen i bitar, blanda med crème fraiche, spenat och citron.', 'Vänd ihop med pastan.']
+  },
+  pizza: {
+    namn: 'Pizza på tortillabröd', tid: '25 min',
+    ingr: [['tortilla', 4], ['krossade', 400], ['rivost', 120], ['paprika', 1], ['kalkon', 40], ['tomat', 150]],
+    steg: ['Ugn 225 °C. Lägg tortillabröden på plåt och grädda 3 min.', 'Bred på krossade tomater, ost och valfria toppings.', 'Grädda 8–10 min.'],
+    rester: false
+  },
+  chili: {
+    namn: 'Mild bönchili med ris', tid: '35 min', solo: true,
+    ingr: [['kidney', 1], ['majs', 1], ['krossade', 400], ['paprika', 1], ['lok', 80], ['morot', 100], ['vitlok', 2], ['ris', 150], ['rivost', 40], ['cf', 50]],
+    steg: ['Koka riset.', 'Fräs lök, vitlök och tärnad paprika och morot.', 'Tillsätt tomater, bönor och majs och sjud 20 min.', 'Servera med ris, ost och crème fraiche.']
+  },
+  omelett: {
+    namn: 'Omelett med grönsaker', tid: '15 min', solo: true, rester: false,
+    ingr: [['agg', 5], ['paprika', 0.5], ['tomat', 100], ['spenat', 40], ['rivost', 40], ['brod', 4], ['gurka', 0.5]],
+    steg: ['Vispa ägg med lite mjölk och salt.', 'Stek de skurna grönsakerna 2 min, häll över äggen.', 'Strö över ost och vik ihop. Servera med bröd och gurka.']
+  }
+};
+
+// Middagar när Noah är hos dig, i ordning. Minst en fiskrätt varje vecka.
+export const HUVUD = ['lax', 'wok', 'tacos', 'torsk', 'pastasas', 'linssoppa', 'lar', 'bullar', 'laxpasta', 'curry', 'pizza', 'lax', 'pastasas', 'chili', 'torsk', 'lar', 'bullar'];
+// Enkla middagar för dig när Noah inte är hos dig (halv portion).
+export const SOLO = ['omelett', 'chili', 'laxpasta', 'wok', 'omelett', 'pastasas', 'laxpasta'];

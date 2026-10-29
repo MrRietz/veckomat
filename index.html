@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Veckomat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap">
+<style>
+:root {
+  --bg: #f2f5f1; --card: #fff; --fg: #19271f; --muted: #5d6e63; --line: #d6ded7;
+  --accent: #2b7a4b; --accent-fg: #fff; --soft: #e3eee6; --warn: #8a4b12; --warn-bg: #fbeedb;
+  --font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Nunito Sans", "Segoe UI", system-ui, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #111a14; --card: #1a251e; --fg: #e5eee7; --muted: #9db1a3; --line: #2c3b31; --accent: #6cc48e; --accent-fg: #0d1a12; --soft: #223228; --warn: #f0c58f; --warn-bg: #3a2a15; color-scheme: dark; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.5 var(--font-body); padding: 0 max(16px, env(safe-area-inset-left, 0px)) 48px max(16px, env(safe-area-inset-right, 0px)); }
+.wrap { max-width: 760px; margin: 0 auto; }
+h1, h2, h3 { font-family: var(--font-display); line-height: 1.15; margin: 0; text-wrap: balance; }
+header.top { position: sticky; top: 0; z-index: 5; background: var(--bg); padding: 14px 0 10px; border-bottom: 1px solid var(--line); }
+h1 { font-size: 1.6rem; font-weight: 700; }
+.sub { color: var(--muted); font-size: 0.88rem; margin: 2px 0 10px; }
+nav { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 2px; }
+nav button { flex: none; min-height: 42px; padding: 0 14px; border: 1px solid var(--line); background: var(--card); color: var(--fg); border-radius: 10px; font: 600 0.95rem var(--font-body); cursor: pointer; }
+nav button[aria-selected="true"] { background: var(--accent); color: var(--accent-fg); border-color: var(--accent); }
+button:focus-visible, input:focus-visible + .box { outline: 3px solid var(--accent); outline-offset: 2px; }
+.bar { height: 8px; border-radius: 99px; background: var(--soft); overflow: hidden; margin-top: 10px; }
+.bar i { display: block; height: 100%; width: 0; background: var(--accent); transition: width .25s; }
+.pcount { display: flex; justify-content: space-between; font-size: 0.88rem; color: var(--muted); margin-top: 8px; font-variant-numeric: tabular-nums; }
+h2.sec { font-size: 1.2rem; margin: 24px 0 8px; }
+.dag { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; margin-top: 10px; }
+.dag.noah { border-left: 5px solid var(--accent); }
+.dag-head { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; }
+.dag-head strong { font-family: var(--font-display); font-size: 1.05rem; text-transform: capitalize; }
+.tag { font-size: 0.78rem; color: var(--muted); }
+.dag dl { margin: 6px 0 0; display: grid; grid-template-columns: 5.2rem 1fr; gap: 2px 10px; font-size: 0.93rem; }
+.dag dt { color: var(--muted); }
+.dag dd { margin: 0; min-width: 0; }
+.dag a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.dag a:hover { text-decoration: underline; }
+.godis { margin-top: 8px; padding: 8px 10px; border-radius: 8px; background: var(--warn-bg); color: var(--warn); font-size: 0.9rem; }
+.cat { margin-top: 20px; }
+.cat-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px; }
+.cat-head h3 { font-size: 1.05rem; font-weight: 600; }
+.cat-head span { color: var(--muted); font-size: 0.82rem; font-variant-numeric: tabular-nums; }
+ul.items { list-style: none; margin: 0; padding: 0; background: var(--card); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+ul.items li + li { border-top: 1px solid var(--line); }
+ul.items label { display: flex; align-items: center; gap: 14px; min-height: 50px; padding: 8px 14px; cursor: pointer; }
+ul.items input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.box { flex: none; width: 26px; height: 26px; border: 2px solid var(--muted); border-radius: 7px; display: grid; place-items: center; }
+.box svg { width: 16px; height: 16px; opacity: 0; stroke: var(--accent-fg); }
+input:checked + .box { background: var(--accent); border-color: var(--accent); }
+input:checked + .box svg { opacity: 1; }
+.txt { flex: 1; min-width: 0; }
+.name { font-weight: 600; }
+.note { display: block; color: var(--muted); font-size: 0.82rem; }
+.qty { color: var(--muted); font-size: 0.9rem; text-align: right; font-variant-numeric: tabular-nums; }
+li.done .name { text-decoration: line-through; color: var(--muted); font-weight: 400; }
+li.done .qty, li.done .note { opacity: .7; }
+.hemma { margin-top: 20px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; }
+.hemma h3 { font-size: 1rem; margin-bottom: 4px; }
+.hemma p { margin: 4px 0 0; color: var(--muted); font-size: 0.9rem; }
+.tools { display: flex; gap: 8px; margin-top: 14px; }
+.btn { min-height: 40px; padding: 0 14px; border: 1px solid var(--line); background: var(--card); color: var(--fg); border-radius: 10px; font: 600 0.9rem var(--font-body); cursor: pointer; }
+.btn[aria-pressed="true"] { background: var(--soft); border-color: var(--accent); }
+li.hide, .cat.hide { display: none; }
+.recipe { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; margin-top: 14px; scroll-margin-top: 150px; }
+.recipe h3 { font-size: 1.25rem; font-weight: 700; }
+.meta { color: var(--muted); font-size: 0.88rem; margin: 2px 0 8px; }
+.recipe h4 { margin: 10px 0 4px; font-size: 0.92rem; font-family: var(--font-body); }
+.recipe ul, .recipe ol { margin: 0; padding-left: 20px; }
+.tip { margin-top: 10px; padding: 8px 10px; border-radius: 8px; background: var(--warn-bg); color: var(--warn); font-size: 0.9rem; }
+.table { background: var(--card); border: 1px solid var(--line); border-radius: 12px; overflow-x: auto; margin-top: 10px; }
+table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+th, td { text-align: left; padding: 8px 12px; border-top: 1px solid var(--line); vertical-align: top; }
+tr:first-child th, tr:first-child td { border-top: 0; }
+.dim { color: var(--muted); }
+.intro { color: var(--muted); font-size: 0.92rem; margin: 12px 0 0; }
+@media (prefers-reduced-motion: reduce) { .bar i { transition: none; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <h1>Veckomat</h1>
+    <p class="sub" id="sub">Frukost, mellanmål och middag för dig och Noah</p>
+    <nav id="nav" role="tablist"></nav>
+    <div id="prog" hidden>
+      <div class="bar"><i id="fill"></i></div>
+      <div class="pcount"><span id="count"></span><span id="busy"></span></div>
+    </div>
+  </header>
+  <main id="main"><p class="intro">Laddar planen...</p></main>
+</div>
+
+<script>
+const CHECK = '<svg viewBox="0 0 16 16" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5"/></svg>';
+const KEY = 'veckomat:v1:bockat';
+let plan, bockat = {}, dolj = false, flik = 'v1';
+const $ = (s, el = document) => el.querySelector(s);
+const el = (tag, cls, txt) => { const e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; };
+function lsGet(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+function lsSet(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+
+async function start() {
+  try { bockat = JSON.parse(lsGet(KEY) || '{}') || {}; } catch (e) { bockat = {}; }
+  dolj = lsGet('veckomat:v1:dolj') === '1';
+  try { plan = await (await fetch('plan.json', { cache: 'no-cache' })).json(); }
+  catch (e) { $('#main').replaceChildren(el('p', 'intro', 'Kunde inte läsa plan.json. Öppna sidan via GitHub Pages eller en lokal server.')); return; }
+  const nav = $('#nav');
+  plan.veckor.forEach((v) => nav.append(tab('v' + v.vecka, 'Vecka ' + v.vecka)));
+  nav.append(tab('recept', 'Recept'), tab('skafferi', 'Skafferi'));
+  $('#sub').textContent = `${plan.veckor[0].rubrik.split(' till ')[0]} till ${plan.veckor[plan.veckor.length - 1].rubrik.split(' till ')[1]} · frukost, mellanmål och middag för dig och Noah`;
+  const h = location.hash.slice(1);
+  visa(h && (h === 'recept' || h === 'skafferi' || /^v\d$/.test(h)) ? h : 'v1', false);
+}
+function tab(id, txt) { const b = el('button', '', txt); b.id = 't-' + id; b.setAttribute('role', 'tab'); b.addEventListener('click', () => visa(id, true)); return b; }
+
+function visa(id, scroll) {
+  flik = id;
+  document.querySelectorAll('nav button').forEach((b) => b.setAttribute('aria-selected', String(b.id === 't-' + id)));
+  if (location.hash !== '#' + id) history.replaceState(null, '', '#' + id);
+  const main = $('#main'); main.replaceChildren();
+  $('#prog').hidden = !/^v\d$/.test(id);
+  if (/^v\d$/.test(id)) vecka(plan.veckor[+id.slice(1) - 1], main);
+  else if (id === 'recept') recept(main);
+  else skafferi(main);
+  if (scroll) window.scrollTo(0, 0);
+  const t = $('#t-' + id); if (t && t.scrollIntoView) t.scrollIntoView({ inline: 'center', block: 'nearest' });
+}
+
+function vecka(v, main) {
+  main.append(el('p', 'intro', `${v.rubrik}. Handla första dagen. ${v.noahDagar} dagar med Noah.`));
+  const tools = el('div', 'tools');
+  const hide = el('button', 'btn', dolj ? 'Visa avbockade' : 'Dölj avbockade'); hide.setAttribute('aria-pressed', String(dolj));
+  hide.addEventListener('click', () => { dolj = !dolj; lsSet('veckomat:v1:dolj', dolj ? '1' : '0'); hide.textContent = dolj ? 'Visa avbockade' : 'Dölj avbockade'; hide.setAttribute('aria-pressed', String(dolj)); uppdatera(v); });
+  tools.append(hide);
+  main.append(tools);
+
+  main.append(el('h2', 'sec', 'Inköpslista'));
+  v.lista.forEach((c) => {
+    const sec = el('section', 'cat'); const head = el('div', 'cat-head');
+    head.append(el('h3', '', c.kat)); const cnt = el('span'); head.append(cnt); sec.append(head);
+    const ul = el('ul', 'items');
+    c.rader.forEach((r) => {
+      const id = `v${v.vecka}:${r.key}`;
+      const li = el('li'); li.dataset.id = id;
+      const lab = el('label'); const inp = el('input'); inp.type = 'checkbox';
+      const box = el('span', 'box'); box.innerHTML = CHECK;
+      const txt = el('span', 'txt'); txt.append(el('span', 'name', r.namn)); if (r.anm) txt.append(el('span', 'note', r.anm));
+      lab.append(inp, box, txt, el('span', 'qty', r.qty)); li.append(lab); ul.append(li);
+      inp.addEventListener('change', () => { if (inp.checked) bockat[id] = 1; else delete bockat[id]; lsSet(KEY, JSON.stringify(bockat)); uppdatera(v); });
+    });
+    sec.append(ul); sec._cnt = cnt; main.append(sec);
+  });
+  const hem = el('div', 'hemma');
+  hem.append(el('h3', '', 'Räcker redan i skafferiet'));
+  hem.append(el('p', '', v.hemma.length ? v.hemma.map((h) => `${h.namn} (${h.text})`).join(', ') : 'Inget den här veckan.'));
+  hem.append(el('p', '', 'Kolla alltid olja, salt, peppar och kaffe/te hemma.'));
+  main.append(hem);
+
+  main.append(el('h2', 'sec', 'Dag för dag'));
+  v.dagar.forEach((d) => {
+    const k = el('div', 'dag' + (d.noah ? ' noah' : ''));
+    const h = el('div', 'dag-head'); h.append(el('strong', '', d.dag), el('span', 'tag', d.noah ? 'Du + Noah' : 'Bara du')); k.append(h);
+    const dl = el('dl');
+    [['Frukost', d.frukost], ['Mellanmål', d.mellis]].forEach(([a, b]) => { dl.append(el('dt', '', a), el('dd', '', b)); });
+    dl.append(el('dt', '', 'Middag'));
+    const dd = el('dd'); const a = el('a', '', d.middag.namn); a.href = '#recept'; a.addEventListener('click', (e) => { e.preventDefault(); visa('recept', false); const t = document.getElementById('r-' + d.middag.recept); if (t) t.scrollIntoView(); });
+    dd.append(a, el('span', 'tag', ' · ' + d.middag.port)); dl.append(dd); k.append(dl);
+    if (d.extra) k.append(el('div', 'godis', d.extra));
+    main.append(k);
+  });
+  uppdatera(v);
+}
+
+function uppdatera(v) {
+  let tot = 0, klar = 0;
+  document.querySelectorAll('section.cat').forEach((sec) => {
+    const lis = sec.querySelectorAll('li'); let d = 0;
+    lis.forEach((li) => {
+      const on = !!bockat[li.dataset.id];
+      li.querySelector('input').checked = on; li.classList.toggle('done', on); li.classList.toggle('hide', dolj && on);
+      if (on) d++;
+    });
+    sec._cnt.textContent = `${d}/${lis.length}`; sec.classList.toggle('hide', dolj && d === lis.length);
+    tot += lis.length; klar += d;
+  });
+  $('#count').textContent = `${klar} av ${tot} varor köpta`;
+  $('#fill').style.width = (tot ? klar / tot * 100 : 0) + '%';
+}
+
+function recept(main) {
+  main.append(el('p', 'intro', 'Alla recept gäller 2 portioner (du + Noah). Planen skalar upp eller ner automatiskt.'));
+  plan.recept.forEach((r) => {
+    const a = el('article', 'recipe'); a.id = 'r-' + r.id;
+    a.append(el('h3', '', r.namn), el('p', 'meta', r.tid + (r.fisk ? ' · fisk' : '')));
+    a.append(el('h4', '', 'Ingredienser'));
+    const ul = el('ul'); r.ingr.forEach((i) => ul.append(el('li', '', `${i.mangd} ${i.namn.toLowerCase()}`))); a.append(ul);
+    a.append(el('h4', '', 'Gör så här'));
+    const ol = el('ol'); r.steg.forEach((s) => ol.append(el('li', '', s))); a.append(ol);
+    if (r.tips) a.append(el('p', 'tip', r.tips));
+    main.append(a);
+  });
+}
+
+function skafferi(main) {
+  main.append(el('p', 'intro', 'Basvaror och frysvaror köps bara när skafferiet inte räcker, så du får inga dubletter. Lagret är en uppskattning efter veckan som slutar tis 3 nov. Stämmer det inte, räkna om i huvudet och hoppa över eller lägg till på listan.'));
+  const wrap = el('div', 'table'); const t = el('table');
+  const head = el('tr'); ['Vara', 'Har hemma nu', 'Köps'].forEach((h) => head.append(el('th', '', h))); t.append(head);
+  plan.skafferi.forEach((s) => { const tr = el('tr'); tr.append(el('td', '', s.namn), el('td', 'dim', s.start), el('td', '', s.kop)); t.append(tr); });
+  wrap.append(t); main.append(wrap);
+}
+
+window.addEventListener('hashchange', () => { const h = location.hash.slice(1); if (plan && h !== flik && (h === 'recept' || h === 'skafferi' || /^v\d$/.test(h))) visa(h, false); });
+start();
+</script>
+</body>
+</html>

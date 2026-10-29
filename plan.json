@@ -1,0 +1,2690 @@
+{
+ "byggd": "2026-10-29",
+ "veckor": [
+  {
+   "vecka": 1,
+   "fran": "2026-11-04",
+   "till": "2026-11-10",
+   "rubrik": "ons 4 nov till tis 10 nov",
+   "noahDagar": 3,
+   "dagar": [
+    {
+     "datum": "2026-11-04",
+     "dag": "ons 4 nov",
+     "noah": false,
+     "frukost": "Havregrynsgröt med banan och bär",
+     "mellis": "Päron eller banan i bitar",
+     "middag": {
+      "typ": "solo",
+      "recept": "omelett",
+      "namn": "Omelett med grönsaker",
+      "port": "1 portion (halva receptet)"
+     },
+     "extra": null
+    },
+    {
+     "datum": "2026-11-05",
+     "dag": "tors 5 nov",
+     "noah": false,
+     "frukost": "Turkisk yoghurt med müsli och bär",
+     "mellis": "Hummus med gurka och riven morot",
+     "middag": {
+      "typ": "solo",
+      "recept": "chili",
+      "namn": "Mild bönchili med ris",
+      "port": "1 portion (halva receptet)"
+     },
+     "extra": null
+    },
+    {
+     "datum": "2026-11-06",
+     "dag": "fre 6 nov",
+     "noah": true,
+     "frukost": "Smörgås med ost, gurka och ägg",
+     "mellis": "Keso eller kvarg med bär",
+     "middag": {
+      "typ": "recept",
+      "recept": "lax",
+      "namn": "Ugnslax med potatis och broccoli",
+      "port": "2 portioner"
+     },
+     "extra": null
+    },
+    {
+     "datum": "2026-11-07",
+     "dag": "lör 7 nov",
+     "noah": true,
+     "frukost": "Äggröra på fullkornsbröd",
+     "mellis": "Ostbitar med knäckebröd",
+     "middag": {
+      "typ": "recept",
+      "recept": "wok",
+      "namn": "Kycklingwok med ris",
+      "port": "2 portioner"
+     },
+     "extra": "Lördagsgodis (lösgodis ca 150 g att dela) och popcorn"
+    },
+    {
+     "datum": "2026-11-08",
+     "dag": "sön 8 nov",
+     "noah": true,
+     "frukost": "Turkisk yoghurt med müsli och bär",
+     "mellis": "Äppelklyftor med yoghurt och kanel",
+     "middag": {
+      "typ": "recept",
+      "recept": "tacos",
+      "namn": "Tacos",
+      "port": "3 portioner (en blir rester)"
+     },
+     "extra": null
+    },
+    {
+     "datum": "2026-11-09",
+     "dag": "mån 9 nov",
+     "noah": false,
+     "frukost": "Havregrynsgröt med honung och äpple",
+     "mellis": "Yoghurt med bär",
+     "middag": {
+      "typ": "rester",
+      "recept": "tacos",
+      "namn": "Rester: Tacos",
+      "port": "1 portion"
+     },
+     "extra": null
+    },
+    {
+     "datum": "2026-11-10",
+     "dag": "tis 10 nov",
+     "noah": false,
+     "frukost": "Smörgås med kalkon och avokado",
+     "mellis": "Gurka och tunna morotsstavar med hummus",
+     "middag": {
+      "typ": "solo",
+      "recept": "laxpasta",
+      "namn": "Pasta med lax och spenat",
+      "port": "1 portion (halva receptet)"
+     },
+     "extra": null
+    }
+   ],
+   "lista": [
+    {
+     "kat": "Frukt & grönt",
+     "rader": [
+      {
+       "key": "avokado",
+       "namn": "Avokado",
+       "qty": "2 st",
+       "anm": ""
+      },
+      {
+       "key": "spenat",
+       "namn": "Babyspenat",
+       "qty": "1 påse",
+       "anm": ""
+      },
+      {
+       "key": "banan",
+       "namn": "Bananer",
+       "qty": "1 klase",
+       "anm": ""
+      },
+      {
+       "key": "broccoli",
+       "namn": "Broccoli",
+       "qty": "2 st",
+       "anm": ""
+      },
+      {
+       "key": "citron",
+       "namn": "Citron",
+       "qty": "1 st",
+       "anm": ""
+      },
+      {
+       "key": "gurka",
+       "namn": "Gurka",
+       "qty": "4 st",
+       "anm": ""
+      },
+      {
+       "key": "morot",
+       "namn": "Morötter",
+       "qty": "1 kg",
+       "anm": ""
+      },
+      {
+       "key": "paprika",
+       "namn": "Paprika",
+       "qty": "2 st",
+       "anm": ""
+      },
+      {
+       "key": "potatis",
+       "namn": "Potatis",
+       "qty": "1,5 kg",
+       "anm": ""
+      },
+      {
+       "key": "paron",
+       "namn": "Päron",
+       "qty": "4 st",
+       "anm": ""
+      },
+      {
+       "key": "sallad",
+       "namn": "Sallad",
+       "qty": "2 st",
+       "anm": ""
+      },
+      {
+       "key": "tomat",
+       "namn": "Tomater",
+       "qty": "500 g",
+       "anm": ""
+      },
+      {
+       "key": "apple",
+       "namn": "Äpplen",
+       "qty": "6 st",
+       "anm": ""
+      }
+     ]
+    },
+    {
+     "kat": "Kött & fisk",
+     "rader": [
+      {
+       "key": "kalkon",
+       "namn": "Kalkonpålägg",
+       "qty": "2 förp",
+       "anm": ""
+      },
+      {
+       "key": "kyckling",
+       "namn": "Kycklingfilé",
+       "qty": "600 g",
+       "anm": ""
+      },
+      {
+       "key": "lax",
+       "namn": "Laxfilé",
+       "qty": "500 g",
+       "anm": ""
+      },
+      {
+       "key": "notfars",
+       "namn": "Nötfärs",
+       "qty": "500 g",
+       "anm": "Frys det du inte använder inom 2 dagar."
+      }
+     ]
+    },
+    {
+     "kat": "Mejeri & ägg",
+     "rader": [
+      {
+       "key": "cf",
+       "namn": "Crème fraiche",
+       "qty": "400 g",
+       "anm": ""
+      },
+      {
+       "key": "hummus",
+       "namn": "Hummus",
+       "qty": "400 g",
+       "anm": ""
+      },
+      {
+       "key": "keso",
+       "namn": "Keso",
+       "qty": "1 kg",
+       "anm": ""
+      },
+      {
+       "key": "kvarg",
+       "namn": "Mild kvarg",
+       "qty": "500 g",
+       "anm": ""
+      },
+      {
+       "key": "mjolk",
+       "namn": "Mjölk",
+       "qty": "2 paket (2 l)",
+       "anm": ""
+      },
+      {
+       "key": "ost",
+       "namn": "Ostbit till mackor",
+       "qty": "400 g",
+       "anm": ""
+      },
+      {
+       "key": "rivost",
+       "namn": "Riven ost",
+       "qty": "200 g",
+       "anm": ""
+      },
+      {
+       "key": "yoghurt",
+       "namn": "Turkisk yoghurt",
+       "qty": "2 burkar (1 kg)",
+       "anm": ""
+      },
+      {
+       "key": "agg",
+       "namn": "Ägg",
+       "qty": "1 förp (12 st)",
+       "anm": ""
+      }
+     ]
+    },
+    {
+     "kat": "Skafferi",
+     "rader": [
+      {
+       "key": "kidney",
+       "namn": "Kidneybönor",
+       "qty": "2 burkar",
+       "anm": ""
+      },
+      {
+       "key": "knacke",
+       "namn": "Knäckebröd",
+       "qty": "1 förp",
+       "anm": ""
+      },
+      {
+       "key": "krossade",
+       "namn": "Krossade tomater",
+       "qty": "1 förp",
+       "anm": ""
+      },
+      {
+       "key": "majs",
+       "namn": "Majs",
+       "qty": "2 burkar",
+       "anm": ""
+      },
+      {
+       "key": "tacokrydda",
+       "namn": "Mild tacokrydda",
+       "qty": "1 förp",
+       "anm": ""
+      },
+      {
+       "key": "popcorn",
+       "namn": "Popcornmajs",
+       "qty": "500 g",
+       "anm": ""
+      },
+      {
+       "key": "tacosas",
+       "namn": "Tacosås",
+       "qty": "1 burk",
+       "anm": ""
+      }
+     ]
+    },
+    {
+     "kat": "Bröd",
+     "rader": [
+      {
+       "key": "brod",
+       "namn": "Fullkornsbröd",
+       "qty": "1 limpa",
+       "anm": ""
+      }
+     ]
+    },
+    {
+     "kat": "Fryst",
+     "rader": [
+      {
+       "key": "bar",
+       "namn": "Frysta bär",
+       "qty": "500 g",
+       "anm": ""
+      }
+     ]
+    },
+    {
+     "kat": "Godis & snacks",
+     "rader": [
+      {
+       "key": "godis",
+       "namn": "Lösgodis",
+       "qty": "150 g",
+       "anm": "Lördagsgodis. Ta bara det som ska ätas samma dag."
+      }
+     ]
+    }
+   ],
+   "hemma": [
+    {
+     "namn": "Osockrad müsli",
+     "text": "räcker (kvar ca 30 g)"
+    },
+    {
+     "namn": "Havregryn",
+     "text": "räcker (kvar ca 636 g)"
+    },
+    {
+     "namn": "Honung",
+     "text": "räcker (kvar ca 206 g)"
+    },
+    {
+     "namn": "Smör",
+     "text": "räcker (kvar ca 262 g)"
+    },
+    {
+     "namn": "Gul lök",
+     "text": "räcker (kvar ca 480 g)"
+    },
+    {
+     "namn": "Vitlök",
+     "text": "räcker (kvar ca 5 klyfta)"
+    },
+    {
+     "namn": "Ris",
+     "text": "räcker (kvar ca 975 g)"
+    },
+    {
+     "namn": "Salt-reducerad soja",
+     "text": "räcker (kvar ca 170 ml)"
+    },
+    {
+     "namn": "Tortillabröd",
+     "text": "räcker (kvar ca 2 st)"
+    },
+    {
+     "namn": "Fullkornspasta",
+     "text": "räcker (kvar ca 170 g)"
+    },
+    {
+     "namn": "Frysta ärtor",
+     "text": "räcker (kvar ca 375 g)"
+    }
+   ]
+  },
+  {
+   "vecka": 2,
+   "fran": "2026-11-11",
+   "till": "2026-11-17",
+   "rubrik": "ons 11 nov till tis 17 nov",
+   "noahDagar": 3,
+   "dagar": [
+    {
+     "datum": "2026-11-11",
+     "dag": "ons 11 nov",
+     "noah": true,
+     "frukost": "Havregrynsgröt med banan och bär",
+     "mellis": "Päron eller banan i bitar",
+     "middag": {
+      "typ": "recept",
+      "recept": "torsk",
+      "namn": "Ugnstorsk med rotfrukter",
+      "port": "3 portioner (en blir rester)"
+     },
+     "extra": null
+    },
+    {
+     "datum": "2026-11-12",
+     "dag": "tors 12 nov",
+     "noah": false,
+     "frukost": "Turkisk yoghurt med müsli och bär",
+     "mellis": "Hummus med gurka och riven morot",
+     "middag": {
+      "typ": "rester",
+      "recept": "torsk",
+      "namn": "Rester: Ugnstorsk med rotfrukter",
+      "port": "1 portion"
+     },
+     "extra": null
+    },
+    {
+     "datum": "2026-11-13",
+     "dag": "fre 13 nov",
+     "noah": true,
+     "frukost": "Smörgås med ost, gurka och ägg",
+     "mellis": "Keso eller kvarg med bär",
+     "middag": {
+      "typ": "recept",
+      "recept": "pastasas",
+      "namn": "Pasta med grönsaksrik köttfärssås",
+      "port": "3 portioner (en blir rester)"
+     },
+     "extra": null
+    },
+    {
+     "datum": "2026-11-14",
+     "dag": "lör 14 nov",
+     "noah": false,
+     "frukost": "Äggröra på fullkornsbröd",
+     "mellis": "Ostbitar med knäckebröd",
+     "middag": {
+      "typ": "rester",
+      "recept": "pastasas",
+      "namn": "Rester: Pasta med grönsaksrik köttfärssås",
+      "port": "1 portion"
+     },
+     "extra": "Lördagssnacks för dig: mörk choklad, popcorn och chips med yoghurtdipp"
+    },
+    {
+     "datum": "2026-11-15",
+     "dag": "sön 15 nov",
+     "noah": false,
+     "frukost": "Turkisk yoghurt med müsli och bär",
+     "mellis": "Äppelklyftor med yoghurt och kanel",
+     "middag": {
+      "typ": "solo",
+      "recept": "wok",
+      "namn": "Kycklingwok med ris",
+      "port": "1 portion (halva receptet)"
+     },
+     "extra": null
+    },
+    {
+     "datum": "2026-11-16",
+     "dag": "mån 16 nov",
+     "noah": true,
+     "frukost": "Havregrynsgröt med honung och äpple",
+     "mellis": "Yoghurt med bär",
+     "middag": {
+      "typ": "recept",
+      "recept": "linssoppa",
+      "namn": "Röd linssoppa med bröd",
+      "port": "3 portioner (en blir rester)"
+     },
+     "extra": null
+    },
+    {
+     "datum": "2026-11-17",
+     "dag": "tis 17 nov",
+     "noah": false,
+     "frukost": "Smörgås med kalkon och avokado",
+     "mellis": "Gurka och tunna morotsstavar med hummus",
+     "middag": {
+      "typ": "rester",
+      "recept": "linssoppa",
+      "namn": "Rester: Röd linssoppa med bröd",
+      "port": "1 portion"
+     },
+     "extra": null
+    }
+   ],
+   "lista": [
+    {
+     "kat": "Frukt & grönt",
+     "rader": [
+      {
+       "key": "banan",
+       "namn": "Bananer",
+       "qty": "1 klase",
+       "anm": ""
+      },
+      {
+       "key": "broccoli",
+       "namn": "Broccoli",
+       "qty": "2 st",
+       "anm": ""
+      },
+      {
+       "key": "citron",
+       "namn": "Citron",
+       "qty": "1 st",
+       "anm": ""
+      },
+      {
+       "key": "gurka",
+       "namn": "Gurka",
+       "qty": "3 st",
+       "anm": ""
+      },
+      {
+       "key": "morot",
+       "namn": "Morötter",
+       "qty": "1 kg",
+       "anm": ""
+      },
+      {
+       "key": "paprika",
+       "namn": "Paprika",
+       "qty": "1 st",
+       "anm": ""
+      },
+      {
+       "key": "paron",
+       "namn": "Päron",
+       "qty": "4 st",
+       "anm": ""
+      },
+      {
+       "key": "vitlok",
+       "namn": "Vitlök",
+       "qty": "1 huvud",
+       "anm": ""
+      },
+      {
+       "key": "zucchini",
+       "namn": "Zucchini",
+       "qty": "1 st",
+       "anm": ""
+      },
+      {
+       "key": "apple",
+       "namn": "Äpplen",
+       "qty": "6 st",
+       "anm": ""
+      }
+     ]
+    },
+    {
+     "kat": "Kött & fisk",
+     "rader": [
+      {
+       "key": "kalkon",
+       "namn": "Kalkonpålägg",
+       "qty": "2 förp",
+       "anm": ""
+      },
+      {
+       "key": "kyckling",
+       "namn": "Kycklingfilé",
+       "qty": "600 g",
+       "anm": ""
+      },
+      {
+       "key": "notfars",
+       "namn": "Nötfärs",
+       "qty": "500 g",
+       "anm": "Frys det du inte använder inom 2 dagar."
+      }
+     ]
+    },
+    {
+     "kat": "Mejeri & ägg",
+     "rader": [
+      {
+       "key": "hummus",
+       "namn": "Hummus",
+       "qty": "400 g",
+       "anm": ""
+      },
+      {
+       "key": "keso",
+       "namn": "Keso",
+       "qty": "1 kg",
+       "anm": ""
+      },
+      {
+       "key": "kvarg",
+       "namn": "Mild kvarg",
+       "qty": "500 g",
+       "anm": ""
+      },
+      {
+       "key": "mjolk",
+       "namn": "Mjölk",
+       "qty": "2 paket (2 l)",
+       "anm": ""
+      },
+      {
+       "key": "yoghurt",
+       "namn": "Turkisk yoghurt",
+       "qty": "2 burkar (1 kg)",
+       "anm": ""
+      }
+     ]
+    },
+    {
+     "kat": "Skafferi",
+     "rader": [
+      {
+       "key": "pasta",
+       "namn": "Fullkornspasta",
+       "qty": "500 g",
+       "anm": ""
+      },
+      {
+       "key": "kokos",
+       "namn": "Kokosmjölk",
+       "qty": "2 burkar",
+       "anm": ""
+      },
+      {
+       "key": "krossade",
+       "namn": "Krossade tomater",
+       "qty": "2 förp",
+       "anm": ""
+      },
+      {
+       "key": "curry",
+       "namn": "Mild currypulver",
+       "qty": "1 burk",
+       "anm": ""
+      },
+      {
+       "key": "musli",
+       "namn": "Osockrad müsli",
+       "qty": "500 g",
+       "anm": ""
+      },
+      {
+       "key": "linser",
+       "namn": "Röda linser",
+       "qty": "500 g",
+       "anm": ""
+      }
+     ]
+    },
+    {
+     "kat": "Bröd",
+     "rader": [
+      {
+       "key": "brod",
+       "namn": "Fullkornsbröd",
+       "qty": "2 limpor",
+       "anm": ""
+      }
+     ]
+    },
+    {
+     "kat": "Fryst",
+     "rader": [
+      {
+       "key": "bar",
+       "namn": "Frysta bär",
+       "qty": "500 g",
+       "anm": ""
+      },
+      {
+       "key": "torsk",
+       "namn": "Torskfilé, fryst",
+       "qty": "500 g",
+       "anm": ""
+      }
+     ]
+    },
+    {
+     "kat": "Godis & snacks",
+     "rader": [
+      {
+       "key": "chips",
+       "namn": "Chips",
+       "qty": "1 förp",
+       "anm": ""
+      },
+      {
+       "key": "choklad",
+       "namn": "Mörk choklad 70 %",
+       "qty": "1 kaka",
+       "anm": ""
+      }
+     ]
+    }
+   ],
+   "hemma": [
+    {
+     "namn": "Havregryn",
+     "text": "räcker (kvar ca 372 g)"
+    },
+    {
+     "namn": "Ägg",
+     "text": "räcker (kvar ca 1,2 st)"
+    },
+    {
+     "namn": "Ostbit till mackor",
+     "text": "räcker (kvar ca 60 g)"
+    },
+    {
+     "namn": "Honung",
+     "text": "räcker (kvar ca 162 g)"
+    },
+    {
+     "namn": "Smör",
+     "text": "räcker (kvar ca 144 g)"
+    },
+    {
+     "namn": "Knäckebröd",
+     "text": "räcker (kvar ca 48 g)"
+    },
+    {
+     "namn": "Potatis",
+     "text": "räcker (kvar ca 700 g)"
+    },
+    {
+     "namn": "Gul lök",
+     "text": "räcker (kvar ca 170 g)"
+    },
+    {
+     "namn": "Frysta ärtor",
+     "text": "räcker (kvar ca 300 g)"
+    },
+    {
+     "namn": "Riven ost",
+     "text": "räcker (kvar ca 110 g)"
+    },
+    {
+     "namn": "Popcornmajs",
+     "text": "räcker (kvar ca 340 g)"
+    },
+    {
+     "namn": "Salt-reducerad soja",
+     "text": "räcker (kvar ca 155 ml)"
+    },
+    {
+     "namn": "Ris",
+     "text": "räcker (kvar ca 900 g)"
+    }
+   ]
+  },
+  {
+   "vecka": 3,
+   "fran": "2026-11-18",
+   "till": "2026-11-24",
+   "rubrik": "ons 18 nov till tis 24 nov",
+   "noahDagar": 5,
+   "dagar": [
+    {
+     "datum": "2026-11-18",
+     "dag": "ons 18 nov",
+     "noah": true,
+     "frukost": "Havregrynsgröt med banan och bär",
+     "mellis": "Päron eller banan i bitar",
+     "middag": {
+      "typ": "recept",
+      "recept": "lar",
+      "namn": "Ugnsbakad kyckling med rotfrukter",
+      "port": "3 portioner (en blir rester)"
+     },
+     "extra": null
+    },
+    {
+     "datum": "2026-11-19",
+     "dag": "tors 19 nov",
+     "noah": false,
+     "frukost": "Turkisk yoghurt med müsli och bär",
+     "mellis": "Hummus med gurka och riven morot",
+     "middag": {
+      "typ": "rester",
+      "recept": "lar",
+      "namn": "Rester: Ugnsbakad kyckling med rotfrukter",
+      "port": "1 portion"
+     },
+     "extra": null
+    },
+    {
+     "datum": "2026-11-20",
+     "dag": "fre 20 nov",
+     "noah": true,
+     "frukost": "Smörgås med ost, gurka och ägg",
+     "mellis": "Keso eller kvarg med bär",
+     "middag": {
+      "typ": "recept",
+      "recept": "bullar",
+      "namn": "Ugnsbullar med potatis och gurka",
+      "port": "2 portioner"
+     },
+     "extra": null
+    },
+    {
+     "datum": "2026-11-21",
+     "dag": "lör 21 nov",
+     "noah": true,
+     "frukost": "Äggröra på fullkornsbröd",
+     "mellis": "Ostbitar med knäckebröd",
+     "middag": {
+      "typ": "recept",
+      "recept": "laxpasta",
+      "namn": "Pasta med lax och spenat",
+      "port": "2 portioner"
+     },
+     "extra": "Lördagsgodis (lösgodis ca 150 g att dela) och popcorn"
+    },
+    {
+     "datum": "2026-11-22",
+     "dag": "sön 22 nov",
+     "noah": true,
+     "frukost": "Turkisk yoghurt med müsli och bär",
+     "mellis": "Äppelklyftor med yoghurt och kanel",
+     "middag": {
+      "typ": "recept",
+      "recept": "curry",
+      "namn": "Kikärtscurry med sötpotatis",
+      "port": "2 portioner"
+     },
+     "extra": null
+    },
+    {
+     "datum": "2026-11-23",
+     "dag": "mån 23 nov",
+     "noah": true,
+     "frukost": "Havregrynsgröt med honung och äpple",
+     "mellis": "Yoghurt med bär",
+     "middag": {
+      "typ": "recept",
+      "recept": "pizza",
+      "namn": "Pizza på tortillabröd",
+      "port": "2 portioner"
+     },
+     "extra": null
+    },
+    {
+     "datum": "2026-11-24",
+     "dag": "tis 24 nov",
+     "noah": false,
+     "frukost": "Smörgås med kalkon och avokado",
+     "mellis": "Gurka och tunna morotsstavar med hummus",
+     "middag": {
+      "typ": "solo",
+      "recept": "omelett",
+      "namn": "Omelett med grönsaker",
+      "port": "1 portion (halva receptet)"
+     },
+     "extra": null
+    }
+   ],
+   "lista": [
+    {
+     "kat": "Frukt & grönt",
+     "rader": [
+      {
+       "key": "spenat",
+       "namn": "Babyspenat",
+       "qty": "2 påsar",
+       "anm": ""
+      },
+      {
+       "key": "banan",
+       "namn": "Bananer",
+       "qty": "1 klase",
+       "anm": ""
+      },
+      {
+       "key": "broccoli",
+       "namn": "Broccoli",
+       "qty": "2 st",
+       "anm": ""
+      },
+      {
+       "key": "citron",
+       "namn": "Citron",
+       "qty": "1 st",
+       "anm": ""
+      },
+      {
+       "key": "gurka",
+       "namn": "Gurka",
+       "qty": "4 st",
+       "anm": ""
+      },
+      {
+       "key": "morot",
+       "namn": "Morötter",
+       "qty": "1 kg",
+       "anm": ""
+      },
+      {
+       "key": "paprika",
+       "namn": "Paprika",
+       "qty": "2 st",
+       "anm": ""
+      },
+      {
+       "key": "potatis",
+       "namn": "Potatis",
+       "qty": "1,5 kg",
+       "anm": ""
+      },
+      {
+       "key": "paron",
+       "namn": "Päron",
+       "qty": "4 st",
+       "anm": ""
+      },
+      {
+       "key": "sotpotatis",
+       "namn": "Sötpotatis",
+       "qty": "800 g",
+       "anm": ""
+      },
+      {
+       "key": "tomat",
+       "namn": "Tomater",
+       "qty": "500 g",
+       "anm": ""
+      },
+      {
+       "key": "apple",
+       "namn": "Äpplen",
+       "qty": "6 st",
+       "anm": ""
+      }
+     ]
+    },
+    {
+     "kat": "Kött & fisk",
+     "rader": [
+      {
+       "key": "kalkon",
+       "namn": "Kalkonpålägg",
+       "qty": "2 förp",
+       "anm": ""
+      },
+      {
+       "key": "kycklinglar",
+       "namn": "Kycklinglårfilé",
+       "qty": "700 g",
+       "anm": ""
+      },
+      {
+       "key": "lax",
+       "namn": "Laxfilé",
+       "qty": "500 g",
+       "anm": ""
+      },
+      {
+       "key": "notfars",
+       "namn": "Nötfärs",
+       "qty": "500 g",
+       "anm": "Frys det du inte använder inom 2 dagar."
+      }
+     ]
+    },
+    {
+     "kat": "Mejeri & ägg",
+     "rader": [
+      {
+       "key": "cf",
+       "namn": "Crème fraiche",
+       "qty": "200 g",
+       "anm": ""
+      },
+      {
+       "key": "hummus",
+       "namn": "Hummus",
+       "qty": "400 g",
+       "anm": ""
+      },
+      {
+       "key": "keso",
+       "namn": "Keso",
+       "qty": "1 kg",
+       "anm": ""
+      },
+      {
+       "key": "kvarg",
+       "namn": "Mild kvarg",
+       "qty": "500 g",
+       "anm": ""
+      },
+      {
+       "key": "mjolk",
+       "namn": "Mjölk",
+       "qty": "2 paket (2 l)",
+       "anm": ""
+      },
+      {
+       "key": "ost",
+       "namn": "Ostbit till mackor",
+       "qty": "400 g",
+       "anm": ""
+      },
+      {
+       "key": "rivost",
+       "namn": "Riven ost",
+       "qty": "200 g",
+       "anm": ""
+      },
+      {
+       "key": "yoghurt",
+       "namn": "Turkisk yoghurt",
+       "qty": "2 burkar (1 kg)",
+       "anm": ""
+      },
+      {
+       "key": "agg",
+       "namn": "Ägg",
+       "qty": "1 förp (12 st)",
+       "anm": ""
+      }
+     ]
+    },
+    {
+     "kat": "Skafferi",
+     "rader": [
+      {
+       "key": "kikarter",
+       "namn": "Kikärtor",
+       "qty": "1 burk",
+       "anm": ""
+      },
+      {
+       "key": "knacke",
+       "namn": "Knäckebröd",
+       "qty": "1 förp",
+       "anm": ""
+      },
+      {
+       "key": "kokos",
+       "namn": "Kokosmjölk",
+       "qty": "1 burk",
+       "anm": ""
+      },
+      {
+       "key": "krossade",
+       "namn": "Krossade tomater",
+       "qty": "1 förp",
+       "anm": ""
+      },
+      {
+       "key": "tortilla",
+       "namn": "Tortillabröd",
+       "qty": "1 förp (8 st)",
+       "anm": ""
+      }
+     ]
+    },
+    {
+     "kat": "Bröd",
+     "rader": [
+      {
+       "key": "brod",
+       "namn": "Fullkornsbröd",
+       "qty": "2 limpor",
+       "anm": ""
+      }
+     ]
+    },
+    {
+     "kat": "Fryst",
+     "rader": [
+      {
+       "key": "bar",
+       "namn": "Frysta bär",
+       "qty": "500 g",
+       "anm": ""
+      }
+     ]
+    },
+    {
+     "kat": "Godis & snacks",
+     "rader": [
+      {
+       "key": "godis",
+       "namn": "Lösgodis",
+       "qty": "150 g",
+       "anm": "Lördagsgodis. Ta bara det som ska ätas samma dag."
+      }
+     ]
+    }
+   ],
+   "hemma": [
+    {
+     "namn": "Osockrad müsli",
+     "text": "räcker (kvar ca 60 g)"
+    },
+    {
+     "namn": "Havregryn",
+     "text": "räcker (kvar ca 42 g)"
+    },
+    {
+     "namn": "Honung",
+     "text": "räcker (kvar ca 112 g)"
+    },
+    {
+     "namn": "Smör",
+     "text": "räcker (kvar ca 44 g)"
+    },
+    {
+     "namn": "Gul lök",
+     "text": "räcker (kvar ca 50 g)"
+    },
+    {
+     "namn": "Fullkornspasta",
+     "text": "räcker (kvar ca 270 g)"
+    },
+    {
+     "namn": "Frysta ärtor",
+     "text": "räcker (kvar ca 250 g)"
+    },
+    {
+     "namn": "Popcornmajs",
+     "text": "räcker (kvar ca 260 g)"
+    },
+    {
+     "namn": "Vitlök",
+     "text": "räcker (kvar ca 6 klyfta)"
+    },
+    {
+     "namn": "Ris",
+     "text": "räcker (kvar ca 750 g)"
+    },
+    {
+     "namn": "Mild currypulver",
+     "text": "räcker (kvar ca 0,8 burk)"
+    }
+   ]
+  },
+  {
+   "vecka": 4,
+   "fran": "2026-11-25",
+   "till": "2026-12-01",
+   "rubrik": "ons 25 nov till tis 1 dec",
+   "noahDagar": 3,
+   "dagar": [
+    {
+     "datum": "2026-11-25",
+     "dag": "ons 25 nov",
+     "noah": false,
+     "frukost": "Havregrynsgröt med banan och bär",
+     "mellis": "Päron eller banan i bitar",
+     "middag": {
+      "typ": "solo",
+      "recept": "pastasas",
+      "namn": "Pasta med grönsaksrik köttfärssås",
+      "port": "1 portion (halva receptet)"
+     },
+     "extra": null
+    },
+    {
+     "datum": "2026-11-26",
+     "dag": "tors 26 nov",
+     "noah": true,
+     "frukost": "Turkisk yoghurt med müsli och bär",
+     "mellis": "Hummus med gurka och riven morot",
+     "middag": {
+      "typ": "recept",
+      "recept": "lax",
+      "namn": "Ugnslax med potatis och broccoli",
+      "port": "3 portioner (en blir rester)"
+     },
+     "extra": null
+    },
+    {
+     "datum": "2026-11-27",
+     "dag": "fre 27 nov",
+     "noah": false,
+     "frukost": "Smörgås med ost, gurka och ägg",
+     "mellis": "Keso eller kvarg med bär",
+     "middag": {
+      "typ": "rester",
+      "recept": "lax",
+      "namn": "Rester: Ugnslax med potatis och broccoli",
+      "port": "1 portion"
+     },
+     "extra": null
+    },
+    {
+     "datum": "2026-11-28",
+     "dag": "lör 28 nov",
+     "noah": false,
+     "frukost": "Äggröra på fullkornsbröd",
+     "mellis": "Ostbitar med knäckebröd",
+     "middag": {
+      "typ": "solo",
+      "recept": "laxpasta",
+      "namn": "Pasta med lax och spenat",
+      "port": "1 portion (halva receptet)"
+     },
+     "extra": "Lördagssnacks för dig: mörk choklad, popcorn och chips med yoghurtdipp"
+    },
+    {
+     "datum": "2026-11-29",
+     "dag": "sön 29 nov",
+     "noah": false,
+     "frukost": "Turkisk yoghurt med müsli och bär",
+     "mellis": "Äppelklyftor med yoghurt och kanel",
+     "middag": {
+      "typ": "solo",
+      "recept": "omelett",
+      "namn": "Omelett med grönsaker",
+      "port": "1 portion (halva receptet)"
+     },
+     "extra": null
+    },
+    {
+     "datum": "2026-11-30",
+     "dag": "mån 30 nov",
+     "noah": true,
+     "frukost": "Havregrynsgröt med honung och äpple",
+     "mellis": "Yoghurt med bär",
+     "middag": {
+      "typ": "recept",
+      "recept": "pastasas",
+      "namn": "Pasta med grönsaksrik köttfärssås",
+      "port": "2 portioner"
+     },
+     "extra": null
+    },
+    {
+     "datum": "2026-12-01",
+     "dag": "tis 1 dec",
+     "noah": true,
+     "frukost": "Smörgås med kalkon och avokado",
+     "mellis": "Gurka och tunna morotsstavar med hummus",
+     "middag": {
+      "typ": "recept",
+      "recept": "chili",
+      "namn": "Mild bönchili med ris",
+      "port": "3 portioner (en blir rester)"
+     },
+     "extra": null
+    }
+   ],
+   "lista": [
+    {
+     "kat": "Frukt & grönt",
+     "rader": [
+      {
+       "key": "spenat",
+       "namn": "Babyspenat",
+       "qty": "1 påse",
+       "anm": ""
+      },
+      {
+       "key": "banan",
+       "namn": "Bananer",
+       "qty": "1 klase",
+       "anm": ""
+      },
+      {
+       "key": "broccoli",
+       "namn": "Broccoli",
+       "qty": "2 st",
+       "anm": ""
+      },
+      {
+       "key": "citron",
+       "namn": "Citron",
+       "qty": "1 st",
+       "anm": ""
+      },
+      {
+       "key": "lok",
+       "namn": "Gul lök",
+       "qty": "1 kg",
+       "anm": ""
+      },
+      {
+       "key": "gurka",
+       "namn": "Gurka",
+       "qty": "3 st",
+       "anm": ""
+      },
+      {
+       "key": "morot",
+       "namn": "Morötter",
+       "qty": "1 kg",
+       "anm": ""
+      },
+      {
+       "key": "paprika",
+       "namn": "Paprika",
+       "qty": "2 st",
+       "anm": ""
+      },
+      {
+       "key": "paron",
+       "namn": "Päron",
+       "qty": "4 st",
+       "anm": ""
+      },
+      {
+       "key": "tomat",
+       "namn": "Tomater",
+       "qty": "500 g",
+       "anm": ""
+      },
+      {
+       "key": "zucchini",
+       "namn": "Zucchini",
+       "qty": "1 st",
+       "anm": ""
+      },
+      {
+       "key": "apple",
+       "namn": "Äpplen",
+       "qty": "6 st",
+       "anm": ""
+      }
+     ]
+    },
+    {
+     "kat": "Kött & fisk",
+     "rader": [
+      {
+       "key": "kalkon",
+       "namn": "Kalkonpålägg",
+       "qty": "2 förp",
+       "anm": ""
+      },
+      {
+       "key": "lax",
+       "namn": "Laxfilé",
+       "qty": "1 kg",
+       "anm": ""
+      },
+      {
+       "key": "notfars",
+       "namn": "Nötfärs",
+       "qty": "500 g",
+       "anm": "Frys det du inte använder inom 2 dagar."
+      }
+     ]
+    },
+    {
+     "kat": "Mejeri & ägg",
+     "rader": [
+      {
+       "key": "cf",
+       "namn": "Crème fraiche",
+       "qty": "200 g",
+       "anm": ""
+      },
+      {
+       "key": "hummus",
+       "namn": "Hummus",
+       "qty": "400 g",
+       "anm": ""
+      },
+      {
+       "key": "keso",
+       "namn": "Keso",
+       "qty": "1 kg",
+       "anm": ""
+      },
+      {
+       "key": "kvarg",
+       "namn": "Mild kvarg",
+       "qty": "500 g",
+       "anm": ""
+      },
+      {
+       "key": "mjolk",
+       "namn": "Mjölk",
+       "qty": "2 paket (2 l)",
+       "anm": ""
+      },
+      {
+       "key": "ost",
+       "namn": "Ostbit till mackor",
+       "qty": "400 g",
+       "anm": ""
+      },
+      {
+       "key": "smor",
+       "namn": "Smör",
+       "qty": "500 g",
+       "anm": ""
+      },
+      {
+       "key": "yoghurt",
+       "namn": "Turkisk yoghurt",
+       "qty": "2 burkar (1 kg)",
+       "anm": ""
+      },
+      {
+       "key": "agg",
+       "namn": "Ägg",
+       "qty": "1 förp (12 st)",
+       "anm": ""
+      }
+     ]
+    },
+    {
+     "kat": "Skafferi",
+     "rader": [
+      {
+       "key": "pasta",
+       "namn": "Fullkornspasta",
+       "qty": "500 g",
+       "anm": ""
+      },
+      {
+       "key": "havregryn",
+       "namn": "Havregryn",
+       "qty": "1 kg",
+       "anm": ""
+      },
+      {
+       "key": "kidney",
+       "namn": "Kidneybönor",
+       "qty": "2 burkar",
+       "anm": ""
+      },
+      {
+       "key": "knacke",
+       "namn": "Knäckebröd",
+       "qty": "1 förp",
+       "anm": ""
+      },
+      {
+       "key": "krossade",
+       "namn": "Krossade tomater",
+       "qty": "3 förp",
+       "anm": ""
+      },
+      {
+       "key": "majs",
+       "namn": "Majs",
+       "qty": "2 burkar",
+       "anm": ""
+      },
+      {
+       "key": "musli",
+       "namn": "Osockrad müsli",
+       "qty": "500 g",
+       "anm": ""
+      }
+     ]
+    },
+    {
+     "kat": "Bröd",
+     "rader": [
+      {
+       "key": "brod",
+       "namn": "Fullkornsbröd",
+       "qty": "1 limpa",
+       "anm": ""
+      }
+     ]
+    },
+    {
+     "kat": "Fryst",
+     "rader": [
+      {
+       "key": "bar",
+       "namn": "Frysta bär",
+       "qty": "500 g",
+       "anm": ""
+      }
+     ]
+    },
+    {
+     "kat": "Godis & snacks",
+     "rader": [
+      {
+       "key": "chips",
+       "namn": "Chips",
+       "qty": "1 förp",
+       "anm": ""
+      },
+      {
+       "key": "choklad",
+       "namn": "Mörk choklad 70 %",
+       "qty": "1 kaka",
+       "anm": ""
+      }
+     ]
+    }
+   ],
+   "hemma": [
+    {
+     "namn": "Honung",
+     "text": "räcker (kvar ca 68 g)"
+    },
+    {
+     "namn": "Vitlök",
+     "text": "räcker (kvar ca 0 klyfta)"
+    },
+    {
+     "namn": "Frysta ärtor",
+     "text": "räcker (kvar ca 150 g)"
+    },
+    {
+     "namn": "Riven ost",
+     "text": "räcker (kvar ca 30 g)"
+    },
+    {
+     "namn": "Potatis",
+     "text": "räcker (kvar ca 350 g)"
+    },
+    {
+     "namn": "Popcornmajs",
+     "text": "räcker (kvar ca 180 g)"
+    },
+    {
+     "namn": "Ris",
+     "text": "räcker (kvar ca 525 g)"
+    }
+   ]
+  },
+  {
+   "vecka": 5,
+   "fran": "2026-12-02",
+   "till": "2026-12-08",
+   "rubrik": "ons 2 dec till tis 8 dec",
+   "noahDagar": 3,
+   "dagar": [
+    {
+     "datum": "2026-12-02",
+     "dag": "ons 2 dec",
+     "noah": false,
+     "frukost": "Havregrynsgröt med banan och bär",
+     "mellis": "Päron eller banan i bitar",
+     "middag": {
+      "typ": "rester",
+      "recept": "chili",
+      "namn": "Rester: Mild bönchili med ris",
+      "port": "1 portion"
+     },
+     "extra": null
+    },
+    {
+     "datum": "2026-12-03",
+     "dag": "tors 3 dec",
+     "noah": false,
+     "frukost": "Turkisk yoghurt med müsli och bär",
+     "mellis": "Hummus med gurka och riven morot",
+     "middag": {
+      "typ": "solo",
+      "recept": "chili",
+      "namn": "Mild bönchili med ris",
+      "port": "1 portion (halva receptet)"
+     },
+     "extra": null
+    },
+    {
+     "datum": "2026-12-04",
+     "dag": "fre 4 dec",
+     "noah": true,
+     "frukost": "Smörgås med ost, gurka och ägg",
+     "mellis": "Keso eller kvarg med bär",
+     "middag": {
+      "typ": "recept",
+      "recept": "torsk",
+      "namn": "Ugnstorsk med rotfrukter",
+      "port": "2 portioner"
+     },
+     "extra": null
+    },
+    {
+     "datum": "2026-12-05",
+     "dag": "lör 5 dec",
+     "noah": true,
+     "frukost": "Äggröra på fullkornsbröd",
+     "mellis": "Ostbitar med knäckebröd",
+     "middag": {
+      "typ": "recept",
+      "recept": "lar",
+      "namn": "Ugnsbakad kyckling med rotfrukter",
+      "port": "2 portioner"
+     },
+     "extra": "Lördagsgodis (lösgodis ca 150 g att dela) och popcorn"
+    },
+    {
+     "datum": "2026-12-06",
+     "dag": "sön 6 dec",
+     "noah": true,
+     "frukost": "Turkisk yoghurt med müsli och bär",
+     "mellis": "Äppelklyftor med yoghurt och kanel",
+     "middag": {
+      "typ": "recept",
+      "recept": "bullar",
+      "namn": "Ugnsbullar med potatis och gurka",
+      "port": "3 portioner (en blir rester)"
+     },
+     "extra": null
+    },
+    {
+     "datum": "2026-12-07",
+     "dag": "mån 7 dec",
+     "noah": false,
+     "frukost": "Havregrynsgröt med honung och äpple",
+     "mellis": "Yoghurt med bär",
+     "middag": {
+      "typ": "rester",
+      "recept": "bullar",
+      "namn": "Rester: Ugnsbullar med potatis och gurka",
+      "port": "1 portion"
+     },
+     "extra": null
+    },
+    {
+     "datum": "2026-12-08",
+     "dag": "tis 8 dec",
+     "noah": false,
+     "frukost": "Smörgås med kalkon och avokado",
+     "mellis": "Gurka och tunna morotsstavar med hummus",
+     "middag": {
+      "typ": "solo",
+      "recept": "laxpasta",
+      "namn": "Pasta med lax och spenat",
+      "port": "1 portion (halva receptet)"
+     },
+     "extra": null
+    }
+   ],
+   "lista": [
+    {
+     "kat": "Frukt & grönt",
+     "rader": [
+      {
+       "key": "spenat",
+       "namn": "Babyspenat",
+       "qty": "1 påse",
+       "anm": ""
+      },
+      {
+       "key": "banan",
+       "namn": "Bananer",
+       "qty": "1 klase",
+       "anm": ""
+      },
+      {
+       "key": "broccoli",
+       "namn": "Broccoli",
+       "qty": "2 st",
+       "anm": ""
+      },
+      {
+       "key": "citron",
+       "namn": "Citron",
+       "qty": "1 st",
+       "anm": ""
+      },
+      {
+       "key": "gurka",
+       "namn": "Gurka",
+       "qty": "4 st",
+       "anm": ""
+      },
+      {
+       "key": "morot",
+       "namn": "Morötter",
+       "qty": "1 kg",
+       "anm": ""
+      },
+      {
+       "key": "paprika",
+       "namn": "Paprika",
+       "qty": "1 st",
+       "anm": ""
+      },
+      {
+       "key": "potatis",
+       "namn": "Potatis",
+       "qty": "1,5 kg",
+       "anm": ""
+      },
+      {
+       "key": "paron",
+       "namn": "Päron",
+       "qty": "4 st",
+       "anm": ""
+      },
+      {
+       "key": "vitlok",
+       "namn": "Vitlök",
+       "qty": "1 huvud",
+       "anm": ""
+      },
+      {
+       "key": "apple",
+       "namn": "Äpplen",
+       "qty": "6 st",
+       "anm": ""
+      }
+     ]
+    },
+    {
+     "kat": "Kött & fisk",
+     "rader": [
+      {
+       "key": "kalkon",
+       "namn": "Kalkonpålägg",
+       "qty": "2 förp",
+       "anm": ""
+      },
+      {
+       "key": "kycklinglar",
+       "namn": "Kycklinglårfilé",
+       "qty": "700 g",
+       "anm": ""
+      },
+      {
+       "key": "lax",
+       "namn": "Laxfilé",
+       "qty": "500 g",
+       "anm": ""
+      },
+      {
+       "key": "notfars",
+       "namn": "Nötfärs",
+       "qty": "500 g",
+       "anm": "Frys det du inte använder inom 2 dagar."
+      }
+     ]
+    },
+    {
+     "kat": "Mejeri & ägg",
+     "rader": [
+      {
+       "key": "cf",
+       "namn": "Crème fraiche",
+       "qty": "200 g",
+       "anm": ""
+      },
+      {
+       "key": "hummus",
+       "namn": "Hummus",
+       "qty": "400 g",
+       "anm": ""
+      },
+      {
+       "key": "keso",
+       "namn": "Keso",
+       "qty": "1 kg",
+       "anm": ""
+      },
+      {
+       "key": "kvarg",
+       "namn": "Mild kvarg",
+       "qty": "500 g",
+       "anm": ""
+      },
+      {
+       "key": "mjolk",
+       "namn": "Mjölk",
+       "qty": "2 paket (2 l)",
+       "anm": ""
+      },
+      {
+       "key": "yoghurt",
+       "namn": "Turkisk yoghurt",
+       "qty": "2 burkar (1 kg)",
+       "anm": ""
+      },
+      {
+       "key": "agg",
+       "namn": "Ägg",
+       "qty": "1 förp (12 st)",
+       "anm": ""
+      }
+     ]
+    },
+    {
+     "kat": "Skafferi",
+     "rader": [
+      {
+       "key": "kidney",
+       "namn": "Kidneybönor",
+       "qty": "1 burk",
+       "anm": ""
+      },
+      {
+       "key": "knacke",
+       "namn": "Knäckebröd",
+       "qty": "1 förp",
+       "anm": ""
+      },
+      {
+       "key": "krossade",
+       "namn": "Krossade tomater",
+       "qty": "1 förp",
+       "anm": ""
+      },
+      {
+       "key": "majs",
+       "namn": "Majs",
+       "qty": "1 burk",
+       "anm": ""
+      }
+     ]
+    },
+    {
+     "kat": "Bröd",
+     "rader": [
+      {
+       "key": "brod",
+       "namn": "Fullkornsbröd",
+       "qty": "1 limpa",
+       "anm": ""
+      }
+     ]
+    },
+    {
+     "kat": "Fryst",
+     "rader": [
+      {
+       "key": "torsk",
+       "namn": "Torskfilé, fryst",
+       "qty": "500 g",
+       "anm": ""
+      }
+     ]
+    },
+    {
+     "kat": "Godis & snacks",
+     "rader": [
+      {
+       "key": "godis",
+       "namn": "Lösgodis",
+       "qty": "150 g",
+       "anm": "Lördagsgodis. Ta bara det som ska ätas samma dag."
+      }
+     ]
+    }
+   ],
+   "hemma": [
+    {
+     "namn": "Osockrad müsli",
+     "text": "räcker (kvar ca 120 g)"
+    },
+    {
+     "namn": "Frysta bär",
+     "text": "räcker (kvar ca 40 g)"
+    },
+    {
+     "namn": "Havregryn",
+     "text": "räcker (kvar ca 469 g)"
+    },
+    {
+     "namn": "Ostbit till mackor",
+     "text": "räcker (kvar ca 170 g)"
+    },
+    {
+     "namn": "Honung",
+     "text": "räcker (kvar ca 24 g)"
+    },
+    {
+     "namn": "Smör",
+     "text": "räcker (kvar ca 348 g)"
+    },
+    {
+     "namn": "Gul lök",
+     "text": "räcker (kvar ca 710 g)"
+    },
+    {
+     "namn": "Ris",
+     "text": "räcker (kvar ca 450 g)"
+    },
+    {
+     "namn": "Riven ost",
+     "text": "räcker (kvar ca 10 g)"
+    },
+    {
+     "namn": "Popcornmajs",
+     "text": "räcker (kvar ca 100 g)"
+    },
+    {
+     "namn": "Fullkornspasta",
+     "text": "räcker (kvar ca 370 g)"
+    },
+    {
+     "namn": "Frysta ärtor",
+     "text": "räcker (kvar ca 125 g)"
+    }
+   ]
+  }
+ ],
+ "skafferi": [
+  {
+   "namn": "Gul lök",
+   "kat": "Frukt & grönt",
+   "start": "600 g",
+   "kop": "v4: 1 kg",
+   "anm": ""
+  },
+  {
+   "namn": "Morötter",
+   "kat": "Frukt & grönt",
+   "start": "300 g",
+   "kop": "v1: 1 kg, v2: 1 kg, v3: 1 kg, v4: 1 kg, v5: 1 kg",
+   "anm": ""
+  },
+  {
+   "namn": "Potatis",
+   "kat": "Frukt & grönt",
+   "start": "300 g",
+   "kop": "v1: 1,5 kg, v3: 1,5 kg, v5: 1,5 kg",
+   "anm": ""
+  },
+  {
+   "namn": "Vitlök",
+   "kat": "Frukt & grönt",
+   "start": "8 klyfta",
+   "kop": "v2: 1 huvud, v5: 1 huvud",
+   "anm": ""
+  },
+  {
+   "namn": "Frysta bär",
+   "kat": "Fryst",
+   "start": "300 g",
+   "kop": "v1: 500 g, v2: 500 g, v3: 500 g, v4: 500 g",
+   "anm": ""
+  },
+  {
+   "namn": "Frysta ärtor",
+   "kat": "Fryst",
+   "start": "400 g",
+   "kop": "behöver inte köpas",
+   "anm": ""
+  },
+  {
+   "namn": "Nötfärs",
+   "kat": "Kött & fisk",
+   "start": "inget",
+   "kop": "v1: 500 g, v2: 500 g, v3: 500 g, v4: 500 g, v5: 500 g",
+   "anm": "Frys det du inte använder inom 2 dagar."
+  },
+  {
+   "namn": "Ostbit till mackor",
+   "kat": "Mejeri & ägg",
+   "start": "100 g",
+   "kop": "v1: 400 g, v3: 400 g, v4: 400 g",
+   "anm": ""
+  },
+  {
+   "namn": "Riven ost",
+   "kat": "Mejeri & ägg",
+   "start": "100 g",
+   "kop": "v1: 200 g, v3: 200 g",
+   "anm": ""
+  },
+  {
+   "namn": "Smör",
+   "kat": "Mejeri & ägg",
+   "start": "350 g",
+   "kop": "v4: 500 g",
+   "anm": ""
+  },
+  {
+   "namn": "Ägg",
+   "kat": "Mejeri & ägg",
+   "start": "4 st",
+   "kop": "v1: 1 förp (12 st), v3: 1 förp (12 st), v4: 1 förp (12 st), v5: 1 förp (12 st)",
+   "anm": ""
+  },
+  {
+   "namn": "Fullkornspasta",
+   "kat": "Skafferi",
+   "start": "250 g",
+   "kop": "v2: 500 g, v4: 500 g",
+   "anm": ""
+  },
+  {
+   "namn": "Havregryn",
+   "kat": "Skafferi",
+   "start": "900 g",
+   "kop": "v4: 1 kg",
+   "anm": ""
+  },
+  {
+   "namn": "Honung",
+   "kat": "Skafferi",
+   "start": "250 g",
+   "kop": "behöver inte köpas",
+   "anm": ""
+  },
+  {
+   "namn": "Jordnötssmör",
+   "kat": "Skafferi",
+   "start": "250 g",
+   "kop": "behöver inte köpas",
+   "anm": ""
+  },
+  {
+   "namn": "Knäckebröd",
+   "kat": "Skafferi",
+   "start": "150 g",
+   "kop": "v1: 1 förp, v3: 1 förp, v4: 1 förp, v5: 1 förp",
+   "anm": ""
+  },
+  {
+   "namn": "Mild currypulver",
+   "kat": "Skafferi",
+   "start": "inget",
+   "kop": "v2: 1 burk",
+   "anm": ""
+  },
+  {
+   "namn": "Mild tacokrydda",
+   "kat": "Skafferi",
+   "start": "inget",
+   "kop": "v1: 1 förp",
+   "anm": ""
+  },
+  {
+   "namn": "Osockrad müsli",
+   "kat": "Skafferi",
+   "start": "250 g",
+   "kop": "v2: 500 g, v4: 500 g",
+   "anm": ""
+  },
+  {
+   "namn": "Popcornmajs",
+   "kat": "Skafferi",
+   "start": "inget",
+   "kop": "v1: 500 g",
+   "anm": ""
+  },
+  {
+   "namn": "Ris",
+   "kat": "Skafferi",
+   "start": "1,2 kg",
+   "kop": "behöver inte köpas",
+   "anm": ""
+  },
+  {
+   "namn": "Röda linser",
+   "kat": "Skafferi",
+   "start": "inget",
+   "kop": "v2: 500 g",
+   "anm": ""
+  },
+  {
+   "namn": "Salt-reducerad soja",
+   "kat": "Skafferi",
+   "start": "200 ml",
+   "kop": "behöver inte köpas",
+   "anm": ""
+  },
+  {
+   "namn": "Tacosås",
+   "kat": "Skafferi",
+   "start": "inget",
+   "kop": "v1: 1 burk",
+   "anm": ""
+  },
+  {
+   "namn": "Tortillabröd",
+   "kat": "Skafferi",
+   "start": "8 st",
+   "kop": "v3: 1 förp (8 st)",
+   "anm": ""
+  }
+ ],
+ "recept": [
+  {
+   "id": "lax",
+   "namn": "Ugnslax med potatis och broccoli",
+   "tid": "35 min",
+   "fisk": true,
+   "tips": "Kolla laxen efter ben och ta bort skinnet åt Noah. Skär potatis och broccoli små.",
+   "ingr": [
+    {
+     "namn": "Laxfilé",
+     "mangd": "300 g"
+    },
+    {
+     "namn": "Potatis",
+     "mangd": "500 g"
+    },
+    {
+     "namn": "Broccoli",
+     "mangd": "1 st"
+    },
+    {
+     "namn": "Citron",
+     "mangd": "0,5 st"
+    },
+    {
+     "namn": "Turkisk yoghurt",
+     "mangd": "100 g"
+    }
+   ],
+   "steg": [
+    "Ugn 200 °C. Tärna potatisen, vänd i olja och rosta 20 min.",
+    "Lägg laxen bredvid på plåten och rosta 12–15 min.",
+    "Ånga broccolin 4–5 min.",
+    "Rör ihop yoghurt, citronsaft och en nypa salt till sås."
+   ]
+  },
+  {
+   "id": "wok",
+   "namn": "Kycklingwok med ris",
+   "tid": "25 min",
+   "fisk": false,
+   "tips": "",
+   "ingr": [
+    {
+     "namn": "Kycklingfilé",
+     "mangd": "300 g"
+    },
+    {
+     "namn": "Paprika",
+     "mangd": "1 st"
+    },
+    {
+     "namn": "Broccoli",
+     "mangd": "1 st"
+    },
+    {
+     "namn": "Morötter",
+     "mangd": "150 g"
+    },
+    {
+     "namn": "Gul lök",
+     "mangd": "80 g"
+    },
+    {
+     "namn": "Vitlök",
+     "mangd": "2 klyfta"
+    },
+    {
+     "namn": "Salt-reducerad soja",
+     "mangd": "30 ml"
+    },
+    {
+     "namn": "Ris",
+     "mangd": "150 g"
+    }
+   ],
+   "steg": [
+    "Koka riset.",
+    "Skär kyckling i strimlor och grönsakerna smalt. Morötterna tunnast.",
+    "Stek kycklingen genomstekt och ta upp den.",
+    "Woka morot, lök och broccoli 4 min, sedan paprika och vitlök 2 min.",
+    "Lägg tillbaka kycklingen, tillsätt soja och en skvätt vatten. Servera över riset."
+   ]
+  },
+  {
+   "id": "tacos",
+   "namn": "Tacos",
+   "tid": "25 min",
+   "fisk": false,
+   "tips": "Använd halv mängd krydda åt Noah om det blir för starkt.",
+   "ingr": [
+    {
+     "namn": "Nötfärs",
+     "mangd": "300 g"
+    },
+    {
+     "namn": "Mild tacokrydda",
+     "mangd": "0,6 förp"
+    },
+    {
+     "namn": "Kidneybönor",
+     "mangd": "1 burk"
+    },
+    {
+     "namn": "Majs",
+     "mangd": "1 burk"
+    },
+    {
+     "namn": "Tortillabröd",
+     "mangd": "4 st"
+    },
+    {
+     "namn": "Sallad",
+     "mangd": "1 st"
+    },
+    {
+     "namn": "Tomater",
+     "mangd": "150 g"
+    },
+    {
+     "namn": "Gurka",
+     "mangd": "0,5 st"
+    },
+    {
+     "namn": "Avokado",
+     "mangd": "1 st"
+    },
+    {
+     "namn": "Riven ost",
+     "mangd": "60 g"
+    },
+    {
+     "namn": "Crème fraiche",
+     "mangd": "100 g"
+    },
+    {
+     "namn": "Tacosås",
+     "mangd": "0,3 burk"
+    }
+   ],
+   "steg": [
+    "Bryn färsen, rör ner kryddan och lite vatten och sjud 5 min.",
+    "Skölj bönorna och blanda ner dem med majsen.",
+    "Skär grönsakerna och mosa avokadon.",
+    "Värm tortillabröden och ställ fram allt så att alla bygger själva."
+   ]
+  },
+  {
+   "id": "pastasas",
+   "namn": "Pasta med grönsaksrik köttfärssås",
+   "tid": "35 min",
+   "fisk": false,
+   "tips": "De rivna grönsakerna försvinner i såsen, bra för en 3-åring.",
+   "ingr": [
+    {
+     "namn": "Nötfärs",
+     "mangd": "300 g"
+    },
+    {
+     "namn": "Gul lök",
+     "mangd": "80 g"
+    },
+    {
+     "namn": "Vitlök",
+     "mangd": "2 klyfta"
+    },
+    {
+     "namn": "Morötter",
+     "mangd": "150 g"
+    },
+    {
+     "namn": "Zucchini",
+     "mangd": "0,5 st"
+    },
+    {
+     "namn": "Krossade tomater",
+     "mangd": "400 g"
+    },
+    {
+     "namn": "Frysta ärtor",
+     "mangd": "50 g"
+    },
+    {
+     "namn": "Fullkornspasta",
+     "mangd": "160 g"
+    },
+    {
+     "namn": "Riven ost",
+     "mangd": "40 g"
+    }
+   ],
+   "steg": [
+    "Fräs lök och vitlök, bryn färsen.",
+    "Rör ner riven morot och zucchini samt tomaterna. Sjud 20 min.",
+    "Koka pastan och lägg i ärtorna i såsen sista 3 min.",
+    "Servera med riven ost."
+   ]
+  },
+  {
+   "id": "torsk",
+   "namn": "Ugnstorsk med rotfrukter",
+   "tid": "40 min",
+   "fisk": true,
+   "tips": "Kolla torsken efter ben innan Noah får den.",
+   "ingr": [
+    {
+     "namn": "Torskfilé, fryst",
+     "mangd": "300 g"
+    },
+    {
+     "namn": "Morötter",
+     "mangd": "200 g"
+    },
+    {
+     "namn": "Potatis",
+     "mangd": "400 g"
+    },
+    {
+     "namn": "Broccoli",
+     "mangd": "1 st"
+    },
+    {
+     "namn": "Citron",
+     "mangd": "0,5 st"
+    },
+    {
+     "namn": "Turkisk yoghurt",
+     "mangd": "100 g"
+    },
+    {
+     "namn": "Smör",
+     "mangd": "20 g"
+    }
+   ],
+   "steg": [
+    "Tina torsken i kylen kvällen innan.",
+    "Ugn 200 °C. Tärna morot och potatis, rosta 20 min.",
+    "Lägg torsken på plåten med lite smör och rosta 12–15 min.",
+    "Ånga broccolin och rör yoghurt med citron till sås."
+   ]
+  },
+  {
+   "id": "linssoppa",
+   "namn": "Röd linssoppa med bröd",
+   "tid": "30 min",
+   "fisk": false,
+   "tips": "",
+   "ingr": [
+    {
+     "namn": "Röda linser",
+     "mangd": "150 g"
+    },
+    {
+     "namn": "Morötter",
+     "mangd": "200 g"
+    },
+    {
+     "namn": "Gul lök",
+     "mangd": "100 g"
+    },
+    {
+     "namn": "Vitlök",
+     "mangd": "2 klyfta"
+    },
+    {
+     "namn": "Kokosmjölk",
+     "mangd": "400 ml"
+    },
+    {
+     "namn": "Mild currypulver",
+     "mangd": "0,1 burk"
+    },
+    {
+     "namn": "Fullkornsbröd",
+     "mangd": "4 skivor"
+    },
+    {
+     "namn": "Turkisk yoghurt",
+     "mangd": "50 g"
+    }
+   ],
+   "steg": [
+    "Fräs lök, vitlök och curry i en kastrull.",
+    "Tillsätt riven morot, linser, kokosmjölk och 5 dl vatten. Sjud 15–20 min.",
+    "Mixa slätt med stavmixer.",
+    "Servera med bröd och en klick yoghurt."
+   ]
+  },
+  {
+   "id": "lar",
+   "namn": "Ugnsbakad kyckling med rotfrukter",
+   "tid": "45 min",
+   "fisk": false,
+   "tips": "",
+   "ingr": [
+    {
+     "namn": "Kycklinglårfilé",
+     "mangd": "350 g"
+    },
+    {
+     "namn": "Potatis",
+     "mangd": "400 g"
+    },
+    {
+     "namn": "Morötter",
+     "mangd": "200 g"
+    },
+    {
+     "namn": "Broccoli",
+     "mangd": "1 st"
+    },
+    {
+     "namn": "Turkisk yoghurt",
+     "mangd": "100 g"
+    }
+   ],
+   "steg": [
+    "Ugn 200 °C. Skär rotfrukterna i bitar och lägg på plåt med olja och salt.",
+    "Lägg kycklingen ovanpå och rosta 25–30 min tills den är genomstekt.",
+    "Ånga broccolin och servera med yoghurt."
+   ]
+  },
+  {
+   "id": "bullar",
+   "namn": "Ugnsbullar med potatis och gurka",
+   "tid": "40 min",
+   "fisk": false,
+   "tips": "",
+   "ingr": [
+    {
+     "namn": "Nötfärs",
+     "mangd": "300 g"
+    },
+    {
+     "namn": "Ägg",
+     "mangd": "1 st"
+    },
+    {
+     "namn": "Havregryn",
+     "mangd": "30 g"
+    },
+    {
+     "namn": "Mjölk",
+     "mangd": "1 dl"
+    },
+    {
+     "namn": "Gul lök",
+     "mangd": "40 g"
+    },
+    {
+     "namn": "Potatis",
+     "mangd": "500 g"
+    },
+    {
+     "namn": "Gurka",
+     "mangd": "0,5 st"
+    },
+    {
+     "namn": "Crème fraiche",
+     "mangd": "50 g"
+    }
+   ],
+   "steg": [
+    "Ugn 200 °C. Blanda färs, ägg, havregryn, mjölk och riven lök. Rulla bullar.",
+    "Baka 15–18 min.",
+    "Koka potatisen och skär gurkan i tunna stavar.",
+    "Servera med crème fraiche."
+   ]
+  },
+  {
+   "id": "curry",
+   "namn": "Kikärtscurry med sötpotatis",
+   "tid": "35 min",
+   "fisk": false,
+   "tips": "",
+   "ingr": [
+    {
+     "namn": "Sötpotatis",
+     "mangd": "400 g"
+    },
+    {
+     "namn": "Kikärtor",
+     "mangd": "1 burk"
+    },
+    {
+     "namn": "Kokosmjölk",
+     "mangd": "400 ml"
+    },
+    {
+     "namn": "Gul lök",
+     "mangd": "80 g"
+    },
+    {
+     "namn": "Vitlök",
+     "mangd": "2 klyfta"
+    },
+    {
+     "namn": "Babyspenat",
+     "mangd": "50 g"
+    },
+    {
+     "namn": "Ris",
+     "mangd": "150 g"
+    },
+    {
+     "namn": "Mild currypulver",
+     "mangd": "0,1 burk"
+    }
+   ],
+   "steg": [
+    "Koka riset.",
+    "Fräs lök, vitlök och curry. Tillsätt tärnad sötpotatis, kokosmjölk och 1 dl vatten.",
+    "Sjud 15 min, lägg i kikärtor och spenat sista 3 min.",
+    "Servera över riset."
+   ]
+  },
+  {
+   "id": "laxpasta",
+   "namn": "Pasta med lax och spenat",
+   "tid": "25 min",
+   "fisk": true,
+   "tips": "",
+   "ingr": [
+    {
+     "namn": "Fullkornspasta",
+     "mangd": "160 g"
+    },
+    {
+     "namn": "Laxfilé",
+     "mangd": "250 g"
+    },
+    {
+     "namn": "Babyspenat",
+     "mangd": "60 g"
+    },
+    {
+     "namn": "Crème fraiche",
+     "mangd": "100 g"
+    },
+    {
+     "namn": "Citron",
+     "mangd": "0,5 st"
+    },
+    {
+     "namn": "Frysta ärtor",
+     "mangd": "50 g"
+    }
+   ],
+   "steg": [
+    "Koka pastan och lägg i ärtorna sista 3 min.",
+    "Stek laxen i bitar, blanda med crème fraiche, spenat och citron.",
+    "Vänd ihop med pastan."
+   ]
+  },
+  {
+   "id": "pizza",
+   "namn": "Pizza på tortillabröd",
+   "tid": "25 min",
+   "fisk": false,
+   "tips": "",
+   "ingr": [
+    {
+     "namn": "Tortillabröd",
+     "mangd": "4 st"
+    },
+    {
+     "namn": "Krossade tomater",
+     "mangd": "400 g"
+    },
+    {
+     "namn": "Riven ost",
+     "mangd": "120 g"
+    },
+    {
+     "namn": "Paprika",
+     "mangd": "1 st"
+    },
+    {
+     "namn": "Kalkonpålägg",
+     "mangd": "40 g"
+    },
+    {
+     "namn": "Tomater",
+     "mangd": "150 g"
+    }
+   ],
+   "steg": [
+    "Ugn 225 °C. Lägg tortillabröden på plåt och grädda 3 min.",
+    "Bred på krossade tomater, ost och valfria toppings.",
+    "Grädda 8–10 min."
+   ]
+  },
+  {
+   "id": "chili",
+   "namn": "Mild bönchili med ris",
+   "tid": "35 min",
+   "fisk": false,
+   "tips": "",
+   "ingr": [
+    {
+     "namn": "Kidneybönor",
+     "mangd": "1 burk"
+    },
+    {
+     "namn": "Majs",
+     "mangd": "1 burk"
+    },
+    {
+     "namn": "Krossade tomater",
+     "mangd": "400 g"
+    },
+    {
+     "namn": "Paprika",
+     "mangd": "1 st"
+    },
+    {
+     "namn": "Gul lök",
+     "mangd": "80 g"
+    },
+    {
+     "namn": "Morötter",
+     "mangd": "100 g"
+    },
+    {
+     "namn": "Vitlök",
+     "mangd": "2 klyfta"
+    },
+    {
+     "namn": "Ris",
+     "mangd": "150 g"
+    },
+    {
+     "namn": "Riven ost",
+     "mangd": "40 g"
+    },
+    {
+     "namn": "Crème fraiche",
+     "mangd": "50 g"
+    }
+   ],
+   "steg": [
+    "Koka riset.",
+    "Fräs lök, vitlök och tärnad paprika och morot.",
+    "Tillsätt tomater, bönor och majs och sjud 20 min.",
+    "Servera med ris, ost och crème fraiche."
+   ]
+  },
+  {
+   "id": "omelett",
+   "namn": "Omelett med grönsaker",
+   "tid": "15 min",
+   "fisk": false,
+   "tips": "",
+   "ingr": [
+    {
+     "namn": "Ägg",
+     "mangd": "5 st"
+    },
+    {
+     "namn": "Paprika",
+     "mangd": "0,5 st"
+    },
+    {
+     "namn": "Tomater",
+     "mangd": "100 g"
+    },
+    {
+     "namn": "Babyspenat",
+     "mangd": "40 g"
+    },
+    {
+     "namn": "Riven ost",
+     "mangd": "40 g"
+    },
+    {
+     "namn": "Fullkornsbröd",
+     "mangd": "4 skivor"
+    },
+    {
+     "namn": "Gurka",
+     "mangd": "0,5 st"
+    }
+   ],
+   "steg": [
+    "Vispa ägg med lite mjölk och salt.",
+    "Stek de skurna grönsakerna 2 min, häll över äggen.",
+    "Strö över ost och vik ihop. Servera med bröd och gurka."
+   ]
+  }
+ ]
+}
