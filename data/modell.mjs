@@ -5,7 +5,7 @@
 
 const F = 'Frukt & grönt', M = 'Kött & fisk', D = 'Mejeri & ägg', S = 'Skafferi', B = 'Bröd', Fr = 'Fryst', G = 'Godis & snacks';
 
-export const KATEGORIER = [F, M, D, S, B, Fr, G];
+export const KATEGORIER = [F, M, D, S, B, Fr, G, 'Dryck'];
 
 export const K = {
   banan: { n: 'Bananer', k: F, e: 'st', p: 6, pt: ['klase', 'klasar'] },
@@ -73,6 +73,8 @@ export const K = {
 
   godis: { n: 'Lösgodis', k: G, e: 'g', p: 150, anm: 'Lördagsgodis. Ta bara det som ska ätas samma dag.' },
   choklad: { n: 'Mörk choklad 70 %', k: G, e: 'g', p: 100, pt: ['kaka', 'kakor'] },
+  dippmix: { n: 'Dippmix (t.ex. gräddfil/lök)', k: G, e: 'förp', p: 1 },
+  dryck: { n: 'Läsk, öl eller mineralvatten (valfritt)', k: 'Dryck', e: 'förp', p: 1, anm: 'Till spelkvällen med Dennis.' },
   chips: { n: 'Chips', k: G, e: 'förp', p: 1 }
 };
 
@@ -194,7 +196,8 @@ export const OVERRIDE = {
     med: 'Du + Dennis',
     lunch: 'Thaibuffé med Dennis',
     middag: { typ: 'ute', recept: null, namn: 'Middag ute med Dennis', port: '' },
-    extra: 'Rör ihop brödsmeten innan ni går ut, så jäser den över natten till onsdag (recept: Lätt bröd utan knådning)',
+    extra: ['Rör ihop brödsmeten innan ni går ut, så jäser den över natten till onsdag (recept: Lätt bröd utan knådning)', 'Spelkväll med Dennis (Heroes of Might and Magic 3): chips med dipp, popcorn, godis, mörk choklad och något att dricka'],
+    ingr: [['chips', 2], ['dippmix', 1], ['cf', 200], ['popcorn', 160], ['godis', 200], ['choklad', 100], ['dryck', 1]],
     extraPersoner: 0
   },
   '2026-11-11': {

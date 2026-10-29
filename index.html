@@ -173,7 +173,7 @@ function vecka(v, main) {
     dl.append(el('dt', '', 'Middag'));
     const dd = el('dd'); const a = d.middag.recept ? el('a', '', d.middag.namn) : el('span', '', d.middag.namn); if (d.middag.recept) a.href = '#recept'; if (d.middag.recept) a.addEventListener('click', (e) => { e.preventDefault(); visa('recept', false); const t = document.getElementById('r-' + d.middag.recept); if (t) t.scrollIntoView(); });
     dd.append(a); if (d.middag.port) dd.append(el('span', 'tag', ' · ' + d.middag.port)); dl.append(dd); k.append(dl);
-    if (d.extra) k.append(el('div', 'godis', d.extra));
+    if (d.extra) [].concat(d.extra).forEach((x) => k.append(el('div', 'godis', x)));
     main.append(k);
   });
   uppdatera(v);

@@ -119,7 +119,10 @@
       "namn": "Middag ute med Dennis",
       "port": ""
      },
-     "extra": "Rör ihop brödsmeten innan ni går ut, så jäser den över natten till onsdag (recept: Lätt bröd utan knådning)"
+     "extra": [
+      "Rör ihop brödsmeten innan ni går ut, så jäser den över natten till onsdag (recept: Lätt bröd utan knådning)",
+      "Spelkväll med Dennis (Heroes of Might and Magic 3): chips med dipp, popcorn, godis, mörk choklad och något att dricka"
+     ]
     }
    ],
    "lista": [
@@ -241,7 +244,7 @@
       {
        "key": "cf",
        "namn": "Crème fraiche",
-       "qty": "200 g",
+       "qty": "400 g",
        "anm": ""
       },
       {
@@ -379,10 +382,39 @@
      "kat": "Godis & snacks",
      "rader": [
       {
+       "key": "chips",
+       "namn": "Chips",
+       "qty": "2 förp",
+       "anm": ""
+      },
+      {
+       "key": "dippmix",
+       "namn": "Dippmix (t.ex. gräddfil/lök)",
+       "qty": "1 förp",
+       "anm": ""
+      },
+      {
        "key": "godis",
        "namn": "Lösgodis",
-       "qty": "150 g",
+       "qty": "450 g",
        "anm": "Lördagsgodis. Ta bara det som ska ätas samma dag."
+      },
+      {
+       "key": "choklad",
+       "namn": "Mörk choklad 70 %",
+       "qty": "1 kaka",
+       "anm": ""
+      }
+     ]
+    },
+    {
+     "kat": "Dryck",
+     "rader": [
+      {
+       "key": "dryck",
+       "namn": "Läsk, öl eller mineralvatten (valfritt)",
+       "qty": "1 förp",
+       "anm": "Till spelkvällen med Dennis."
       }
      ]
     }
@@ -811,7 +843,7 @@
     },
     {
      "namn": "Popcornmajs",
-     "text": "räcker (kvar ca 340 g)"
+     "text": "räcker (kvar ca 180 g)"
     }
    ]
   },
@@ -1204,7 +1236,7 @@
     },
     {
      "namn": "Popcornmajs",
-     "text": "räcker (kvar ca 260 g)"
+     "text": "räcker (kvar ca 100 g)"
     },
     {
      "namn": "Vitlök",
@@ -1615,7 +1647,7 @@
     },
     {
      "namn": "Popcornmajs",
-     "text": "räcker (kvar ca 180 g)"
+     "text": "räcker (kvar ca 20 g)"
     },
     {
      "namn": "Ris",
@@ -1918,6 +1950,12 @@
        "namn": "Majs",
        "qty": "1 burk",
        "anm": ""
+      },
+      {
+       "key": "popcorn",
+       "namn": "Popcornmajs",
+       "qty": "500 g",
+       "anm": ""
       }
      ]
     },
@@ -1985,10 +2023,6 @@
     {
      "namn": "Riven ost",
      "text": "räcker (kvar ca 10 g)"
-    },
-    {
-     "namn": "Popcornmajs",
-     "text": "räcker (kvar ca 100 g)"
     },
     {
      "namn": "Gul lök",
@@ -2370,6 +2404,11 @@
     {
      "vecka": "45–46",
      "handla": "ons 4 nov",
+     "qty": "500 g"
+    },
+    {
+     "vecka": "49–50",
+     "handla": "ons 2 dec",
      "qty": "500 g"
     }
    ]
