@@ -135,7 +135,7 @@ function visa(id, scroll) {
 }
 
 function vecka(v, main) {
-  main.append(el('p', 'intro', `Vecka ${v.veckonr}: ${v.rubrik}. Handla första dagen. ${v.noahDagar} dagar med Noah.`));
+  main.append(el('p', 'intro', `Vecka ${v.veckonr}: ${v.rubrik}. ${v.anm || 'Handla första dagen.'} ${v.noahDagar} dagar med Noah.`));
   const tools = el('div', 'tools');
   const hide = el('button', 'btn', dolj ? 'Visa avbockade' : 'Dölj avbockade'); hide.setAttribute('aria-pressed', String(dolj));
   hide.addEventListener('click', () => { dolj = !dolj; lsSet('veckomat:v1:dolj', dolj ? '1' : '0'); hide.textContent = dolj ? 'Visa avbockade' : 'Dölj avbockade'; hide.setAttribute('aria-pressed', String(dolj)); uppdatera(v); });

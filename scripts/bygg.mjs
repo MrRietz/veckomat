@@ -3,7 +3,7 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
-import { K, KATEGORIER, DAG, NOAH_VIKT, FRUKOST, MELLIS, RECEPT, HUVUD, SOLO, OVERRIDE } from '../data/modell.mjs';
+import { K, KATEGORIER, DAG, NOAH_VIKT, FRUKOST, MELLIS, RECEPT, HUVUD, SOLO, OVERRIDE, FASTKOP, FAST_ANM } from '../data/modell.mjs';
 
 const rot = join(dirname(fileURLToPath(import.meta.url)), '..');
 const dagar = JSON.parse(readFileSync(join(rot, 'data', 'noah-dagar.json'), 'utf8'));
@@ -31,6 +31,7 @@ function fmt(k, n) {
 function fmtMangd(k, q) {
   if (k.e === 'g') return q >= 1000 ? `${Math.round(q / 100) / 10} kg`.replace('.', ',') : `${Math.round(q)} g`;
   if (k.e === 'dl') return `${Math.round(q * 10) / 10} dl`.replace('.', ',');
+  if (k.e === 'st' || k.e === 'klyfta') return `${Math.round(q)} ${k.e}`;
   return `${Math.round(q * 10) / 10} ${k.e}`.replace('.', ',');
 }
 
@@ -50,6 +51,7 @@ const veckor = [];
 const stock = {};
 Object.keys(K).forEach((k) => { stock[k] = K[k].start || 0; });
 const kopt = {};
+let stockNu = null;
 let huvudIdx = 0, soloIdx = 0, restFran = null;
 
 for (let w = 0; w * NV < dagar.length; w++) {
@@ -65,12 +67,18 @@ for (let w = 0; w * NV < dagar.length; w++) {
     const nastaNoah = nasta ? nasta.hos === 'Pappa' : true;
     const ov = OVERRIDE[d.datum];
     const pd = 1 + (noah ? NOAH_VIKT : 0) + (ov && !ov.kopTidigare ? ov.extraPersoner || 0 : 0);
-    Object.entries(DAG).forEach(([key, q]) => lagg(need, key, q * pd));
+    const bas = ov && ov.baslinje != null ? ov.baslinje : 1;
+    Object.entries(DAG).forEach(([key, q]) => lagg(need, key, q * pd * bas));
 
     let middag;
     if (ov) {
       if (ov.middag) middag = ov.middag;
       if (!ov.kopTidigare) ovVaror(need, { ingr: ov.ingr, recept: ov.recept });
+    }
+    if (!middag && ov && ov.middagRecept) {
+      const r = RECEPT[ov.middagRecept];
+      r.ingr.forEach(([key, q]) => lagg(need, key, q * (ov.faktor || 1)));
+      middag = { typ: 'recept', recept: ov.middagRecept, namn: r.namn, port: ov.port || '2 portioner' };
     }
     if (middag) { restFran = null; }
     else if (noah) {
@@ -93,7 +101,7 @@ for (let w = 0; w * NV < dagar.length; w++) {
 
     const dow = new Date(d.datum + 'T12:00:00').getDay();
     let extra = ov && ov.extra ? ov.extra : null;
-    if (dow === 6) {
+    if (dow === 6 && !(ov && ov.borta)) {
       if (noah) {
         lagg(need, 'godis', 150); lagg(need, 'popcorn', 80);
         extra = 'Lördagsgodis (lösgodis ca 150 g att dela) och popcorn';
@@ -105,14 +113,21 @@ for (let w = 0; w * NV < dagar.length; w++) {
     dagKort.push({
       datum: d.datum, dag: dagNamn(d.datum), noah,
       med: ov && ov.med ? ov.med : null, lunch: ov && ov.lunch ? ov.lunch : null,
-      frukost: ov && ov.frukost ? ov.frukost : FRUKOST[i % FRUKOST.length], mellis: MELLIS[i % MELLIS.length], middag, extra
+      frukost: ov && ov.frukost ? ov.frukost : FRUKOST[i % FRUKOST.length], mellis: ov && ov.mellis ? ov.mellis : MELLIS[i % MELLIS.length], middag, extra
     });
   });
 
   // Köp: lagervaror köps bara när skafferiet inte räcker, färskvaror alltid efter behov.
   const rader = {};
   const hemma = [];
-  Object.keys(need).forEach((key) => {
+  if (FASTKOP[w]) {
+    Object.entries(FASTKOP[w]).forEach(([key, n]) => {
+      const k = K[key];
+      (rader[k.k] ||= []).push({ key, namn: k.n, qty: fmt(k, n), anm: k.anm || '' });
+      if (k.lagra) stock[key] += n * k.p;
+    });
+    Object.keys(need).forEach((key) => { if (K[key].lagra) stock[key] = Math.max(0, stock[key] - need[key]); });
+  } else Object.keys(need).forEach((key) => {
     const k = K[key], q = need[key];
     let n;
     if (k.lagra) {
@@ -124,11 +139,12 @@ for (let w = 0; w * NV < dagar.length; w++) {
       if (k.lagra) (kopt[key] ||= []).push({ vecka: w + 1, qty: fmt(k, n) });
     }
   });
+  if (FASTKOP[w]) stockNu = { ...stock };
   const lista = KATEGORIER.filter((c) => rader[c]).map((c) => ({ kat: c, rader: rader[c].sort((a, b) => a.namn.localeCompare(b.namn, 'sv')) }));
   veckor.push({
     vecka: w + 1, veckonr: (() => { const a = isoVecka(slice[0].datum), c = isoVecka(slice[slice.length - 1].datum); return a === c ? `${a}` : `${a}–${c}`; })(), fran: slice[0].datum, till: slice[slice.length - 1].datum,
     rubrik: `${dagNamn(slice[0].datum)} till ${dagNamn(slice[slice.length - 1].datum)}`,
-    noahDagar: slice.filter((d) => d.hos === 'Pappa').length, dagar: dagKort, lista, hemma
+    noahDagar: slice.filter((d) => d.hos === 'Pappa').length, anm: FAST_ANM[w] || '', dagar: dagKort, lista, hemma
   });
 }
 
@@ -142,7 +158,7 @@ veckor.forEach((v, w) => {
 
 const skafferi = Object.keys(K).filter((key) => K[key].lagra).map((key) => ({
   namn: K[key].n, kat: K[key].k, anm: K[key].anm || '',
-  harHemma: K[key].start ? fmtMangd(K[key], K[key].start) : null,
+  harHemma: (stockNu || stock)[key] > EPS ? fmtMangd(K[key], (stockNu || stock)[key]) : null,
   kop: (kopt[key] || []).map((x) => ({ vecka: veckor[x.vecka - 1].veckonr, handla: dagNamn(veckor[x.vecka - 1].fran), qty: x.qty }))
 })).sort((a, b) => a.kat.localeCompare(b.kat, 'sv') || a.namn.localeCompare(b.namn, 'sv'));
 

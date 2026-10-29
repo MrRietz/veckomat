@@ -5,7 +5,7 @@
 
 const F = 'Frukt & grönt', M = 'Kött & fisk', D = 'Mejeri & ägg', S = 'Skafferi', B = 'Bröd', Fr = 'Fryst', G = 'Godis & snacks';
 
-export const KATEGORIER = [F, M, D, S, B, Fr, G, 'Dryck', 'Köps på ICA'];
+export const KATEGORIER = [F, M, D, S, B, Fr, G, 'Ostbricka (fredag)', 'Dryck', 'Köps på ICA'];
 
 export const K = {
   banan: { n: 'Bananer', k: F, e: 'st', p: 6, pt: ['klase', 'klasar'] },
@@ -15,15 +15,16 @@ export const K = {
   tomat: { n: 'Tomater', k: F, e: 'g', p: 500 },
   paprika: { n: 'Paprika', k: F, e: 'st', p: 1 },
   broccoli: { n: 'Broccoli', k: F, e: 'st', p: 1 },
-  morot: { n: 'Morötter', k: F, e: 'g', p: 1000, lagra: true, start: 300 },
+  morot: { n: 'Morötter', k: F, e: 'g', p: 1000, lagra: true },
   zucchini: { n: 'Zucchini', k: F, e: 'st', p: 1 },
-  lok: { n: 'Gul lök', k: F, e: 'g', p: 1000, lagra: true, start: 600 },
+  lok: { n: 'Gul lök', k: F, e: 'g', p: 1000, lagra: true },
   vitlok: { n: 'Vitlök', k: F, e: 'klyfta', p: 10, pt: ['huvud', 'huvuden'], lagra: true, start: 8 },
   sallad: { n: 'Sallad', k: F, e: 'st', p: 1 },
   avokado: { n: 'Avokado', k: F, e: 'st', p: 2 },
   spenat: { n: 'Babyspenat', k: F, e: 'g', p: 120, pt: ['påse', 'påsar'] },
   citron: { n: 'Citron', k: F, e: 'st', p: 1 },
-  potatis: { n: 'Potatis', k: F, e: 'g', p: 1500, lagra: true, start: 300 },
+  potatis: { n: 'Potatis', k: F, e: 'g', p: 1500, lagra: true },
+  vindruvor: { n: 'Vindruvor', k: F, e: 'g', p: 300, anm: 'Till ostbrickan. Dela på längden åt Noah.' },
   sotpotatis: { n: 'Sötpotatis', k: F, e: 'g', p: 800 },
 
   kyckling: { n: 'Kycklingfilé', k: M, e: 'g', p: 600 },
@@ -37,15 +38,15 @@ export const K = {
   kvarg: { n: 'Mild kvarg', k: D, e: 'g', p: 500 },
   keso: { n: 'Keso', k: D, e: 'g', p: 500 },
   hummus: { n: 'Hummus', k: D, e: 'g', p: 200 },
-  agg: { n: 'Ägg', k: D, e: 'st', p: 12, pt: ['förp (12 st)', 'förp (12 st)'], lagra: true, start: 4 },
-  smor: { n: 'Smör', k: D, e: 'g', p: 500, lagra: true, start: 350 },
-  ost: { n: 'Ostbit till mackor', k: D, e: 'g', p: 400, lagra: true, start: 100 },
-  rivost: { n: 'Riven ost', k: D, e: 'g', p: 200, lagra: true, start: 100 },
+  agg: { n: 'Ägg', k: D, e: 'st', p: 12, pt: ['förp (12 st)', 'förp (12 st)'], lagra: true },
+  smor: { n: 'Smör', k: D, e: 'g', p: 500, lagra: true },
+  ost: { n: 'Ostbit till mackor', k: D, e: 'g', p: 400, lagra: true },
+  rivost: { n: 'Riven ost', k: D, e: 'g', p: 200, lagra: true },
   cf: { n: 'Crème fraiche', k: D, e: 'g', p: 200 },
 
   havregryn: { n: 'Havregryn', k: S, e: 'g', p: 1000, lagra: true, start: 900 },
   ris: { n: 'Ris', k: S, e: 'g', p: 1000, lagra: true, start: 1200 },
-  pasta: { n: 'Fullkornspasta', k: S, e: 'g', p: 500, lagra: true, start: 250 },
+  pasta: { n: 'Fullkornspasta', k: S, e: 'g', p: 500, lagra: true },
   krossade: { n: 'Krossade tomater', k: S, e: 'g', p: 400, pt: ['förp', 'förp'] },
   kidney: { n: 'Kidneybönor', k: S, e: 'burk', p: 1, pt: ['burk', 'burkar'] },
   kikarter: { n: 'Kikärtor', k: S, e: 'burk', p: 1, pt: ['burk', 'burkar'] },
@@ -55,20 +56,25 @@ export const K = {
   curry: { n: 'Mild currypulver', k: S, e: 'burk', p: 1, lagra: true },
   tacokrydda: { n: 'Mild tacokrydda', k: S, e: 'förp', p: 1, lagra: true },
   tacosas: { n: 'Tacosås', k: S, e: 'burk', p: 1, pt: ['burk', 'burkar'], lagra: true },
-  soja: { n: 'Salt-reducerad soja', k: S, e: 'ml', p: 250, pt: ['flaska', 'flaskor'], lagra: true, start: 200 },
-  honung: { n: 'Honung', k: S, e: 'g', p: 350, pt: ['burk', 'burkar'], lagra: true, start: 250 },
-  jnsmor: { n: 'Jordnötssmör', k: S, e: 'g', p: 340, pt: ['burk', 'burkar'], lagra: true, start: 250 },
-  musli: { n: 'Osockrad müsli', k: S, e: 'g', p: 500, lagra: true, start: 250 },
-  knacke: { n: 'Knäckebröd', k: S, e: 'g', p: 250, pt: ['förp', 'förp'], lagra: true, start: 150 },
+  soja: { n: 'Salt-reducerad soja', k: S, e: 'ml', p: 250, pt: ['flaska', 'flaskor'], lagra: true },
+  honung: { n: 'Honung', k: S, e: 'g', p: 350, pt: ['burk', 'burkar'], lagra: true },
+  jnsmor: { n: 'Jordnötssmör', k: S, e: 'g', p: 340, pt: ['burk', 'burkar'], lagra: true },
+  musli: { n: 'Osockrad müsli', k: S, e: 'g', p: 500, lagra: true },
+  knacke: { n: 'Knäckebröd', k: S, e: 'g', p: 250, pt: ['förp', 'förp'], lagra: true },
   tortilla: { n: 'Tortillabröd', k: S, e: 'st', p: 8, pt: ['förp (8 st)', 'förp (8 st)'], lagra: true, start: 8 },
   mjol: { n: 'Vetemjöl', k: S, e: 'g', p: 1000, lagra: true },
   torrjast: { n: 'Torrjäst', k: S, e: 'förp', p: 1, lagra: true },
+  fruktpure: { n: 'Fruktpuré eller mjuka bär till Noah', k: S, e: 'förp', p: 1 },
+  ostar: { n: 'Ost (2–3 sorter)', k: 'Ostbricka (fredag)', e: 'g', p: 400, anm: 'T.ex. brie, lagrad ost, blåmögelost.' },
+  kex: { n: 'Kex eller knäckebröd', k: 'Ostbricka (fredag)', e: 'förp', p: 1 },
+  sylt: { n: 'Fikonmarmelad eller annan sylt', k: 'Ostbricka (fredag)', e: 'burk', p: 1, pt: ['burk', 'burkar'] },
+  oliver: { n: 'Oliver eller cornichons', k: 'Ostbricka (fredag)', e: 'burk', p: 1, pt: ['burk', 'burkar'], anm: 'Valfritt' },
   popcorn: { n: 'Popcornmajs', k: S, e: 'g', p: 500, lagra: true },
 
   brod: { n: 'Fullkornsbröd', k: B, e: 'skivor', p: 20, pt: ['limpa', 'limpor'] },
 
-  bar: { n: 'Frysta bär', k: Fr, e: 'g', p: 500, lagra: true, start: 300 },
-  arter: { n: 'Frysta ärtor', k: Fr, e: 'g', p: 500, lagra: true, start: 400 },
+  bar: { n: 'Frysta bär', k: Fr, e: 'g', p: 500, lagra: true },
+  arter: { n: 'Frysta ärtor', k: Fr, e: 'g', p: 500, lagra: true },
   torsk: { n: 'Torskfilé, fryst', k: Fr, e: 'g', p: 500 },
 
   godis: { n: 'Lösgodis', k: G, e: 'g', p: 150, anm: 'Lördagsgodis. Ta bara det som ska ätas samma dag.' },
@@ -190,10 +196,17 @@ export const RECEPT = {
 // Middagar när Noah är hos dig, i ordning. Minst en fiskrätt varje vecka.
 export const HUVUD = ['lax', 'wok', 'tacos', 'torsk', 'pastasas', 'linssoppa', 'lar', 'bullar', 'laxpasta', 'curry', 'pizza', 'lax', 'pastasas', 'chili', 'torsk', 'lar', 'bullar'];
 // Enkla middagar för dig när Noah inte är hos dig (halv portion).
-export const SOLO = ['omelett', 'chili', 'laxpasta', 'wok', 'omelett', 'pastasas', 'laxpasta'];
+export const SOLO = ['omelett', 'chili', 'wok', 'omelett', 'laxpasta', 'chili', 'wok'];
 
 // Särskilda dagar. extraPersoner läggs på frukost/mellanmål, ingr är extra varor den dagen.
 export const OVERRIDE = {
+  '2026-10-28': { middagRecept: 'wok', faktor: 2, port: '2 portioner (en blir matlåda)' },
+  '2026-10-29': { middagRecept: 'lax', faktor: 1.5, port: '2 portioner' },
+  '2026-10-30': { med: 'Du + kompis (fre–sön)', middagRecept: 'tacos', faktor: 1.7, port: '2 vuxna', extra: 'Kompisen kommer. Ostbricka till kvällen.' },
+  '2026-10-31': { med: 'Du + kompis, ni åker på förmiddagen', borta: true, baslinje: 0.5, mellis: 'Borta', middag: { typ: 'ute', recept: null, namn: 'Borta', port: '' } },
+  '2026-11-01': { med: 'Borta', borta: true, baslinje: 0, frukost: 'Borta', mellis: 'Borta', middag: { typ: 'ute', recept: null, namn: 'Borta', port: '' } },
+  '2026-11-02': { middagRecept: 'pastasas', faktor: 1.7, port: '2 portioner' },
+  '2026-11-03': { middagRecept: 'torsk', faktor: 1.7, port: '2 portioner' },
   '2026-11-10': {
     med: 'Du + Dennis',
     lunch: 'Thaibuffé med Dennis',
@@ -213,3 +226,17 @@ export const OVERRIDE = {
     ingr: [['agg', 4], ['avokado', 2], ['tomat', 150], ['yoghurt', 200], ['bar', 100], ['brod', 6], ['ost', 100], ['kalkon', 60], ['hummus', 100], ['gurka', 1], ['princess', 1], ['tartljus', 1]]
   }
 };
+
+// Veckan som redan är handlad enligt din egen lista (nyckel = veckoindex, 0 = första veckan).
+export const FASTKOP = {
+  0: {
+    banan: 1, paron: 1, vindruvor: 1, gurka: 2, tomat: 1, paprika: 3, broccoli: 2, morot: 1, zucchini: 1, lok: 1, vitlok: 1,
+    sallad: 1, avokado: 1, spenat: 1, citron: 1, potatis: 1,
+    kyckling: 1, lax: 1, notfars: 2, kalkon: 1,
+    mjolk: 1, yoghurt: 1, kvarg: 1, keso: 1, hummus: 1, agg: 1, smor: 1, rivost: 1, ost: 1, cf: 1,
+    ostar: 1, kex: 1, sylt: 1, oliver: 1,
+    musli: 1, pasta: 1, krossade: 2, tacokrydda: 1, tacosas: 1, majs: 1, kidney: 1, soja: 1, jnsmor: 1, fruktpure: 1, honung: 1,
+    brod: 1, knacke: 1, torsk: 1, bar: 1, arter: 1, dryck: 1
+  }
+};
+export const FAST_ANM = { 0: 'Den här veckan är redan handlad enligt din lista. Bockarna visar vad du köpte.' };
