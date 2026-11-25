@@ -3,81 +3,89 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
 <title>Veckomat</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;500;700&display=swap">
 <style>
 :root {
-  --bg: #f2f5f1; --card: #fff; --fg: #19271f; --muted: #5d6e63; --line: #d6ded7;
-  --accent: #2b7a4b; --accent-fg: #fff; --soft: #e3eee6; --warn: #8a4b12; --warn-bg: #fbeedb;
-  --font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
-  --font-body: "Nunito Sans", "Segoe UI", system-ui, sans-serif;
+  --paper: #fbf8f2; --ink: #2b2622; --muted: #7a7068; --rule: #e4ddd1; --rule-strong: #cfc5b5;
+  --accent: #b8452b; --hl: #f6e9c8;
+  --serif: "DM Serif Display", Georgia, "Times New Roman", serif;
+  --sans: "Karla", "Segoe UI", system-ui, sans-serif;
   color-scheme: light;
 }
-@media (prefers-color-scheme: dark) {
-  :root { --bg: #111a14; --card: #1a251e; --fg: #e5eee7; --muted: #9db1a3; --line: #2c3b31; --accent: #6cc48e; --accent-fg: #0d1a12; --soft: #223228; --warn: #f0c58f; --warn-bg: #3a2a15; color-scheme: dark; }
-}
 * { box-sizing: border-box; }
-body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.5 var(--font-body); padding: 0 16px 48px; }
-.wrap { max-width: 720px; margin: 0 auto; }
-h1, h2, h3 { font-family: var(--font-display); line-height: 1.15; margin: 0; text-wrap: balance; }
-header.top { position: sticky; top: 0; z-index: 5; background: var(--bg); padding: 14px 0 10px; border-bottom: 1px solid var(--line); }
-h1 { font-size: 1.6rem; }
-.sub { color: var(--muted); font-size: 0.9rem; margin: 2px 0 10px; }
-nav { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
-nav button { min-height: 44px; border: 1px solid var(--line); background: var(--card); color: var(--fg); border-radius: 10px; font: 600 0.95rem var(--font-body); cursor: pointer; }
-nav button[aria-selected="true"] { background: var(--accent); color: var(--accent-fg); border-color: var(--accent); }
-button:focus-visible, input:focus-visible + .box, summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
-.bar { height: 8px; border-radius: 99px; background: var(--soft); overflow: hidden; margin-top: 10px; }
-.bar i { display: block; height: 100%; width: 0; background: var(--accent); transition: width .25s; }
-.pcount { font-size: 0.88rem; color: var(--muted); margin-top: 6px; font-variant-numeric: tabular-nums; }
-.intro { color: var(--muted); font-size: 0.92rem; margin: 14px 0 0; }
-h2.sec { font-size: 1.2rem; margin: 26px 0 4px; }
-.cat { margin-top: 20px; }
-.cat-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px; }
-.cat-head h3 { font-size: 1.05rem; }
-.cat-head span { color: var(--muted); font-size: 0.82rem; font-variant-numeric: tabular-nums; }
-.cat-info { margin: 0 0 6px; color: var(--muted); font-size: 0.85rem; }
-ul.items { list-style: none; margin: 0; padding: 0; background: var(--card); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
-ul.items li + li { border-top: 1px solid var(--line); }
-ul.items label { display: flex; align-items: center; gap: 14px; min-height: 52px; padding: 8px 14px; cursor: pointer; }
+html { background: var(--paper); }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.55 var(--sans); padding: 0 20px 64px; }
+.wrap { max-width: 640px; margin: 0 auto; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 400; margin: 0; line-height: 1.15; }
+a { color: var(--accent); }
+
+header.top { padding: 28px 0 0; }
+h1 { font-size: 2.6rem; letter-spacing: -0.01em; }
+.sub { margin: 4px 0 0; color: var(--muted); font-size: 0.95rem; }
+nav { display: flex; gap: 22px; margin-top: 18px; border-bottom: 1px solid var(--rule-strong); position: sticky; top: 0; background: var(--paper); z-index: 5; }
+nav button { appearance: none; background: none; border: 0; border-bottom: 3px solid transparent; margin-bottom: -1px; padding: 12px 0 9px; font: 700 1rem var(--sans); color: var(--muted); cursor: pointer; min-height: 46px; }
+nav button[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); }
+button:focus-visible, summary:focus-visible, a:focus-visible, input:focus-visible + .box { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+.prog { margin-top: 14px; font-size: 0.9rem; color: var(--muted); display: flex; align-items: center; gap: 12px; }
+.prog .line { flex: 1; height: 3px; background: var(--rule); }
+.prog .line i { display: block; height: 100%; width: 0; background: var(--accent); transition: width .25s; }
+.intro { color: var(--muted); margin: 18px 0 0; font-size: 0.98rem; }
+.toggle { appearance: none; background: none; border: 0; padding: 0; margin-top: 10px; font: 500 0.92rem var(--sans); color: var(--accent); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; min-height: 32px; }
+
+/* Inköpslista */
+.cat { margin-top: 34px; }
+.cat-head { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 2px solid var(--ink); padding-bottom: 4px; }
+.cat-head h3 { font-size: 1.45rem; }
+.cat-head span { font-size: 0.85rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.cat-info { margin: 8px 0 0; color: var(--muted); font-size: 0.9rem; font-style: italic; }
+ul.items { list-style: none; margin: 0; padding: 0; }
+ul.items li { border-bottom: 1px solid var(--rule); }
+ul.items label { display: flex; align-items: flex-start; gap: 14px; padding: 11px 0; cursor: pointer; }
 ul.items input { position: absolute; opacity: 0; width: 1px; height: 1px; }
-.box { flex: none; width: 26px; height: 26px; border: 2px solid var(--muted); border-radius: 7px; display: grid; place-items: center; }
-.box svg { width: 16px; height: 16px; opacity: 0; stroke: var(--accent-fg); }
-input:checked + .box { background: var(--accent); border-color: var(--accent); }
+.box { flex: none; width: 22px; height: 22px; margin-top: 2px; border: 1.5px solid var(--ink); display: grid; place-items: center; }
+.box svg { width: 14px; height: 14px; opacity: 0; stroke: var(--accent); }
 input:checked + .box svg { opacity: 1; }
 .txt { flex: 1; min-width: 0; }
-.name { font-weight: 600; }
-.note { display: block; color: var(--muted); font-size: 0.82rem; }
-.qty { color: var(--muted); font-size: 0.9rem; text-align: right; }
-li.done .name { text-decoration: line-through; color: var(--muted); font-weight: 400; }
-li.done .qty, li.done .note { opacity: .7; }
+.name { font-weight: 500; }
+.note { display: block; color: var(--muted); font-size: 0.85rem; }
+.qty { color: var(--ink); font-size: 0.95rem; text-align: right; white-space: nowrap; padding-left: 8px; }
+li.done .name, li.done .qty { text-decoration: line-through; text-decoration-color: var(--accent); color: var(--muted); }
+li.done .note { opacity: .6; }
 li.hide, .cat.hide { display: none; }
-.btn { margin-top: 14px; min-height: 40px; padding: 0 14px; border: 1px solid var(--line); background: var(--card); color: var(--fg); border-radius: 10px; font: 600 0.9rem var(--font-body); cursor: pointer; }
-.btn[aria-pressed="true"] { background: var(--soft); border-color: var(--accent); }
-.dag { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; margin-top: 10px; }
-.dag.noah { border-left: 5px solid var(--accent); }
-.dag.idag { outline: 2px solid var(--accent); }
-.dag.forbi { opacity: .6; }
-.dag-head { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; }
-.dag-head strong { font-family: var(--font-display); font-size: 1.05rem; }
-.tag { font-size: 0.8rem; color: var(--muted); }
-.idag-tag { color: var(--accent); font-weight: 700; }
-.dag dl { margin: 6px 0 0; display: grid; grid-template-columns: 5.2rem 1fr; gap: 2px 10px; font-size: 0.93rem; }
+
+/* Dagar */
+.dagar { margin-top: 14px; }
+.dag { display: grid; grid-template-columns: 5.6rem 1fr; gap: 0 14px; padding: 18px 0; border-bottom: 1px solid var(--rule); }
+.dag.idag { background: var(--hl); margin: 0 -12px; padding-left: 12px; padding-right: 12px; border-bottom-color: transparent; }
+.dag.forbi { opacity: .55; }
+.dnamn { font-family: var(--serif); font-size: 1.25rem; line-height: 1.15; }
+.dnamn small { display: block; font: 500 0.78rem var(--sans); color: var(--muted); margin-top: 4px; }
+.dnamn .noah { color: var(--accent); font-weight: 700; }
+.dag dl { margin: 0; display: grid; grid-template-columns: 4.6rem 1fr; gap: 3px 10px; font-size: 0.95rem; }
 .dag dt { color: var(--muted); }
 .dag dd { margin: 0; min-width: 0; }
-.dag a { color: var(--accent); font-weight: 600; text-decoration: none; }
-.dag a:hover { text-decoration: underline; }
-.recipe { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; margin-top: 12px; scroll-margin-top: 150px; }
-.recipe h3 { font-size: 1.2rem; }
-.meta { color: var(--muted); font-size: 0.88rem; margin: 2px 0 8px; }
-.meta a { color: var(--accent); font-weight: 600; }
-.recipe h4 { margin: 10px 0 4px; font-size: 0.92rem; }
-.recipe ul, .recipe ol { margin: 0; padding-left: 20px; }
-.tip { margin-top: 10px; padding: 8px 10px; border-radius: 8px; background: var(--warn-bg); color: var(--warn); font-size: 0.9rem; }
-details.mer { margin-top: 26px; }
-details.mer summary { cursor: pointer; font: 700 1.1rem var(--font-display); min-height: 44px; display: flex; align-items: center; }
-@media (prefers-reduced-motion: reduce) { .bar i { transition: none; } }
+.dag dd.mid { font-weight: 700; }
+.dag dd small { display: block; font-weight: 400; color: var(--muted); font-size: 0.85rem; }
+
+/* Recept */
+.recipe { margin-top: 40px; padding-top: 6px; scroll-margin-top: 70px; }
+.recipe h3 { font-size: 1.9rem; }
+.meta { color: var(--muted); font-size: 0.9rem; margin: 6px 0 0; }
+.recipe h4 { margin: 22px 0 6px; font: 700 0.78rem var(--sans); letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); }
+.recipe ul { margin: 0; padding: 0; list-style: none; columns: 2 220px; column-gap: 28px; }
+.recipe ul li { padding: 3px 0; break-inside: avoid; }
+.recipe ol { margin: 0; padding: 0; list-style: none; counter-reset: s; }
+.recipe ol li { counter-increment: s; position: relative; padding: 0 0 12px 38px; }
+.recipe ol li::before { content: counter(s); position: absolute; left: 0; top: -2px; font: 1.5rem/1.2 var(--serif); color: var(--accent); }
+.tip { margin: 18px 0 0; padding-left: 14px; border-left: 3px solid var(--rule-strong); color: var(--muted); font-style: italic; }
+.recipe + .recipe { border-top: 1px solid var(--rule-strong); padding-top: 34px; }
+@media (prefers-reduced-motion: reduce) { .prog .line i { transition: none; } }
+@media (max-width: 420px) { .dag { grid-template-columns: 1fr; gap: 8px; } }
 </style>
 </head>
 <body>
@@ -90,16 +98,12 @@ details.mer summary { cursor: pointer; font: 700 1.1rem var(--font-display); min
       <button id="t-dagar" role="tab">Dagar</button>
       <button id="t-recept" role="tab">Recept</button>
     </nav>
-    <div id="prog" hidden>
-      <div class="bar"><i id="fill"></i></div>
-      <div class="pcount" id="count"></div>
-    </div>
   </header>
   <main id="main"><p class="intro">Laddar veckan...</p></main>
 </div>
 
 <script>
-const CHECK = '<svg viewBox="0 0 16 16" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5"/></svg>';
+const CHECK = '<svg viewBox="0 0 16 16" fill="none" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 8.5l3.5 3.2L13.5 3.5"/></svg>';
 const FLIKAR = ['handla', 'dagar', 'recept'];
 let vecka, recept, bockat = {}, dolj = false, flik = 'handla', KEY, DOLJ = 'veckomat:v2:dolj';
 const $ = (s, e = document) => e.querySelector(s);
@@ -128,15 +132,16 @@ function visa(id, scroll) {
   FLIKAR.forEach((f) => $('#t-' + f).setAttribute('aria-selected', String(f === id)));
   if (location.hash !== '#' + id) history.replaceState(null, '', '#' + id);
   const main = $('#main'); main.replaceChildren();
-  $('#prog').hidden = id !== 'handla';
   ({ handla, dagar, recept: veckansRecept })[id](main);
   if (scroll) window.scrollTo(0, 0);
 }
 
 function handla(main) {
   main.append(el('p', 'intro', vecka.anm));
-  const hide = el('button', 'btn', dolj ? 'Visa avbockade' : 'Dölj avbockade'); hide.setAttribute('aria-pressed', String(dolj));
-  hide.addEventListener('click', () => { dolj = !dolj; lsSet(DOLJ, dolj ? '1' : '0'); hide.textContent = dolj ? 'Visa avbockade' : 'Dölj avbockade'; hide.setAttribute('aria-pressed', String(dolj)); uppdatera(); });
+  const prog = el('div', 'prog'), line = el('div', 'line'), fill = el('i'), count = el('span');
+  line.append(fill); prog.append(line, count); main.append(prog);
+  const hide = el('button', 'toggle', dolj ? 'Visa avbockade' : 'Dölj avbockade');
+  hide.addEventListener('click', () => { dolj = !dolj; lsSet(DOLJ, dolj ? '1' : '0'); hide.textContent = dolj ? 'Visa avbockade' : 'Dölj avbockade'; uppdatera(fill, count); });
   main.append(hide);
   vecka.handla.forEach((c) => {
     const sec = el('section', 'cat'), head = el('div', 'cat-head'), cnt = el('span');
@@ -149,14 +154,14 @@ function handla(main) {
       inp.type = 'checkbox'; box.innerHTML = CHECK;
       txt.append(el('span', 'name', r.namn)); if (r.anm) txt.append(el('span', 'note', r.anm));
       lab.append(inp, box, txt, el('span', 'qty', r.mangd || '')); li.append(lab); ul.append(li);
-      inp.addEventListener('change', () => { if (inp.checked) bockat[r.id] = 1; else delete bockat[r.id]; lsSet(KEY, JSON.stringify(bockat)); uppdatera(); });
+      inp.addEventListener('change', () => { if (inp.checked) bockat[r.id] = 1; else delete bockat[r.id]; lsSet(KEY, JSON.stringify(bockat)); uppdatera(fill, count); });
     });
     sec.append(ul); sec._cnt = cnt; main.append(sec);
   });
-  uppdatera();
+  uppdatera(fill, count);
 }
 
-function uppdatera() {
+function uppdatera(fill, count) {
   let tot = 0, klar = 0;
   document.querySelectorAll('section.cat').forEach((sec) => {
     const lis = sec.querySelectorAll('li'); let d = 0;
@@ -165,31 +170,36 @@ function uppdatera() {
       li.querySelector('input').checked = on; li.classList.toggle('done', on); li.classList.toggle('hide', dolj && on);
       if (on) d++;
     });
-    sec._cnt.textContent = `${d}/${lis.length}`; sec.classList.toggle('hide', dolj && d === lis.length);
+    sec._cnt.textContent = `${d} av ${lis.length}`; sec.classList.toggle('hide', dolj && d === lis.length);
     tot += lis.length; klar += d;
   });
-  $('#count').textContent = `${klar} av ${tot} avbockade`;
-  $('#fill').style.width = (tot ? klar / tot * 100 : 0) + '%';
+  count.textContent = `${klar} av ${tot}`;
+  fill.style.width = (tot ? klar / tot * 100 : 0) + '%';
 }
 
 function dagar(main) {
   const nu = idag();
-  main.append(el('p', 'intro', 'Grön kant betyder att Noah är med. Tryck på middagen för receptet.'));
+  main.append(el('p', 'intro', 'Tryck på middagen för receptet.'));
+  const lista = el('div', 'dagar');
   vecka.dagar.forEach((d) => {
-    const noah = d.tag === 'Du + Noah';
-    const k = el('div', 'dag' + (noah ? ' noah' : '') + (d.datum === nu ? ' idag' : '') + (d.datum < nu ? ' forbi' : ''));
-    const h = el('div', 'dag-head'), sp = el('span', 'tag', d.tag);
-    if (d.datum === nu) sp.prepend(el('span', 'idag-tag', 'Idag · '));
-    h.append(el('strong', '', d.dag), sp); k.append(h);
+    const k = el('div', 'dag' + (d.datum === nu ? ' idag' : '') + (d.datum < nu ? ' forbi' : ''));
+    const [dag, ...datum] = d.dag.split(' ');
+    const namn = el('div', 'dnamn', dag + ' ' + datum.join(' '));
+    const liten = el('small'); const noah = d.tag === 'Du + Noah';
+    if (d.datum === nu) liten.append('Idag · ');
+    if (noah) liten.append(el('span', 'noah', 'Med Noah')); else liten.append(d.tag);
+    namn.append(liten);
     const dl = el('dl');
     [['Frukost', d.frukost], ['Lunch', d.lunch], ['Mellanmål', d.mellis]].forEach(([a, b]) => { if (b) dl.append(el('dt', '', a), el('dd', '', b)); });
-    const dd = el('dd'), m = d.middag;
+    const dd = el('dd', 'mid'), m = d.middag;
     let n;
     if (m.recept) { n = el('a', '', m.namn); n.href = '#recept'; n.addEventListener('click', (e) => { e.preventDefault(); visa('recept', false); const t = document.getElementById('r-' + m.recept); if (t) t.scrollIntoView(); }); }
     else n = el('span', '', m.namn);
-    dd.append(n); if (m.port) dd.append(el('span', 'tag', ' · ' + m.port));
-    dl.append(el('dt', '', 'Middag'), dd); k.append(dl); main.append(k);
+    dd.append(n); if (m.port) dd.append(el('small', '', m.port));
+    dl.append(el('dt', '', 'Middag'), dd);
+    k.append(namn, dl); lista.append(k);
   });
+  main.append(lista);
 }
 
 function receptKort(r) {
@@ -207,10 +217,6 @@ function veckansRecept(main) {
   main.append(el('p', 'intro', 'Alla recept gäller 4 portioner, så det blir matlådor.'));
   const ids = [...new Set(vecka.dagar.map((d) => d.middag.recept).filter(Boolean))];
   ids.forEach((id) => { const r = recept.find((x) => x.id === id); if (r) main.append(receptKort(r)); });
-  const mer = recept.filter((r) => !ids.includes(r.id));
-  if (!mer.length) return;
-  const det = el('details', 'mer'); det.append(el('summary', '', 'Fler recept'));
-  mer.forEach((r) => det.append(receptKort(r))); main.append(det);
 }
 
 window.addEventListener('hashchange', () => { const h = location.hash.slice(1); if (vecka && h !== flik && FLIKAR.includes(h)) visa(h, false); });
