@@ -3,7 +3,7 @@
 En vecka i taget: inköpslista att bocka av, dag för dag och recept. Statisk sida på GitHub Pages.
 
 - `vecka.json` är den aktuella veckan (inköpslista och dagsplan).
-- `recept.json` är receptbiblioteket (alla recept gäller 2 portioner).
+- `recept.json` är receptbiblioteket (alla recept gäller 4 portioner, så det blir matlådor).
 - `arkiv/` har tidigare veckor. Bockarna sparas i webbläsaren per vecka (`id` i `vecka.json`).
 
 ## Ny vecka

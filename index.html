@@ -71,6 +71,7 @@ li.hide, .cat.hide { display: none; }
 .recipe { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; margin-top: 12px; scroll-margin-top: 150px; }
 .recipe h3 { font-size: 1.2rem; }
 .meta { color: var(--muted); font-size: 0.88rem; margin: 2px 0 8px; }
+.meta a { color: var(--accent); font-weight: 600; }
 .recipe h4 { margin: 10px 0 4px; font-size: 0.92rem; }
 .recipe ul, .recipe ol { margin: 0; padding-left: 20px; }
 .tip { margin-top: 10px; padding: 8px 10px; border-radius: 8px; background: var(--warn-bg); color: var(--warn); font-size: 0.9rem; }
@@ -193,7 +194,9 @@ function dagar(main) {
 
 function receptKort(r) {
   const a = el('article', 'recipe'); a.id = 'r-' + r.id;
-  a.append(el('h3', '', r.namn), el('p', 'meta', r.tid + (r.fisk ? ' · fisk' : '')), el('h4', '', 'Ingredienser'));
+  const meta = el('p', 'meta', r.tid + (r.fisk ? ' · fisk' : ''));
+  if (r.kalla) { const l = el('a', '', r.kalla.namn); l.href = r.kalla.url; l.target = '_blank'; l.rel = 'noopener'; meta.append(' · Original: ', l); }
+  a.append(el('h3', '', r.namn), meta, el('h4', '', 'Ingredienser'));
   const ul = el('ul'); r.ingr.forEach((i) => ul.append(el('li', '', i))); a.append(ul, el('h4', '', 'Gör så här'));
   const ol = el('ol'); r.steg.forEach((s) => ol.append(el('li', '', s))); a.append(ol);
   if (r.tips) a.append(el('p', 'tip', r.tips));
@@ -201,7 +204,7 @@ function receptKort(r) {
 }
 
 function veckansRecept(main) {
-  main.append(el('p', 'intro', 'Alla recept gäller 2 portioner. Halvera för en portion.'));
+  main.append(el('p', 'intro', 'Alla recept gäller 4 portioner, så det blir matlådor.'));
   const ids = [...new Set(vecka.dagar.map((d) => d.middag.recept).filter(Boolean))];
   ids.forEach((id) => { const r = recept.find((x) => x.id === id); if (r) main.append(receptKort(r)); });
   const mer = recept.filter((r) => !ids.includes(r.id));
