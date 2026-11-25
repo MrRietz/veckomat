@@ -1,0 +1,310 @@
+[
+ {
+  "id": "lax",
+  "namn": "Ugnslax med potatis och broccoli",
+  "tid": "35 min",
+  "fisk": true,
+  "tips": "Kolla laxen efter ben och ta bort skinnet åt Noah. Skär potatis och broccoli små.",
+  "ingr": [
+   "300 g laxfilé",
+   "500 g potatis",
+   "1 st broccoli",
+   "1 st citron",
+   "100 g turkisk yoghurt"
+  ],
+  "steg": [
+   "Ugn 200 °C. Tärna potatisen, vänd i olja och rosta 20 min.",
+   "Lägg laxen bredvid på plåten och rosta 12–15 min.",
+   "Ånga broccolin 4–5 min.",
+   "Rör ihop yoghurt, citronsaft och en nypa salt till sås."
+  ]
+ },
+ {
+  "id": "wok",
+  "namn": "Kycklingwok med ris",
+  "tid": "25 min",
+  "fisk": false,
+  "tips": "",
+  "ingr": [
+   "300 g kycklingfilé",
+   "1 st paprika",
+   "1 st broccoli",
+   "150 g morötter",
+   "80 g gul lök",
+   "2 klyfta vitlök",
+   "30 ml salt-reducerad soja",
+   "150 g ris"
+  ],
+  "steg": [
+   "Koka riset.",
+   "Skär kyckling i strimlor och grönsakerna smalt. Morötterna tunnast.",
+   "Stek kycklingen genomstekt och ta upp den.",
+   "Woka morot, lök och broccoli 4 min, sedan paprika och vitlök 2 min.",
+   "Lägg tillbaka kycklingen, tillsätt soja och en skvätt vatten. Servera över riset."
+  ]
+ },
+ {
+  "id": "tacos",
+  "namn": "Tacos",
+  "tid": "25 min",
+  "fisk": false,
+  "tips": "Använd halv mängd krydda åt Noah om det blir för starkt.",
+  "ingr": [
+   "300 g nötfärs",
+   "0,6 förp mild tacokrydda",
+   "1 burk kidneybönor",
+   "1 burk majs",
+   "4 st tortillabröd",
+   "1 st sallad",
+   "150 g tomater",
+   "1 st gurka",
+   "1 st avokado",
+   "60 g riven ost",
+   "100 g crème fraiche",
+   "0,3 burk tacosås"
+  ],
+  "steg": [
+   "Bryn färsen, rör ner kryddan och lite vatten och sjud 5 min.",
+   "Skölj bönorna och blanda ner dem med majsen.",
+   "Skär grönsakerna och mosa avokadon.",
+   "Värm tortillabröden och ställ fram allt så att alla bygger själva."
+  ]
+ },
+ {
+  "id": "pastasas",
+  "namn": "Pasta med grönsaksrik köttfärssås",
+  "tid": "35 min",
+  "fisk": false,
+  "tips": "De rivna grönsakerna försvinner i såsen, bra för en 3-åring.",
+  "ingr": [
+   "300 g nötfärs",
+   "80 g gul lök",
+   "2 klyfta vitlök",
+   "150 g morötter",
+   "1 st zucchini",
+   "400 g krossade tomater",
+   "50 g frysta ärtor",
+   "160 g fullkornspasta",
+   "40 g riven ost"
+  ],
+  "steg": [
+   "Fräs lök och vitlök, bryn färsen.",
+   "Rör ner riven morot och zucchini samt tomaterna. Sjud 20 min.",
+   "Koka pastan och lägg i ärtorna i såsen sista 3 min.",
+   "Servera med riven ost."
+  ]
+ },
+ {
+  "id": "torsk",
+  "namn": "Ugnstorsk med rotfrukter",
+  "tid": "40 min",
+  "fisk": true,
+  "tips": "Kolla torsken efter ben innan Noah får den.",
+  "ingr": [
+   "300 g torskfilé, fryst",
+   "200 g morötter",
+   "400 g potatis",
+   "1 st broccoli",
+   "1 st citron",
+   "100 g turkisk yoghurt",
+   "20 g smör"
+  ],
+  "steg": [
+   "Tina torsken i kylen kvällen innan.",
+   "Ugn 200 °C. Tärna morot och potatis, rosta 20 min.",
+   "Lägg torsken på plåten med lite smör och rosta 12–15 min.",
+   "Ånga broccolin och rör yoghurt med citron till sås."
+  ]
+ },
+ {
+  "id": "linssoppa",
+  "namn": "Röd linssoppa med bröd",
+  "tid": "30 min",
+  "fisk": false,
+  "tips": "",
+  "ingr": [
+   "150 g röda linser",
+   "200 g morötter",
+   "100 g gul lök",
+   "2 klyfta vitlök",
+   "400 ml kokosmjölk",
+   "0,1 burk mild currypulver",
+   "4 skivor fullkornsbröd",
+   "50 g turkisk yoghurt"
+  ],
+  "steg": [
+   "Fräs lök, vitlök och curry i en kastrull.",
+   "Tillsätt riven morot, linser, kokosmjölk och 5 dl vatten. Sjud 15–20 min.",
+   "Mixa slätt med stavmixer.",
+   "Servera med bröd och en klick yoghurt."
+  ]
+ },
+ {
+  "id": "lar",
+  "namn": "Ugnsbakad kyckling med rotfrukter",
+  "tid": "45 min",
+  "fisk": false,
+  "tips": "",
+  "ingr": [
+   "350 g kycklinglårfilé",
+   "400 g potatis",
+   "200 g morötter",
+   "1 st broccoli",
+   "100 g turkisk yoghurt"
+  ],
+  "steg": [
+   "Ugn 200 °C. Skär rotfrukterna i bitar och lägg på plåt med olja och salt.",
+   "Lägg kycklingen ovanpå och rosta 25–30 min tills den är genomstekt.",
+   "Ånga broccolin och servera med yoghurt."
+  ]
+ },
+ {
+  "id": "bullar",
+  "namn": "Ugnsbullar med potatis och gurka",
+  "tid": "40 min",
+  "fisk": false,
+  "tips": "",
+  "ingr": [
+   "300 g nötfärs",
+   "1 st ägg",
+   "30 g havregryn",
+   "1 dl mjölk",
+   "40 g gul lök",
+   "500 g potatis",
+   "1 st gurka",
+   "50 g crème fraiche"
+  ],
+  "steg": [
+   "Ugn 200 °C. Blanda färs, ägg, havregryn, mjölk och riven lök. Rulla bullar.",
+   "Baka 15–18 min.",
+   "Koka potatisen och skär gurkan i tunna stavar.",
+   "Servera med crème fraiche."
+  ]
+ },
+ {
+  "id": "curry",
+  "namn": "Kikärtscurry med sötpotatis",
+  "tid": "35 min",
+  "fisk": false,
+  "tips": "",
+  "ingr": [
+   "400 g sötpotatis",
+   "1 burk kikärtor",
+   "400 ml kokosmjölk",
+   "80 g gul lök",
+   "2 klyfta vitlök",
+   "50 g babyspenat",
+   "150 g ris",
+   "0,1 burk mild currypulver"
+  ],
+  "steg": [
+   "Koka riset.",
+   "Fräs lök, vitlök och curry. Tillsätt tärnad sötpotatis, kokosmjölk och 1 dl vatten.",
+   "Sjud 15 min, lägg i kikärtor och spenat sista 3 min.",
+   "Servera över riset."
+  ]
+ },
+ {
+  "id": "laxpasta",
+  "namn": "Pasta med lax och spenat",
+  "tid": "25 min",
+  "fisk": true,
+  "tips": "",
+  "ingr": [
+   "160 g fullkornspasta",
+   "250 g laxfilé",
+   "60 g babyspenat",
+   "100 g crème fraiche",
+   "1 st citron",
+   "50 g frysta ärtor"
+  ],
+  "steg": [
+   "Koka pastan och lägg i ärtorna sista 3 min.",
+   "Stek laxen i bitar, blanda med crème fraiche, spenat och citron.",
+   "Vänd ihop med pastan."
+  ]
+ },
+ {
+  "id": "pizza",
+  "namn": "Pizza på tortillabröd",
+  "tid": "25 min",
+  "fisk": false,
+  "tips": "",
+  "ingr": [
+   "4 st tortillabröd",
+   "400 g krossade tomater",
+   "120 g riven ost",
+   "1 st paprika",
+   "40 g kalkonpålägg",
+   "150 g tomater"
+  ],
+  "steg": [
+   "Ugn 225 °C. Lägg tortillabröden på plåt och grädda 3 min.",
+   "Bred på krossade tomater, ost och valfria toppings.",
+   "Grädda 8–10 min."
+  ]
+ },
+ {
+  "id": "chili",
+  "namn": "Mild bönchili med ris",
+  "tid": "35 min",
+  "fisk": false,
+  "tips": "",
+  "ingr": [
+   "1 burk kidneybönor",
+   "1 burk majs",
+   "400 g krossade tomater",
+   "1 st paprika",
+   "80 g gul lök",
+   "100 g morötter",
+   "2 klyfta vitlök",
+   "150 g ris",
+   "40 g riven ost",
+   "50 g crème fraiche"
+  ],
+  "steg": [
+   "Koka riset.",
+   "Fräs lök, vitlök och tärnad paprika och morot.",
+   "Tillsätt tomater, bönor och majs och sjud 20 min.",
+   "Servera med ris, ost och crème fraiche."
+  ]
+ },
+ {
+  "id": "brod",
+  "namn": "Lätt bröd utan knådning",
+  "tid": "15 min + 12 tim jäsning + 45 min i ugnen",
+  "fisk": false,
+  "tips": "Vill du ha det på lördagsmorgonen: rör ihop degen på kvällen.",
+  "ingr": [
+   "500 g vetemjöl",
+   "0,1 förp torrjäst"
+  ],
+  "steg": [
+   "Blanda 500 g vetemjöl, 1 tsk salt och en nypa torrjäst i en skål.",
+   "Rör ner 4 dl kallt vatten till en kladdig deg. Låt jäsa täckt 12 timmar (kvällen innan eller på morgonen).",
+   "Ugn 240 °C med en gjutjärnsgryta eller ugnsfast form inuti. Vänd ut degen på mjölad bänk, vik ihop och lägg i den heta grytan.",
+   "Grädda med lock 30 min och utan lock 15 min tills brödet är gyllene."
+  ]
+ },
+ {
+  "id": "omelett",
+  "namn": "Omelett med grönsaker",
+  "tid": "15 min",
+  "fisk": false,
+  "tips": "",
+  "ingr": [
+   "5 st ägg",
+   "1 st paprika",
+   "100 g tomater",
+   "40 g babyspenat",
+   "40 g riven ost",
+   "4 skivor fullkornsbröd",
+   "1 st gurka"
+  ],
+  "steg": [
+   "Vispa ägg med lite mjölk och salt.",
+   "Stek de skurna grönsakerna 2 min, häll över äggen.",
+   "Strö över ost och vik ihop. Servera med bröd och gurka."
+  ]
+ }
+]

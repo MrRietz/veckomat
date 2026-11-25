@@ -1,0 +1,132 @@
+{
+  "id": "2026-11-25",
+  "veckonr": 48,
+  "rubrik": "ons 25 nov till tis 1 dec",
+  "anm": "Handla i dag. Tre dagar med Noah (tors, mån, tis), kalas på lördag och skejt på söndag.",
+  "handla": [
+    {
+      "kat": "Kolla hemma först",
+      "info": "Bocka av det du redan har hemma, så syns bara resten kvar.",
+      "rader": [
+        { "id": "lok", "namn": "Gul lök", "mangd": "ca 400 g", "anm": "Wok, chili, köttfärssås, curry" },
+        { "id": "vitlok", "namn": "Vitlök", "mangd": "8 klyftor", "anm": "Ett huvud räcker" },
+        { "id": "ris", "namn": "Ris", "mangd": "ca 450 g", "anm": "Wok, chili, curry" },
+        { "id": "pasta", "namn": "Fullkornspasta", "mangd": "160 g" },
+        { "id": "agg", "namn": "Ägg", "mangd": "1 förp (12 st)", "anm": "Äggröra och frukost" },
+        { "id": "ost", "namn": "Ostbit till mackor", "mangd": "ca 200 g" },
+        { "id": "smor", "namn": "Smör" },
+        { "id": "havregryn", "namn": "Havregryn", "anm": "Gröt tors och sön" },
+        { "id": "musli", "namn": "Osockrad müsli" },
+        { "id": "honung", "namn": "Honung" },
+        { "id": "soja", "namn": "Salt-reducerad soja", "anm": "Woken" },
+        { "id": "curry", "namn": "Mild currypulver", "anm": "Curryn" },
+        { "id": "kanel", "namn": "Kanel", "anm": "Tisdagens mellanmål" },
+        { "id": "arter", "namn": "Frysta ärtor", "mangd": "ca 50 g", "anm": "Köttfärssåsen. Kolla frysen" },
+        { "id": "olja", "namn": "Olja, salt och peppar" }
+      ]
+    },
+    {
+      "kat": "Frukt & grönt",
+      "rader": [
+        { "id": "banan", "namn": "Bananer", "mangd": "1 klase" },
+        { "id": "apple", "namn": "Äpplen", "mangd": "1 förp (6 st)" },
+        { "id": "paron", "namn": "Päron", "mangd": "2 st" },
+        { "id": "gurka", "namn": "Gurka", "mangd": "2 st" },
+        { "id": "morot", "namn": "Morötter", "mangd": "ca 500 g", "anm": "Mat och mellanmål" },
+        { "id": "paprika", "namn": "Paprika", "mangd": "3 st", "anm": "Wok, pizza, chili" },
+        { "id": "broccoli", "namn": "Broccoli", "mangd": "2 st", "anm": "Wok och lax" },
+        { "id": "zucchini", "namn": "Zucchini", "mangd": "1 st", "anm": "Hälften i köttfärssåsen" },
+        { "id": "tomat", "namn": "Tomater", "mangd": "ca 300 g", "anm": "Pizza och mackor" },
+        { "id": "avokado", "namn": "Avokado", "mangd": "1 st" },
+        { "id": "spenat", "namn": "Babyspenat", "mangd": "1 påse", "anm": "Curryn" },
+        { "id": "citron", "namn": "Citron", "mangd": "1 st", "anm": "Lax" },
+        { "id": "potatis", "namn": "Potatis", "mangd": "ca 500 g", "anm": "Lax" },
+        { "id": "sotpotatis", "namn": "Sötpotatis", "mangd": "400 g", "anm": "1 stor. Curryn" }
+      ]
+    },
+    {
+      "kat": "Kött & fisk",
+      "rader": [
+        { "id": "kyckling", "namn": "Kycklingfilé", "mangd": "300 g", "anm": "Onsdagens wok" },
+        { "id": "lax", "namn": "Laxfilé", "mangd": "150–200 g", "anm": "Fredag. Färsk eller fryst" },
+        { "id": "notfars", "namn": "Nötfärs", "mangd": "1 förp (500 g)", "anm": "300 g till måndag. Frys resten" },
+        { "id": "kalkon", "namn": "Kalkonpålägg", "mangd": "1 förp", "anm": "Pizza och mackor" }
+      ]
+    },
+    {
+      "kat": "Mejeri",
+      "rader": [
+        { "id": "mjolk", "namn": "Mjölk", "mangd": "1 paket (2 l)" },
+        { "id": "yoghurt", "namn": "Turkisk yoghurt", "mangd": "1 burk (1 kg)" },
+        { "id": "keso", "namn": "Keso", "mangd": "1 förp (500 g)" },
+        { "id": "hummus", "namn": "Hummus", "mangd": "1 förp" },
+        { "id": "rivost", "namn": "Riven ost", "mangd": "1 förp (200 g)", "anm": "Pizza, chili, köttfärssås" },
+        { "id": "cf", "namn": "Crème fraiche", "mangd": "1 förp (200 g)", "anm": "Chilin" }
+      ]
+    },
+    {
+      "kat": "Skafferi & konserver",
+      "rader": [
+        { "id": "krossade", "namn": "Krossade tomater", "mangd": "3 förp", "anm": "Pizza, chili, köttfärssås" },
+        { "id": "kidney", "namn": "Kidneybönor", "mangd": "1 burk", "anm": "Chilin" },
+        { "id": "majs", "namn": "Majs", "mangd": "1 burk", "anm": "Chilin" },
+        { "id": "kikarter", "namn": "Kikärtor", "mangd": "1 burk", "anm": "Curryn" },
+        { "id": "kokos", "namn": "Kokosmjölk", "mangd": "1 burk (400 ml)", "anm": "Curryn" },
+        { "id": "tortilla", "namn": "Tortillabröd", "mangd": "1 förp (8 st)", "anm": "Pizza" }
+      ]
+    },
+    {
+      "kat": "Bröd & fryst",
+      "rader": [
+        { "id": "brod", "namn": "Fullkornsbröd", "mangd": "1 limpa" },
+        { "id": "bar", "namn": "Frysta bär", "mangd": "1 förp (500 g)" }
+      ]
+    }
+  ],
+  "dagar": [
+    {
+      "datum": "2026-11-25", "dag": "Ons 25 nov", "tag": "Bara du",
+      "middag": { "namn": "Kycklingwok med ris", "recept": "wok", "port": "2 portioner, en blir matlåda till torsdag" }
+    },
+    {
+      "datum": "2026-11-26", "dag": "Tors 26 nov", "tag": "Du + Noah",
+      "frukost": "Havregrynsgröt med banan och bär",
+      "lunch": "Matlåda: kycklingwok",
+      "mellis": "Hummus med gurka och riven morot",
+      "middag": { "namn": "Pizza på tortillabröd", "recept": "pizza", "port": "2 portioner" }
+    },
+    {
+      "datum": "2026-11-27", "dag": "Fre 27 nov", "tag": "Hemma",
+      "frukost": "Turkisk yoghurt med müsli och bär",
+      "lunch": "Äggröra på fullkornsbröd",
+      "mellis": "Keso med bär",
+      "middag": { "namn": "Ugnslax med potatis och broccoli", "recept": "lax", "port": "Halv sats, 1 portion" }
+    },
+    {
+      "datum": "2026-11-28", "dag": "Lör 28 nov", "tag": "Kalas hela dagen",
+      "frukost": "Smörgås med ost och gurka, snabbt innan du åker",
+      "lunch": "Kalaset",
+      "middag": { "namn": "Kalaset", "port": "Hem sent på kvällen" }
+    },
+    {
+      "datum": "2026-11-29", "dag": "Sön 29 nov", "tag": "Skejt kl 12",
+      "frukost": "Havregrynsgröt med honung och äpple, rejäl före skejten",
+      "lunch": "Ute",
+      "mellis": "Banan att ta med",
+      "middag": { "namn": "Mild bönchili med ris", "recept": "chili", "port": "Hel sats, resten blir matlåda till måndag" }
+    },
+    {
+      "datum": "2026-11-30", "dag": "Mån 30 nov", "tag": "Du + Noah",
+      "frukost": "Turkisk yoghurt med müsli och bär",
+      "lunch": "Matlåda: bönchili",
+      "mellis": "Päron i bitar",
+      "middag": { "namn": "Pasta med grönsaksrik köttfärssås", "recept": "pastasas", "port": "2 portioner" }
+    },
+    {
+      "datum": "2026-12-01", "dag": "Tis 1 dec", "tag": "Du + Noah",
+      "frukost": "Smörgås med kalkon och avokado",
+      "mellis": "Äppelklyftor med yoghurt och kanel",
+      "middag": { "namn": "Kikärtscurry med sötpotatis", "recept": "curry", "port": "2 portioner" }
+    }
+  ]
+}

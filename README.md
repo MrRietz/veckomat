@@ -1,19 +1,17 @@
 # Veckomat
 
-Femveckors matplan med inköpslista för en vuxen och en treåring: frukost, mellanmål, middag och lördagsgodis.
-Sidan är statisk och publiceras på GitHub Pages.
+En vecka i taget: inköpslista att bocka av, dag för dag och recept. Statisk sida på GitHub Pages.
 
-- Noahs dagar hämtas ur `data/noah-dagar.json` (kopia av `schema-noah`, bara datum och vem han är hos).
-- Receptet och varukatalogen ligger i `data/modell.mjs`.
-- `node scripts/bygg.mjs` räknar ihop `plan.json` (dagsplan, inköpslistor per vecka och skafferiplan).
-- Basvaror och frysvaror (`lagra: true`) köps bara när det uppskattade lagret inte räcker, så inga dubletter.
-- Bockarna på sidan sparas i webbläsaren (localStorage).
+- `vecka.json` är den aktuella veckan (inköpslista och dagsplan).
+- `recept.json` är receptbiblioteket (alla recept gäller 2 portioner).
+- `arkiv/` har tidigare veckor. Bockarna sparas i webbläsaren per vecka (`id` i `vecka.json`).
 
-## Uppdatera
+## Ny vecka
 
-1. Ändra `data/modell.mjs` eller `data/noah-dagar.json`.
-2. Kör `node scripts/bygg.mjs`.
-3. Committa och pusha `plan.json` tillsammans med ändringen.
+1. Flytta `vecka.json` till `arkiv/<id>.json`.
+2. Skriv en ny `vecka.json` med nytt `id` (startdatum), dagarna och inköpslistan.
+3. Nya recept läggs i `recept.json`.
+4. Committa och pusha.
 
 ## Testa lokalt
 

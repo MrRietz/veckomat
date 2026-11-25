@@ -18,38 +18,29 @@
   :root { --bg: #111a14; --card: #1a251e; --fg: #e5eee7; --muted: #9db1a3; --line: #2c3b31; --accent: #6cc48e; --accent-fg: #0d1a12; --soft: #223228; --warn: #f0c58f; --warn-bg: #3a2a15; color-scheme: dark; }
 }
 * { box-sizing: border-box; }
-body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.5 var(--font-body); padding: 0 max(16px, env(safe-area-inset-left, 0px)) 48px max(16px, env(safe-area-inset-right, 0px)); }
-.wrap { max-width: 760px; margin: 0 auto; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.5 var(--font-body); padding: 0 16px 48px; }
+.wrap { max-width: 720px; margin: 0 auto; }
 h1, h2, h3 { font-family: var(--font-display); line-height: 1.15; margin: 0; text-wrap: balance; }
 header.top { position: sticky; top: 0; z-index: 5; background: var(--bg); padding: 14px 0 10px; border-bottom: 1px solid var(--line); }
-h1 { font-size: 1.6rem; font-weight: 700; }
-.sub { color: var(--muted); font-size: 0.88rem; margin: 2px 0 10px; }
-nav { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 2px; }
-nav button { flex: none; min-height: 42px; padding: 0 14px; border: 1px solid var(--line); background: var(--card); color: var(--fg); border-radius: 10px; font: 600 0.95rem var(--font-body); cursor: pointer; }
+h1 { font-size: 1.6rem; }
+.sub { color: var(--muted); font-size: 0.9rem; margin: 2px 0 10px; }
+nav { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+nav button { min-height: 44px; border: 1px solid var(--line); background: var(--card); color: var(--fg); border-radius: 10px; font: 600 0.95rem var(--font-body); cursor: pointer; }
 nav button[aria-selected="true"] { background: var(--accent); color: var(--accent-fg); border-color: var(--accent); }
-button:focus-visible, input:focus-visible + .box { outline: 3px solid var(--accent); outline-offset: 2px; }
+button:focus-visible, input:focus-visible + .box, summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
 .bar { height: 8px; border-radius: 99px; background: var(--soft); overflow: hidden; margin-top: 10px; }
 .bar i { display: block; height: 100%; width: 0; background: var(--accent); transition: width .25s; }
-.pcount { display: flex; justify-content: space-between; font-size: 0.88rem; color: var(--muted); margin-top: 8px; font-variant-numeric: tabular-nums; }
-h2.sec { font-size: 1.2rem; margin: 24px 0 8px; }
-.dag { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; margin-top: 10px; }
-.dag.noah { border-left: 5px solid var(--accent); }
-.dag-head { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; }
-.dag-head strong { font-family: var(--font-display); font-size: 1.05rem; text-transform: capitalize; }
-.tag { font-size: 0.78rem; color: var(--muted); }
-.dag dl { margin: 6px 0 0; display: grid; grid-template-columns: 5.2rem 1fr; gap: 2px 10px; font-size: 0.93rem; }
-.dag dt { color: var(--muted); }
-.dag dd { margin: 0; min-width: 0; }
-.dag a { color: var(--accent); font-weight: 600; text-decoration: none; }
-.dag a:hover { text-decoration: underline; }
-.godis { margin-top: 8px; padding: 8px 10px; border-radius: 8px; background: var(--warn-bg); color: var(--warn); font-size: 0.9rem; }
+.pcount { font-size: 0.88rem; color: var(--muted); margin-top: 6px; font-variant-numeric: tabular-nums; }
+.intro { color: var(--muted); font-size: 0.92rem; margin: 14px 0 0; }
+h2.sec { font-size: 1.2rem; margin: 26px 0 4px; }
 .cat { margin-top: 20px; }
-.cat-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px; }
-.cat-head h3 { font-size: 1.05rem; font-weight: 600; }
+.cat-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px; }
+.cat-head h3 { font-size: 1.05rem; }
 .cat-head span { color: var(--muted); font-size: 0.82rem; font-variant-numeric: tabular-nums; }
+.cat-info { margin: 0 0 6px; color: var(--muted); font-size: 0.85rem; }
 ul.items { list-style: none; margin: 0; padding: 0; background: var(--card); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
 ul.items li + li { border-top: 1px solid var(--line); }
-ul.items label { display: flex; align-items: center; gap: 14px; min-height: 50px; padding: 8px 14px; cursor: pointer; }
+ul.items label { display: flex; align-items: center; gap: 14px; min-height: 52px; padding: 8px 14px; cursor: pointer; }
 ul.items input { position: absolute; opacity: 0; width: 1px; height: 1px; }
 .box { flex: none; width: 26px; height: 26px; border: 2px solid var(--muted); border-radius: 7px; display: grid; place-items: center; }
 .box svg { width: 16px; height: 16px; opacity: 0; stroke: var(--accent-fg); }
@@ -58,29 +49,33 @@ input:checked + .box svg { opacity: 1; }
 .txt { flex: 1; min-width: 0; }
 .name { font-weight: 600; }
 .note { display: block; color: var(--muted); font-size: 0.82rem; }
-.qty { color: var(--muted); font-size: 0.9rem; text-align: right; font-variant-numeric: tabular-nums; }
+.qty { color: var(--muted); font-size: 0.9rem; text-align: right; }
 li.done .name { text-decoration: line-through; color: var(--muted); font-weight: 400; }
 li.done .qty, li.done .note { opacity: .7; }
-.hemma { margin-top: 20px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; }
-.hemma h3 { font-size: 1rem; margin-bottom: 4px; }
-.hemma p { margin: 4px 0 0; color: var(--muted); font-size: 0.9rem; }
-.tools { display: flex; gap: 8px; margin-top: 14px; }
-.btn { min-height: 40px; padding: 0 14px; border: 1px solid var(--line); background: var(--card); color: var(--fg); border-radius: 10px; font: 600 0.9rem var(--font-body); cursor: pointer; }
-.btn[aria-pressed="true"] { background: var(--soft); border-color: var(--accent); }
 li.hide, .cat.hide { display: none; }
-.recipe { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; margin-top: 14px; scroll-margin-top: 150px; }
-.recipe h3 { font-size: 1.25rem; font-weight: 700; }
+.btn { margin-top: 14px; min-height: 40px; padding: 0 14px; border: 1px solid var(--line); background: var(--card); color: var(--fg); border-radius: 10px; font: 600 0.9rem var(--font-body); cursor: pointer; }
+.btn[aria-pressed="true"] { background: var(--soft); border-color: var(--accent); }
+.dag { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; margin-top: 10px; }
+.dag.noah { border-left: 5px solid var(--accent); }
+.dag.idag { outline: 2px solid var(--accent); }
+.dag.forbi { opacity: .6; }
+.dag-head { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; }
+.dag-head strong { font-family: var(--font-display); font-size: 1.05rem; }
+.tag { font-size: 0.8rem; color: var(--muted); }
+.idag-tag { color: var(--accent); font-weight: 700; }
+.dag dl { margin: 6px 0 0; display: grid; grid-template-columns: 5.2rem 1fr; gap: 2px 10px; font-size: 0.93rem; }
+.dag dt { color: var(--muted); }
+.dag dd { margin: 0; min-width: 0; }
+.dag a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.dag a:hover { text-decoration: underline; }
+.recipe { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; margin-top: 12px; scroll-margin-top: 150px; }
+.recipe h3 { font-size: 1.2rem; }
 .meta { color: var(--muted); font-size: 0.88rem; margin: 2px 0 8px; }
-.recipe h4 { margin: 10px 0 4px; font-size: 0.92rem; font-family: var(--font-body); }
+.recipe h4 { margin: 10px 0 4px; font-size: 0.92rem; }
 .recipe ul, .recipe ol { margin: 0; padding-left: 20px; }
 .tip { margin-top: 10px; padding: 8px 10px; border-radius: 8px; background: var(--warn-bg); color: var(--warn); font-size: 0.9rem; }
-.table { background: var(--card); border: 1px solid var(--line); border-radius: 12px; overflow-x: auto; margin-top: 10px; }
-table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
-th, td { text-align: left; padding: 8px 12px; border-top: 1px solid var(--line); vertical-align: top; }
-tr:first-child th, tr:first-child td { border-top: 0; }
-.dim { color: var(--muted); }
-.srow { padding: 10px 14px; }
-.intro { color: var(--muted); font-size: 0.92rem; margin: 12px 0 0; }
+details.mer { margin-top: 26px; }
+details.mer summary { cursor: pointer; font: 700 1.1rem var(--font-display); min-height: 44px; display: flex; align-items: center; }
 @media (prefers-reduced-motion: reduce) { .bar i { transition: none; } }
 </style>
 </head>
@@ -88,101 +83,79 @@ tr:first-child th, tr:first-child td { border-top: 0; }
 <div class="wrap">
   <header class="top">
     <h1>Veckomat</h1>
-    <p class="sub" id="sub">Frukost, mellanmål och middag för dig och Noah</p>
-    <nav id="nav" role="tablist"></nav>
+    <p class="sub" id="sub"></p>
+    <nav id="nav" role="tablist">
+      <button id="t-handla" role="tab">Handla</button>
+      <button id="t-dagar" role="tab">Dagar</button>
+      <button id="t-recept" role="tab">Recept</button>
+    </nav>
     <div id="prog" hidden>
       <div class="bar"><i id="fill"></i></div>
-      <div class="pcount"><span id="count"></span><span id="busy"></span></div>
+      <div class="pcount" id="count"></div>
     </div>
   </header>
-  <main id="main"><p class="intro">Laddar planen...</p></main>
+  <main id="main"><p class="intro">Laddar veckan...</p></main>
 </div>
 
 <script>
 const CHECK = '<svg viewBox="0 0 16 16" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5"/></svg>';
-const KEY = 'veckomat:v1:bockat';
-let plan, bockat = {}, dolj = false, flik = 'v1';
-const $ = (s, el = document) => el.querySelector(s);
+const FLIKAR = ['handla', 'dagar', 'recept'];
+let vecka, recept, bockat = {}, dolj = false, flik = 'handla', KEY, DOLJ = 'veckomat:v2:dolj';
+const $ = (s, e = document) => e.querySelector(s);
 const el = (tag, cls, txt) => { const e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; };
-function lsGet(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
-function lsSet(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+const lsGet = (k) => { try { return localStorage.getItem(k); } catch (e) { return null; } };
+const lsSet = (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} };
+const idag = () => { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`; };
 
 async function start() {
+  try {
+    [vecka, recept] = await Promise.all(['vecka.json', 'recept.json'].map(async (f) => (await fetch(f, { cache: 'no-cache' })).json()));
+  } catch (e) {
+    $('#main').replaceChildren(el('p', 'intro', 'Kunde inte läsa veckan. Öppna sidan via GitHub Pages eller en lokal server.')); return;
+  }
+  KEY = 'veckomat:v2:' + vecka.id;
   try { bockat = JSON.parse(lsGet(KEY) || '{}') || {}; } catch (e) { bockat = {}; }
-  dolj = lsGet('veckomat:v1:dolj') === '1';
-  try { plan = await (await fetch('plan.json', { cache: 'no-cache' })).json(); }
-  catch (e) { $('#main').replaceChildren(el('p', 'intro', 'Kunde inte läsa plan.json. Öppna sidan via GitHub Pages eller en lokal server.')); return; }
-  const nav = $('#nav');
-  plan.veckor.forEach((v) => nav.append(tab('v' + v.vecka, 'V' + v.veckonr)));
-  nav.append(tab('recept', 'Recept'), tab('skafferi', 'Skafferi'));
-  $('#sub').textContent = `${plan.veckor[0].rubrik.split(' till ')[0]} till ${plan.veckor[plan.veckor.length - 1].rubrik.split(' till ')[1]} · frukost, mellanmål och middag för dig och Noah`;
+  dolj = lsGet(DOLJ) === '1';
+  $('#sub').textContent = `Vecka ${vecka.veckonr} · ${vecka.rubrik}`;
+  FLIKAR.forEach((f) => $('#t-' + f).addEventListener('click', () => visa(f, true)));
   const h = location.hash.slice(1);
-  visa(h && (h === 'recept' || h === 'skafferi' || /^v\d$/.test(h)) ? h : 'v1', false);
+  visa(FLIKAR.includes(h) ? h : 'handla', false);
 }
-function tab(id, txt) { const b = el('button', '', txt); b.id = 't-' + id; b.setAttribute('role', 'tab'); b.addEventListener('click', () => visa(id, true)); return b; }
 
 function visa(id, scroll) {
   flik = id;
-  document.querySelectorAll('nav button').forEach((b) => b.setAttribute('aria-selected', String(b.id === 't-' + id)));
+  FLIKAR.forEach((f) => $('#t-' + f).setAttribute('aria-selected', String(f === id)));
   if (location.hash !== '#' + id) history.replaceState(null, '', '#' + id);
   const main = $('#main'); main.replaceChildren();
-  $('#prog').hidden = !/^v\d$/.test(id);
-  if (/^v\d$/.test(id)) vecka(plan.veckor[+id.slice(1) - 1], main);
-  else if (id === 'recept') recept(main);
-  else skafferi(main);
+  $('#prog').hidden = id !== 'handla';
+  ({ handla, dagar, recept: veckansRecept })[id](main);
   if (scroll) window.scrollTo(0, 0);
-  const t = $('#t-' + id); if (t && t.scrollIntoView) t.scrollIntoView({ inline: 'center', block: 'nearest' });
 }
 
-function vecka(v, main) {
-  main.append(el('p', 'intro', `Vecka ${v.veckonr}: ${v.rubrik}. ${v.anm || 'Handla första dagen.'} ${v.noahDagar} dagar med Noah.`));
-  const tools = el('div', 'tools');
+function handla(main) {
+  main.append(el('p', 'intro', vecka.anm));
   const hide = el('button', 'btn', dolj ? 'Visa avbockade' : 'Dölj avbockade'); hide.setAttribute('aria-pressed', String(dolj));
-  hide.addEventListener('click', () => { dolj = !dolj; lsSet('veckomat:v1:dolj', dolj ? '1' : '0'); hide.textContent = dolj ? 'Visa avbockade' : 'Dölj avbockade'; hide.setAttribute('aria-pressed', String(dolj)); uppdatera(v); });
-  tools.append(hide);
-  main.append(tools);
-
-  main.append(el('h2', 'sec', 'Inköpslista'));
-  v.lista.forEach((c) => {
-    const sec = el('section', 'cat'); const head = el('div', 'cat-head');
-    head.append(el('h3', '', c.kat)); const cnt = el('span'); head.append(cnt); sec.append(head);
+  hide.addEventListener('click', () => { dolj = !dolj; lsSet(DOLJ, dolj ? '1' : '0'); hide.textContent = dolj ? 'Visa avbockade' : 'Dölj avbockade'; hide.setAttribute('aria-pressed', String(dolj)); uppdatera(); });
+  main.append(hide);
+  vecka.handla.forEach((c) => {
+    const sec = el('section', 'cat'), head = el('div', 'cat-head'), cnt = el('span');
+    head.append(el('h3', '', c.kat), cnt); sec.append(head);
+    if (c.info) sec.append(el('p', 'cat-info', c.info));
     const ul = el('ul', 'items');
     c.rader.forEach((r) => {
-      const id = `v${v.vecka}:${r.key}`;
-      const li = el('li'); li.dataset.id = id;
-      const lab = el('label'); const inp = el('input'); inp.type = 'checkbox';
-      const box = el('span', 'box'); box.innerHTML = CHECK;
-      const txt = el('span', 'txt'); txt.append(el('span', 'name', r.namn)); if (r.anm) txt.append(el('span', 'note', r.anm));
-      lab.append(inp, box, txt, el('span', 'qty', r.qty)); li.append(lab); ul.append(li);
-      inp.addEventListener('change', () => { if (inp.checked) bockat[id] = 1; else delete bockat[id]; lsSet(KEY, JSON.stringify(bockat)); uppdatera(v); });
+      const li = el('li'); li.dataset.id = r.id;
+      const lab = el('label'), inp = el('input'), box = el('span', 'box'), txt = el('span', 'txt');
+      inp.type = 'checkbox'; box.innerHTML = CHECK;
+      txt.append(el('span', 'name', r.namn)); if (r.anm) txt.append(el('span', 'note', r.anm));
+      lab.append(inp, box, txt, el('span', 'qty', r.mangd || '')); li.append(lab); ul.append(li);
+      inp.addEventListener('change', () => { if (inp.checked) bockat[r.id] = 1; else delete bockat[r.id]; lsSet(KEY, JSON.stringify(bockat)); uppdatera(); });
     });
     sec.append(ul); sec._cnt = cnt; main.append(sec);
   });
-  const hem = el('div', 'hemma');
-  hem.append(el('h3', '', 'Räcker redan i skafferiet'));
-  hem.append(el('p', '', v.hemma.length ? v.hemma.map((h) => `${h.namn} (${h.text})`).join(', ') : 'Inget den här veckan.'));
-  hem.append(el('p', '', 'Kolla alltid olja, salt, peppar och kaffe/te hemma.'));
-  main.append(hem);
-
-  main.append(el('h2', 'sec', 'Dag för dag'));
-  v.dagar.forEach((d) => {
-    const k = el('div', 'dag' + (d.noah ? ' noah' : ''));
-    const h = el('div', 'dag-head'); h.append(el('strong', '', d.dag), el('span', 'tag', d.med || (d.noah ? 'Du + Noah' : 'Bara du'))); k.append(h);
-    const dl = el('dl');
-    [['Frukost', d.frukost], ...(d.lunch ? [['Lunch', d.lunch]] : []), ['Mellanmål', d.mellis]].forEach(([a, b]) => { dl.append(el('dt', '', a), el('dd', '', b)); });
-    dl.append(el('dt', '', 'Middag'));
-    const dd = el('dd'); const a = d.middag.recept ? el('a', '', d.middag.namn) : el('span', '', d.middag.namn); if (d.middag.recept) a.href = '#recept'; if (d.middag.recept) a.addEventListener('click', (e) => { e.preventDefault(); const t = document.getElementById('r-' + d.middag.recept); if (t) t.scrollIntoView(); });
-    dd.append(a); if (d.middag.port) dd.append(el('span', 'tag', ' · ' + d.middag.port)); dl.append(dd); k.append(dl);
-    if (d.extra) [].concat(d.extra).forEach((x) => k.append(el('div', 'godis', x)));
-    main.append(k);
-  });
-  main.append(el('h2', 'sec', 'Recept den här veckan'));
-  main.append(el('p', 'intro', 'Alla recept gäller 2 portioner (du + Noah). Planen skalar upp eller ner automatiskt.'));
-  (v.recept || []).forEach((id) => { const r = plan.recept.find((x) => x.id === id); if (r) main.append(receptKort(r)); });
-  uppdatera(v);
+  uppdatera();
 }
 
-function uppdatera(v) {
+function uppdatera() {
   let tot = 0, klar = 0;
   document.querySelectorAll('section.cat').forEach((sec) => {
     const lis = sec.querySelectorAll('li'); let d = 0;
@@ -194,56 +167,50 @@ function uppdatera(v) {
     sec._cnt.textContent = `${d}/${lis.length}`; sec.classList.toggle('hide', dolj && d === lis.length);
     tot += lis.length; klar += d;
   });
-  $('#count').textContent = `${klar} av ${tot} varor köpta`;
+  $('#count').textContent = `${klar} av ${tot} avbockade`;
   $('#fill').style.width = (tot ? klar / tot * 100 : 0) + '%';
+}
+
+function dagar(main) {
+  const nu = idag();
+  main.append(el('p', 'intro', 'Grön kant betyder att Noah är med. Tryck på middagen för receptet.'));
+  vecka.dagar.forEach((d) => {
+    const noah = d.tag === 'Du + Noah';
+    const k = el('div', 'dag' + (noah ? ' noah' : '') + (d.datum === nu ? ' idag' : '') + (d.datum < nu ? ' forbi' : ''));
+    const h = el('div', 'dag-head'), sp = el('span', 'tag', d.tag);
+    if (d.datum === nu) sp.prepend(el('span', 'idag-tag', 'Idag · '));
+    h.append(el('strong', '', d.dag), sp); k.append(h);
+    const dl = el('dl');
+    [['Frukost', d.frukost], ['Lunch', d.lunch], ['Mellanmål', d.mellis]].forEach(([a, b]) => { if (b) dl.append(el('dt', '', a), el('dd', '', b)); });
+    const dd = el('dd'), m = d.middag;
+    let n;
+    if (m.recept) { n = el('a', '', m.namn); n.href = '#recept'; n.addEventListener('click', (e) => { e.preventDefault(); visa('recept', false); const t = document.getElementById('r-' + m.recept); if (t) t.scrollIntoView(); }); }
+    else n = el('span', '', m.namn);
+    dd.append(n); if (m.port) dd.append(el('span', 'tag', ' · ' + m.port));
+    dl.append(el('dt', '', 'Middag'), dd); k.append(dl); main.append(k);
+  });
 }
 
 function receptKort(r) {
   const a = el('article', 'recipe'); a.id = 'r-' + r.id;
-  a.append(el('h3', '', r.namn), el('p', 'meta', r.tid + (r.fisk ? ' · fisk' : '')));
-  a.append(el('h4', '', 'Ingredienser'));
-  const ul = el('ul'); r.ingr.forEach((i) => ul.append(el('li', '', `${i.mangd} ${i.namn.toLowerCase()}`))); a.append(ul);
-  a.append(el('h4', '', 'Gör så här'));
+  a.append(el('h3', '', r.namn), el('p', 'meta', r.tid + (r.fisk ? ' · fisk' : '')), el('h4', '', 'Ingredienser'));
+  const ul = el('ul'); r.ingr.forEach((i) => ul.append(el('li', '', i))); a.append(ul, el('h4', '', 'Gör så här'));
   const ol = el('ol'); r.steg.forEach((s) => ol.append(el('li', '', s))); a.append(ol);
   if (r.tips) a.append(el('p', 'tip', r.tips));
   return a;
 }
 
-function recept(main) {
-  main.append(el('p', 'intro', 'Alla recept gäller 2 portioner (du + Noah). Planen skalar upp eller ner automatiskt.'));
-  plan.recept.forEach((r) => main.append(receptKort(r)));
+function veckansRecept(main) {
+  main.append(el('p', 'intro', 'Alla recept gäller 2 portioner. Halvera för en portion.'));
+  const ids = [...new Set(vecka.dagar.map((d) => d.middag.recept).filter(Boolean))];
+  ids.forEach((id) => { const r = recept.find((x) => x.id === id); if (r) main.append(receptKort(r)); });
+  const mer = recept.filter((r) => !ids.includes(r.id));
+  if (!mer.length) return;
+  const det = el('details', 'mer'); det.append(el('summary', '', 'Fler recept'));
+  mer.forEach((r) => det.append(receptKort(r))); main.append(det);
 }
 
-function skafferi(main) {
-  main.append(el('p', 'intro', 'Här ser du vad du redan har hemma och vad som behöver köpas när. Basvaror och frysvaror står bara på inköpslistan den vecka de faktiskt tar slut, så du köper dem inte i onödan. Mängderna du har hemma är en uppskattning, så kolla i skafferiet och hoppa över eller lägg till på listan om det inte stämmer.'));
-  const grupper = [
-    ['Du har redan, köp inte', 'Räcker hela de fem veckorna.', (s) => s.harHemma && !s.kop.length],
-    ['Köps nästan varje vecka', 'Går åt snabbt och står med på de flesta inköpslistor.', (s) => s.kop.length >= 3],
-    ['Du har lite hemma, köp mer senare', 'Räcker ett tag. Köp mer när det står på listan.', (s) => s.harHemma && s.kop.length && s.kop.length < 3],
-    ['Du har inget hemma, köp', 'Står på inköpslistan den vecka som anges.', (s) => !s.harHemma && s.kop.length && s.kop.length < 3],
-    ['Inget behövs', 'Används inte i planen.', (s) => !s.harHemma && !s.kop.length]
-  ];
-  grupper.forEach(([rubrik, text, test]) => {
-    const rader = plan.skafferi.filter(test);
-    if (!rader.length) return;
-    main.append(el('h2', 'sec', rubrik), el('p', 'intro', text));
-    const ul = el('ul', 'items');
-    rader.forEach((s) => {
-      const li = el('li'); const row = el('div', 'srow');
-      const t = el('div', 'txt'); t.append(el('span', 'name', s.namn));
-      const rad = [];
-      if (s.harHemma) rad.push('Har hemma: ca ' + s.harHemma);
-      s.kop.forEach((k) => rad.push('Köp ' + k.qty + ' vecka ' + k.vecka + ' (handla ' + k.handla + ')'));
-      if (!rad.length) rad.push('Behöver inte köpas');
-      rad.forEach((r) => t.append(el('span', 'note', r)));
-      if (s.anm) t.append(el('span', 'note', s.anm));
-      row.append(t); li.append(row); ul.append(li);
-    });
-    main.append(ul);
-  });
-}
-
-window.addEventListener('hashchange', () => { const h = location.hash.slice(1); if (plan && h !== flik && (h === 'recept' || h === 'skafferi' || /^v\d$/.test(h))) visa(h, false); });
+window.addEventListener('hashchange', () => { const h = location.hash.slice(1); if (vecka && h !== flik && FLIKAR.includes(h)) visa(h, false); });
 start();
 </script>
 </body>
